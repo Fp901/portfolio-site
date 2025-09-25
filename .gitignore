@@ -1,0 +1,18 @@
+# Node modules (if you ever use npm locally)
+node_modules/
+
+# Sass cache
+.sass-cache/
+
+# Scout-App cache files
+*.map
+
+# VSCode settings
+.vscode/
+
+# OS junk files
+.DS_Store
+Thumbs.db
+
+# Compiled CSS (optional – if you want to ignore auto-generated CSS)
+# /css
