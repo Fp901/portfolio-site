@@ -1,0 +1,28 @@
+.projects {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+
+  .project {
+    width: 30%;
+    margin-bottom: 20px;
+    background: #fff;
+    color: #000;
+    padding: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+
+    img {
+      width: 100%;
+      height: auto;
+    }
+
+    a {
+      color: $primary-color;
+      text-decoration: none;
+
+      &:hover {
+        text-decoration: underline;
+      }
+    }
+  }
+}

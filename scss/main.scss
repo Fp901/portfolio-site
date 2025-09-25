@@ -1,0 +1,16 @@
+// Variables first
+@import "variables";
+
+// Global styles
+@import "global";
+
+// Sections
+@import "sidebar";
+@import "header";
+@import "projects";
+@import "contact";
+@import "backtotop";
+
+body {
+  margin: 0;
+}
