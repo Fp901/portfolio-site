@@ -1,28 +1,66 @@
 .projects {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: space-around;
+  display: grid;
+  grid-template-columns: 1fr; // XS
+  gap: $space-md;
 
-  .project {
-    width: 30%;
-    margin-bottom: 20px;
-    background: #fff;
-    color: #000;
-    padding: 10px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  @include respond(sm) {
+    grid-template-columns: repeat(2, 1fr);
+  }
 
-    img {
-      width: 100%;
-      height: auto;
-    }
+  @include respond(md) {
+    grid-template-columns: repeat(3, 1fr);
+  }
 
-    a {
-      color: $primary-color;
-      text-decoration: none;
+  @include respond(lg) {
+    grid-template-columns: repeat(3, 1fr);
+    gap: $space-lg;
+  }
 
-      &:hover {
-        text-decoration: underline;
-      }
+  @include respond(xl) {
+    grid-template-columns: repeat(4, 1fr);
+  }
+}
+
+.project {
+  background: $light-green; // soft brand tone
+  border-radius: 10px;
+  overflow: hidden;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.08);
+  text-align: center;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+
+  &:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 6px 18px rgba($verdigris, 0.3); // subtle brand glow
+  }
+
+  img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    display: block;
+  }
+
+  h3 {
+    font-size: 1.25rem;
+    margin: $space-sm 0;
+    color: $lapis-lazuli; // deep blue headings
+  }
+
+  a {
+    display: inline-block;
+    margin-bottom: $space-md;
+    padding: 0.5rem 1rem;
+    background: $bondi-blue; // brand button
+    color: #fff;
+    text-decoration: none;
+    border-radius: 4px;
+    font-weight: bold;
+    transition: background 0.3s, color 0.3s;
+
+    &:hover {
+      background: $mindaro; // pop with lime
+      color: $indigo-dye; // contrast text
     }
   }
 }

@@ -1,0 +1,17 @@
+.footer {
+  background: linear-gradient(90deg, $indigo-dye, $cerulean);
+  padding: $space-md;
+  text-align: center;
+  color: $light-color;
+  font-size: 0.9rem;
+
+  a {
+    color: $mindaro; // lime accent
+    text-decoration: none;
+    margin: 0 0.5rem;
+
+    &:hover {
+      color: $light-green-2;
+    }
+  }
+}

@@ -1,9 +1,26 @@
-// _variables.scss
+// ====================
+// Variables
+// ====================
+
+// Brand Palette
+$mindaro: #d9ed92; // Accent (bright lime)
+$light-green: #b5e48c; // Soft background option
+$light-green-2: #99d98c; // Contact bg / accents
+$emerald: #76c893; // Supportive mid-tone
+$keppel: #52b69a; // Supportive mid-tone
+$verdigris: #34a0a4; // Mid-tone accents
+$bondi-blue: #168aad; // Buttons, links
+$cerulean: #1a759f; // Buttons hover
+$lapis-lazuli: #1e6091; // Text headers
+$indigo-dye: #184e77; // Sidebar / dark base
+$accent-color: $mindaro; // Accent highlight (bright lime)
+$secondary-color: $bondi-blue; // Buttons, links
+$text-color: $lapis-lazuli; // Headings/text
+
+// Old neutrals (keep for fallback)
 $primary-color: #333;
-$accent-color: #0077b6;
 $light-color: #f9f9f9;
 $dark-color: #111;
-$sidebar-bg: #8573e9;
 $background-color: #f4f4f4;
 
 // Fonts
@@ -15,7 +32,7 @@ $space-sm: 1rem;
 $space-md: 2rem;
 $space-lg: 3rem;
 
-// _variables.scss
+// Breakpoints
 $break-sm: 576px;
 $break-md: 768px;
 $break-lg: 992px;

@@ -1,0 +1,21 @@
+.hero {
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  color: $light-color;
+
+  // Bold gradient splash background
+  background: linear-gradient(135deg, $lapis-lazuli, $bondi-blue);
+
+  h1 {
+    font-size: 2.5rem;
+    margin-bottom: $space-sm;
+  }
+
+  p {
+    font-size: 1.25rem;
+    color: $mindaro; // highlight under the name
+  }
+}

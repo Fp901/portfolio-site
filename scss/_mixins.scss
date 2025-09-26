@@ -1,0 +1,22 @@
+@mixin respond($breakpoint) {
+  @if $breakpoint == sm {
+    @media (min-width: $break-sm) {
+      @content;
+    }
+  }
+  @if $breakpoint == md {
+    @media (min-width: $break-md) {
+      @content;
+    }
+  }
+  @if $breakpoint == lg {
+    @media (min-width: $break-lg) {
+      @content;
+    }
+  }
+  @if $breakpoint == xl {
+    @media (min-width: $break-xl) {
+      @content;
+    }
+  }
+}

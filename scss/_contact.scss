@@ -1,32 +1,47 @@
 .contact {
-  background: $background-color;
-  padding: 20px;
-  color: #333;
-  margin-top: 20px;
+  background: $emerald; // strong green background
+  padding: $space-lg;
+  color: $light-color;
 
   h2 {
     margin-top: 0;
+    text-align: center;
+    margin-bottom: $space-md;
+  }
+
+  p {
+    text-align: center;
+    margin-bottom: $space-sm;
   }
 
   form {
+    max-width: 600px;
+    margin: 0 auto;
     display: flex;
     flex-direction: column;
 
     input,
     textarea {
-      margin-bottom: 10px;
+      margin-bottom: $space-sm;
       padding: 10px;
+      border: none;
+      border-radius: 4px;
+      font-family: $font-base;
     }
 
     button {
       padding: 10px 20px;
-      background: $primary-color;
+      background: $bondi-blue;
       color: #fff;
       border: none;
+      border-radius: 4px;
+      font-weight: bold;
       cursor: pointer;
+      transition: background 0.3s;
 
       &:hover {
-        background: darken($primary-color, 10%);
+        background: $mindaro;
+        color: $indigo-dye;
       }
     }
   }
