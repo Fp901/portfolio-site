@@ -1,5 +1,5 @@
-@import "variables"; // variables first
-@import "mixins"; // mixins depend on variables
+@import "variables";
+@import "mixins";
 @import "global";
 @import "sidebar";
 @import "hero";
@@ -8,6 +8,7 @@
 @import "coding";
 @import "scs";
 @import "contact";
+// @import "utilities"; // comment out if not created
 
 body {
   margin: 0;
