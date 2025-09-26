@@ -1,144 +1,22 @@
-$primary-color: #00b4d8;
+// _variables.scss
+$primary-color: #333;
+$accent-color: #0077b6;
+$light-color: #f9f9f9;
+$dark-color: #111;
+$sidebar-bg: #8573e9;
 $background-color: #f4f4f4;
-$sidebar-bg: rgba(0, 0, 0, 0.7);
 
-body {
-  font-family: Arial, sans-serif;
-  margin: 0;
-  padding: 0;
-  background: url("path-to-marble-background.jpg") no-repeat center/cover;
-  color: #fff;
-}
+// Fonts
+$font-base: "Roboto", Arial, sans-serif;
 
-.sidebar {
-  position: fixed;
-  width: 200px;
-  height: 100%;
-  background: $sidebar-bg;
-  padding: 20px;
+// Spacing scale
+$space-xs: 0.5rem;
+$space-sm: 1rem;
+$space-md: 2rem;
+$space-lg: 3rem;
 
-  h1 {
-    font-size: 2em;
-    margin: 0;
-  }
-
-  a {
-    display: block;
-    color: $primary-color;
-    text-decoration: none;
-    margin-bottom: 20px;
-
-    &:hover {
-      text-decoration: underline;
-    }
-  }
-
-  .social {
-    margin-top: 50px;
-
-    a {
-      margin-right: 10px;
-      color: $primary-color;
-
-      &:hover {
-        color: lighten($primary-color, 10%);
-      }
-    }
-  }
-}
-
-.content {
-  margin-left: 220px;
-  padding: 20px;
-}
-
-.header {
-  text-align: center;
-  padding: 100px 0;
-
-  h1 {
-    font-size: 3em;
-    margin: 0;
-  }
-
-  p {
-    font-size: 1.5em;
-  }
-}
-
-.projects {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: space-around;
-
-  .project {
-    width: 30%;
-    margin-bottom: 20px;
-    background: #fff;
-    color: #000;
-    padding: 10px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-
-    img {
-      width: 100%;
-      height: auto;
-    }
-
-    a {
-      color: $primary-color;
-      text-decoration: none;
-
-      &:hover {
-        text-decoration: underline;
-      }
-    }
-  }
-}
-
-.contact {
-  background: $background-color;
-  padding: 20px;
-  color: #333;
-  margin-top: 20px;
-
-  h2 {
-    margin-top: 0;
-  }
-
-  form {
-    display: flex;
-    flex-direction: column;
-
-    input,
-    textarea {
-      margin-bottom: 10px;
-      padding: 10px;
-    }
-
-    button {
-      padding: 10px 20px;
-      background: $primary-color;
-      color: #fff;
-      border: none;
-      cursor: pointer;
-
-      &:hover {
-        background: darken($primary-color, 10%);
-      }
-    }
-  }
-}
-
-.back-to-top {
-  text-align: center;
-  padding: 10px;
-
-  a {
-    color: $primary-color;
-    text-decoration: none;
-
-    &:hover {
-      text-decoration: underline;
-    }
-  }
-}
+// _variables.scss
+$break-sm: 576px;
+$break-md: 768px;
+$break-lg: 992px;
+$break-xl: 1200px;

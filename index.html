@@ -4,10 +4,10 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-    <title>Francois Pretorius - Web Developer</title>
+    <title>Francois Pretorius - Portfolio</title>
     <meta
       name="description"
-      content="Portfolio of Francois Pretorius, showcasing web development projects, skills, and contact."
+      content="Portfolio of Francois Pretorius, showcasing web development, cybersecurity, and coding projects."
     />
     <meta name="author" content="Francois Pretorius" />
 
@@ -31,79 +31,93 @@
   </head>
 
   <body>
-    <div class="sidebar">
-      <h1>S</h1>
-      <a href="#about">About Me</a>
+    <!-- Burger menu -->
+    <div class="burger">
+      <i class="fas fa-bars"></i>
+    </div>
+
+    <!-- Sidebar / Nav -->
+    <nav class="sidebar">
+      <h1>
+        <a href="index.html">FP</a>
+      </h1>
+      <a href="about.html">About Me</a>
       <a href="#portfolio">My Portfolio</a>
-      <a href="#coding">Coding Examples</a>
-      <a href="#scs">SCS Scheme</a>
+      <a href="coding.html">Coding Examples</a>
+      <a href="scs.html">SCS Scheme</a>
       <a href="#contact">Contact Me</a>
       <div class="social">
-        <a href="#">f</a>
-        <a href="#">in</a>
+        <a href="https://www.linkedin.com/in/YOUR-LINK" target="_blank">
+          <i class="fab fa-linkedin-in"></i>
+        </a>
+        <a href="https://github.com/YOUR-GITHUB" target="_blank">
+          <i class="fab fa-github"></i>
+        </a>
       </div>
-    </div>
-    <div class="content">
-      <div class="header" id="about">
-        <h1>My Name is Samuel Merritt</h1>
-        <p>I'm a Web Developer</p>
-      </div>
-      <div class="projects" id="portfolio">
-        <div class="project">
-          <img src="project1.jpg" alt="Project One" />
-          <h3>Project One</h3>
-          <a href="#">View Project &gt;</a>
+    </nav>
+
+    <!-- Main content -->
+    <main class="content">
+      <!-- Hero / Banner -->
+      <header class="hero" id="about">
+        <div class="container">
+          <h1>My Name is Francois Pretorius</h1>
+          <p>Web Developer & Cybersecurity Graduate</p>
         </div>
-        <div class="project">
-          <img src="project2.jpg" alt="Project Two" />
-          <h3>Project Two</h3>
-          <a href="#">View Project &gt;</a>
+      </header>
+
+      <!-- Portfolio Section -->
+      <section class="portfolio" id="portfolio">
+        <div class="container">
+          <h2>My Portfolio</h2>
+          <div class="projects">
+            <div class="project">
+              <img src="images/placeholder.jpg" alt="Project One" />
+              <h3>Project One</h3>
+              <a href="#">View Project &gt;</a>
+            </div>
+            <div class="project">
+              <img src="images/placeholder.jpg" alt="Project Two" />
+              <h3>Project Two</h3>
+              <a href="#">View Project &gt;</a>
+            </div>
+            <div class="project">
+              <img src="images/placeholder.jpg" alt="Project Three" />
+              <h3>Project Three</h3>
+              <a href="#">View Project &gt;</a>
+            </div>
+          </div>
         </div>
-        <div class="project">
-          <img src="project3.jpg" alt="Project Three" />
-          <a href="#">View Project &gt;</a>
+      </section>
+
+      <!-- Contact Section -->
+      <section class="contact" id="contact">
+        <div class="container">
+          <h2>Get In Touch</h2>
+          <p>
+            I am a recent computing graduate specialising in cybersecurity, data
+            analytics, and web development. Passionate about solving real-world
+            challenges, I bring technical expertise and entrepreneurial
+            experience.
+          </p>
+          <p><strong>Email:</strong> francois.pretorius@example.com</p>
+          <p><strong>Phone:</strong> +44 0000 000 000</p>
+
+          <form>
+            <input type="text" placeholder="First Name*" required />
+            <input type="text" placeholder="Last Name*" required />
+            <input type="email" placeholder="Email Address*" required />
+            <input type="text" placeholder="Subject" />
+            <textarea placeholder="Message"></textarea>
+            <button type="submit">Submit</button>
+          </form>
         </div>
-        <div class="project">
-          <img src="project4.jpg" alt="Project Four" />
-          <h3>Project Four</h3>
-          <a href="#">View Project &gt;</a>
-        </div>
-        <div class="project">
-          <img src="project5.jpg" alt="Project Five" />
-          <h3>Project Five</h3>
-          <a href="#">View Project &gt;</a>
-        </div>
-        <div class="project">
-          <img src="project6.jpg" alt="Project Six" />
-          <h3>Project Six</h3>
-          <a href="#">View Project &gt;</a>
-        </div>
-      </div>
-      <div class="contact" id="contact">
-        <h2>Get In Touch</h2>
-        <p>
-          Sed interdum est vel sollicitudin bibendum. Proin at accumsan nulla,
-          non facilisis massa.
-        </p>
-        <p>0000 000 0000</p>
-        <p>info@netmatters.com</p>
-        <p>
-          Phasellus cursus urna in neque faucibus, eu dapibus magna vehicula.
-          Sed tempus cursus maurins et scelerisque. Pellentesque ornare mi at
-          fringilla egestas.
-        </p>
-        <form>
-          <input type="text" placeholder="First Name*" />
-          <input type="text" placeholder="Last Name*" />
-          <input type="email" placeholder="Email Address*" />
-          <input type="text" placeholder="Subject" />
-          <textarea placeholder="Message"></textarea>
-          <button type="submit">Submit</button>
-        </form>
-      </div>
+      </section>
+
+      <!-- Back to Top -->
       <div class="back-to-top">
         <a href="#">Back To Top</a>
       </div>
-    </div>
+    </main>
   </body>
 </html>

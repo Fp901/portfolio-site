@@ -1,15 +1,13 @@
-// Variables first
-@import "variables";
-
-// Global styles
+@import "variables"; // variables first
+@import "mixins"; // mixins depend on variables
 @import "global";
-
-// Sections
 @import "sidebar";
-@import "header";
-@import "projects";
+@import "hero";
+@import "portfolio";
+@import "about";
+@import "coding";
+@import "scs";
 @import "contact";
-@import "backtotop";
 
 body {
   margin: 0;

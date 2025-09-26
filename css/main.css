@@ -1,168 +1,72 @@
-/* line 5, ../../../Desktop/Personal page/portfolio-site/scss/_variables.scss */
-body {
-  font-family: Arial, sans-serif;
+/* line 1, ../../../Desktop/Personal page/portfolio-site/scss/_global.scss */
+* {
+  box-sizing: border-box;
   margin: 0;
   padding: 0;
-  background: url("path-to-marble-background.jpg") no-repeat center/cover;
-  color: #fff;
 }
 
-/* line 13, ../../../Desktop/Personal page/portfolio-site/scss/_variables.scss */
+/* line 7, ../../../Desktop/Personal page/portfolio-site/scss/_global.scss */
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 1rem;
+}
+
+/* line 13, ../../../Desktop/Personal page/portfolio-site/scss/_global.scss */
+body {
+  font-family: "Roboto", Arial, sans-serif;
+  line-height: 1.6;
+  color: #333;
+  background-color: #fff;
+}
+
+/* line 20, ../../../Desktop/Personal page/portfolio-site/scss/_global.scss */
+html {
+  scroll-behavior: smooth;
+}
+
+/* line 1, ../../../Desktop/Personal page/portfolio-site/scss/_sidebar.scss */
 .sidebar {
   position: fixed;
   width: 200px;
   height: 100%;
-  background: rgba(0, 0, 0, 0.7);
+  background: #8573e9;
   padding: 20px;
 }
 
-/* line 20, ../../../Desktop/Personal page/portfolio-site/scss/_variables.scss */
+/* line 8, ../../../Desktop/Personal page/portfolio-site/scss/_sidebar.scss */
 .sidebar h1 {
   font-size: 2em;
   margin: 0;
 }
 
-/* line 25, ../../../Desktop/Personal page/portfolio-site/scss/_variables.scss */
+/* line 13, ../../../Desktop/Personal page/portfolio-site/scss/_sidebar.scss */
 .sidebar a {
   display: block;
-  color: #00b4d8;
+  color: #333;
   text-decoration: none;
   margin-bottom: 20px;
 }
 
-/* line 31, ../../../Desktop/Personal page/portfolio-site/scss/_variables.scss */
+/* line 19, ../../../Desktop/Personal page/portfolio-site/scss/_sidebar.scss */
 .sidebar a:hover {
   text-decoration: underline;
 }
 
-/* line 36, ../../../Desktop/Personal page/portfolio-site/scss/_variables.scss */
+/* line 24, ../../../Desktop/Personal page/portfolio-site/scss/_sidebar.scss */
 .sidebar .social {
   margin-top: 50px;
 }
 
-/* line 39, ../../../Desktop/Personal page/portfolio-site/scss/_variables.scss */
+/* line 27, ../../../Desktop/Personal page/portfolio-site/scss/_sidebar.scss */
 .sidebar .social a {
   margin-right: 10px;
-  color: #00b4d8;
-}
-
-/* line 43, ../../../Desktop/Personal page/portfolio-site/scss/_variables.scss */
-.sidebar .social a:hover {
-  color: #0cd7ff;
-}
-
-/* line 50, ../../../Desktop/Personal page/portfolio-site/scss/_variables.scss */
-.content {
-  margin-left: 220px;
-  padding: 20px;
-}
-
-/* line 55, ../../../Desktop/Personal page/portfolio-site/scss/_variables.scss */
-.header {
-  text-align: center;
-  padding: 100px 0;
-}
-
-/* line 59, ../../../Desktop/Personal page/portfolio-site/scss/_variables.scss */
-.header h1 {
-  font-size: 3em;
-  margin: 0;
-}
-
-/* line 64, ../../../Desktop/Personal page/portfolio-site/scss/_variables.scss */
-.header p {
-  font-size: 1.5em;
-}
-
-/* line 69, ../../../Desktop/Personal page/portfolio-site/scss/_variables.scss */
-.projects {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: space-around;
-}
-
-/* line 74, ../../../Desktop/Personal page/portfolio-site/scss/_variables.scss */
-.projects .project {
-  width: 30%;
-  margin-bottom: 20px;
-  background: #fff;
-  color: #000;
-  padding: 10px;
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-}
-
-/* line 82, ../../../Desktop/Personal page/portfolio-site/scss/_variables.scss */
-.projects .project img {
-  width: 100%;
-  height: auto;
-}
-
-/* line 87, ../../../Desktop/Personal page/portfolio-site/scss/_variables.scss */
-.projects .project a {
-  color: #00b4d8;
-  text-decoration: none;
-}
-
-/* line 91, ../../../Desktop/Personal page/portfolio-site/scss/_variables.scss */
-.projects .project a:hover {
-  text-decoration: underline;
-}
-
-/* line 98, ../../../Desktop/Personal page/portfolio-site/scss/_variables.scss */
-.contact {
-  background: #f4f4f4;
-  padding: 20px;
   color: #333;
-  margin-top: 20px;
 }
 
-/* line 104, ../../../Desktop/Personal page/portfolio-site/scss/_variables.scss */
-.contact h2 {
-  margin-top: 0;
-}
-
-/* line 108, ../../../Desktop/Personal page/portfolio-site/scss/_variables.scss */
-.contact form {
-  display: flex;
-  flex-direction: column;
-}
-
-/* line 112, ../../../Desktop/Personal page/portfolio-site/scss/_variables.scss */
-.contact form input,
-.contact form textarea {
-  margin-bottom: 10px;
-  padding: 10px;
-}
-
-/* line 118, ../../../Desktop/Personal page/portfolio-site/scss/_variables.scss */
-.contact form button {
-  padding: 10px 20px;
-  background: #00b4d8;
-  color: #fff;
-  border: none;
-  cursor: pointer;
-}
-
-/* line 125, ../../../Desktop/Personal page/portfolio-site/scss/_variables.scss */
-.contact form button:hover {
-  background: #008aa5;
-}
-
-/* line 132, ../../../Desktop/Personal page/portfolio-site/scss/_variables.scss */
-.back-to-top {
-  text-align: center;
-  padding: 10px;
-}
-
-/* line 136, ../../../Desktop/Personal page/portfolio-site/scss/_variables.scss */
-.back-to-top a {
-  color: #00b4d8;
-  text-decoration: none;
-}
-
-/* line 140, ../../../Desktop/Personal page/portfolio-site/scss/_variables.scss */
-.back-to-top a:hover {
-  text-decoration: underline;
+/* line 31, ../../../Desktop/Personal page/portfolio-site/scss/_sidebar.scss */
+.sidebar .social a:hover {
+  color: #4d4d4d;
 }
 
 /* line 1, ../../../Desktop/Personal page/portfolio-site/scss/_global.scss */
@@ -192,14 +96,58 @@ html {
   scroll-behavior: smooth;
 }
 
-/* line 1, ../../../Desktop/Personal page/portfolio-site/scss/_projects.scss */
+/* line 1, ../../../Desktop/Personal page/portfolio-site/scss/_sidebar.scss */
+.sidebar {
+  position: fixed;
+  width: 200px;
+  height: 100%;
+  background: #8573e9;
+  padding: 20px;
+}
+
+/* line 8, ../../../Desktop/Personal page/portfolio-site/scss/_sidebar.scss */
+.sidebar h1 {
+  font-size: 2em;
+  margin: 0;
+}
+
+/* line 13, ../../../Desktop/Personal page/portfolio-site/scss/_sidebar.scss */
+.sidebar a {
+  display: block;
+  color: #333;
+  text-decoration: none;
+  margin-bottom: 20px;
+}
+
+/* line 19, ../../../Desktop/Personal page/portfolio-site/scss/_sidebar.scss */
+.sidebar a:hover {
+  text-decoration: underline;
+}
+
+/* line 24, ../../../Desktop/Personal page/portfolio-site/scss/_sidebar.scss */
+.sidebar .social {
+  margin-top: 50px;
+}
+
+/* line 27, ../../../Desktop/Personal page/portfolio-site/scss/_sidebar.scss */
+.sidebar .social a {
+  margin-right: 10px;
+  color: #333;
+}
+
+/* line 31, ../../../Desktop/Personal page/portfolio-site/scss/_sidebar.scss */
+.sidebar .social a:hover {
+  color: #4d4d4d;
+}
+
+/* line 1, ../../../Desktop/Personal page/portfolio-site/scss/_portfolio.scss */
 .projects {
   display: flex;
   flex-wrap: wrap;
   justify-content: space-around;
 }
 
-/* line 6, ../../../Desktop/Personal page/portfolio-site/scss/_projects.scss */
+/* line 6, ../../../Desktop/Personal page/portfolio-site/scss/_portfolio.scss */
 .projects .project {
   width: 30%;
   margin-bottom: 20px;
@@ -209,41 +157,81 @@ html {
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
 }
 
-/* line 14, ../../../Desktop/Personal page/portfolio-site/scss/_projects.scss */
+/* line 14, ../../../Desktop/Personal page/portfolio-site/scss/_portfolio.scss */
 .projects .project img {
   width: 100%;
   height: auto;
 }
 
-/* line 19, ../../../Desktop/Personal page/portfolio-site/scss/_projects.scss */
+/* line 19, ../../../Desktop/Personal page/portfolio-site/scss/_portfolio.scss */
 .projects .project a {
-  color: #00b4d8;
+  color: #333;
   text-decoration: none;
 }
 
-/* line 23, ../../../Desktop/Personal page/portfolio-site/scss/_projects.scss */
+/* line 23, ../../../Desktop/Personal page/portfolio-site/scss/_portfolio.scss */
 .projects .project a:hover {
   text-decoration: underline;
 }
 
-/* line 1, ../../../Desktop/Personal page/portfolio-site/scss/_backtotop.scss */
-.back-to-top {
+/* line 1, ../../../Desktop/Personal page/portfolio-site/scss/_about.scss */
+.header {
   text-align: center;
+  padding: 100px 0;
+}
+
+/* line 5, ../../../Desktop/Personal page/portfolio-site/scss/_about.scss */
+.header h1 {
+  font-size: 3em;
+  margin: 0;
+}
+
+/* line 10, ../../../Desktop/Personal page/portfolio-site/scss/_about.scss */
+.header p {
+  font-size: 1.5em;
+}
+
+/* line 1, ../../../Desktop/Personal page/portfolio-site/scss/_contact.scss */
+.contact {
+  background: #f4f4f4;
+  padding: 20px;
+  color: #333;
+  margin-top: 20px;
+}
+
+/* line 7, ../../../Desktop/Personal page/portfolio-site/scss/_contact.scss */
+.contact h2 {
+  margin-top: 0;
+}
+
+/* line 11, ../../../Desktop/Personal page/portfolio-site/scss/_contact.scss */
+.contact form {
+  display: flex;
+  flex-direction: column;
+}
+
+/* line 15, ../../../Desktop/Personal page/portfolio-site/scss/_contact.scss */
+.contact form input,
+.contact form textarea {
+  margin-bottom: 10px;
   padding: 10px;
 }
 
-/* line 5, ../../../Desktop/Personal page/portfolio-site/scss/_backtotop.scss */
-.back-to-top a {
-  color: #00b4d8;
-  text-decoration: none;
+/* line 21, ../../../Desktop/Personal page/portfolio-site/scss/_contact.scss */
+.contact form button {
+  padding: 10px 20px;
+  background: #333;
+  color: #fff;
+  border: none;
+  cursor: pointer;
 }
 
-/* line 9, ../../../Desktop/Personal page/portfolio-site/scss/_backtotop.scss */
-.back-to-top a:hover {
-  text-decoration: underline;
+/* line 28, ../../../Desktop/Personal page/portfolio-site/scss/_contact.scss */
+.contact form button:hover {
+  background: #1a1a1a;
 }
 
-/* line 14, ../../../Desktop/Personal page/portfolio-site/scss/main.scss */
+/* line 20, ../../../Desktop/Personal page/portfolio-site/scss/main.scss */
 body {
   margin: 0;
 }

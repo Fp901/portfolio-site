@@ -1,0 +1,33 @@
+.contact {
+  background: $background-color;
+  padding: 20px;
+  color: #333;
+  margin-top: 20px;
+
+  h2 {
+    margin-top: 0;
+  }
+
+  form {
+    display: flex;
+    flex-direction: column;
+
+    input,
+    textarea {
+      margin-bottom: 10px;
+      padding: 10px;
+    }
+
+    button {
+      padding: 10px 20px;
+      background: $primary-color;
+      color: #fff;
+      border: none;
+      cursor: pointer;
+
+      &:hover {
+        background: darken($primary-color, 10%);
+      }
+    }
+  }
+}
