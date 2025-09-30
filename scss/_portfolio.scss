@@ -3,7 +3,7 @@
    ========================== */
 #portfolio {
   padding: 3rem 1rem;
-  background-color: #f9f9f9;
+  background-color: transparent; // let body background show through
 
   .container {
     max-width: 1200px;
@@ -23,16 +23,20 @@
   }
 
   .project {
-    background: #fff;
+    background: $brand-lightest;
     border-radius: 8px;
     overflow: hidden;
     box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
     transition: transform 0.2s ease, box-shadow 0.2s ease;
     text-align: center;
+    display: flex;
+    flex-direction: column; // keep content stacked
+    height: 100%; // ensure equal card heights
 
     img {
       width: 100%;
-      height: auto;
+      height: 200px; // fixed height for all images
+      object-fit: cover; // crop instead of stretch
       display: block;
     }
 
@@ -44,11 +48,13 @@
     p {
       font-size: 0.95rem;
       margin: 0 1rem 1rem;
+      flex-grow: 1; // pushes button down if text is short
     }
 
     a {
-      display: inline-block;
-      margin-bottom: 1rem;
+      display: inline-block; // ensures button only as wide as its content
+      align-self: center; // centers the button horizontally
+      margin: 0 0 1rem; // bottom spacing
       padding: 0.5rem 1rem;
       background: #0077b6;
       color: #fff;
@@ -61,7 +67,6 @@
         background: #005f87;
       }
     }
-
     &:hover {
       transform: translateY(-4px);
       box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
@@ -125,10 +130,6 @@
 @media (min-width: 1200px) {
   #portfolio {
     padding: 4rem 1rem;
-
-    h2 {
-      font-size: 2.2rem;
-    }
 
     .projects {
       gap: 3rem;

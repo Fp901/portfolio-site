@@ -1,12 +1,15 @@
+/* ==========================
+   Contact Section
+   ========================== */
 .contact {
   padding: $space-md 0;
-  background: $brand-lightest; // Subtle green background
+  background: transparent; // let body background show through
 
   .contact-content {
-    max-width: 800px; // Constrain width for better readability on large screens
+    max-width: 800px;
     margin: 0 auto;
     padding: $space-md;
-    background: $brand-lighter; // White background for card effect
+    background: $brand-lightest; // card effect against darker background
     border-radius: 10px;
     box-shadow: 0 2px 6px rgba(0, 0, 0, 0.08);
     text-align: center;
@@ -75,14 +78,14 @@
     }
 
     .contact-form {
-      max-width: 600px; // Further constrain form width on medium screens
+      max-width: 600px;
       margin: $space-md auto;
     }
   }
 
   @include respond(lg) {
     .contact-content {
-      max-width: 700px; // Slightly wider for large screens
+      max-width: 700px;
     }
   }
 }

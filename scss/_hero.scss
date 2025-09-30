@@ -1,13 +1,35 @@
 .hero {
+  position: relative;
   height: 100vh;
   display: flex;
   align-items: center;
   justify-content: center;
   text-align: center;
-  color: $brand-lighter;
+  color: $brand-lightest; // text contrast on top of image
 
-  // Bold gradient splash background
-  background: linear-gradient(135deg, $brand-lighter, $brand-dark);
+  // Hero background image
+  background-image: url("/assets/images/maxim-berg-DqZltTH2-9U-unsplash.jpg"); // place your Unsplash image here
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+
+  // Overlay for text readability
+  &::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(26, 42, 68, 0.55); // brand-darkest with transparency
+    z-index: 0;
+  }
+
+  .container {
+    position: relative;
+    z-index: 1; // bring text above overlay
+    padding: 0 1rem;
+  }
 
   h1 {
     font-size: 2.5rem;
@@ -16,6 +38,43 @@
 
   p {
     font-size: 1.25rem;
-    color: $brand-dark; // highlight under the name
+    color: $brand-dark; // pink accent highlight under the name
+  }
+
+  /* Responsive heading scaling */
+  @media (min-width: 576px) {
+    h1 {
+      font-size: 3rem;
+    }
+    p {
+      font-size: 1.3rem;
+    }
+  }
+
+  @media (min-width: 768px) {
+    h1 {
+      font-size: 3.5rem;
+    }
+    p {
+      font-size: 1.35rem;
+    }
+  }
+
+  @media (min-width: 992px) {
+    h1 {
+      font-size: 4rem;
+    }
+    p {
+      font-size: 1.4rem;
+    }
+  }
+
+  @media (min-width: 1200px) {
+    h1 {
+      font-size: 4.5rem;
+    }
+    p {
+      font-size: 1.5rem;
+    }
   }
 }
