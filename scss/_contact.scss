@@ -1,15 +1,12 @@
-/* ==========================
-   Contact Section
-   ========================== */
 .contact {
-  padding: $space-md 0;
-  background: transparent; // let body background show through
+  padding: 4rem 0;
+  background: transparent;
 
   .contact-content {
     max-width: 800px;
     margin: 0 auto;
     padding: $space-md;
-    background: $brand-lightest; // card effect against darker background
+    background: $brand-lightest;
     border-radius: 10px;
     box-shadow: 0 2px 6px rgba(0, 0, 0, 0.08);
     text-align: center;
@@ -66,8 +63,8 @@
       transition: background 0.3s ease, color 0.3s ease;
 
       &:hover {
-        background: $brand-lightest;
-        color: $brand-lighter;
+        background: $brand-pinkish;
+        color: $brand-lightest;
       }
     }
   }
@@ -76,7 +73,6 @@
     .contact-content {
       padding: $space-lg;
     }
-
     .contact-form {
       max-width: 600px;
       margin: $space-md auto;
