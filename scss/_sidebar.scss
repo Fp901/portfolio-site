@@ -4,7 +4,7 @@
   left: 0;
   height: 100%;
   width: 220px;
-  background: $indigo-dye; // darker base
+  background: $brand-darkest; // darker base
   color: #fff;
   padding: 20px;
   display: flex;
@@ -17,7 +17,7 @@
   }
 
   h1 a {
-    color: $mindaro; // initials lime pop
+    color: $brand-pinkish; // initials lime pop
     text-decoration: none;
     font-size: 2rem;
     font-weight: bold;
@@ -25,12 +25,12 @@
   }
 
   a {
-    color: #fff;
+    color: $brand-lightest;
     margin-bottom: 1rem;
     font-weight: 500;
 
     &:hover {
-      color: $bondi-blue; // hover blue
+      color: $brand-lighter; // hover blue
     }
   }
 
@@ -44,7 +44,7 @@
       font-size: 1.2rem;
 
       &:hover {
-        color: $mindaro; // hover lime
+        color: $brand-lightest; // hover lime
       }
     }
   }
@@ -69,7 +69,7 @@
   left: 1rem;
   z-index: 1000;
   font-size: 1.5rem;
-  color: $bondi-blue;
+  color: $brand-darkest;
   cursor: pointer;
 
   @include respond(md) {

@@ -15,8 +15,8 @@
 body {
   font-family: $font-base;
   line-height: 1.6;
-  color: $indigo-dye; // deep brand text colour
-  background-color: $light-green-2; // subtle green background
+  color: $brand-darkest; // deep brand text colour
+  background-color: $brand-lightest; // subtle green background
 }
 
 html {
@@ -24,11 +24,11 @@ html {
 }
 
 a {
-  color: $bondi-blue;
+  color: $brand-darkest;
   text-decoration: none;
 
   &:hover {
-    color: $mindaro; // lime highlight
+    color: $brand-lighter; // lime highlight
   }
 }
 
@@ -38,5 +38,59 @@ h3,
 h4,
 h5 {
   font-weight: bold;
-  color: $lapis-lazuli; // strong contrast for headings
+  color: $brand-darkest; // strong contrast for headings
+}
+
+/* ==========================
+   Global Section Headings
+   ========================== */
+section h2 {
+  text-align: center;
+  margin-bottom: 2rem;
+  font-size: 1.8rem; // XS - mobile-first default
+}
+
+section h3 {
+  margin: 1rem 0 0.5rem;
+  font-size: 1.25rem; // XS - mobile-first default
+}
+
+/* Small devices (≥576px) */
+@media (min-width: 576px) {
+  section h2 {
+    font-size: 2rem;
+  }
+  section h3 {
+    font-size: 1.3rem;
+  }
+}
+
+/* Medium devices (≥768px) */
+@media (min-width: 768px) {
+  section h2 {
+    font-size: 2.1rem;
+  }
+  section h3 {
+    font-size: 1.35rem;
+  }
+}
+
+/* Large devices (≥992px) */
+@media (min-width: 992px) {
+  section h2 {
+    font-size: 2.15rem;
+  }
+  section h3 {
+    font-size: 1.4rem;
+  }
+}
+
+/* Extra-large devices (≥1200px) */
+@media (min-width: 1200px) {
+  section h2 {
+    font-size: 2.2rem;
+  }
+  section h3 {
+    font-size: 1.5rem;
+  }
 }

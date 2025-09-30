@@ -1,48 +1,88 @@
 .contact {
-  background: $emerald; // strong green background
-  padding: $space-lg;
-  color: $light-color;
+  padding: $space-md 0;
+  background: $brand-lightest; // Subtle green background
 
-  h2 {
-    margin-top: 0;
-    text-align: center;
-    margin-bottom: $space-md;
-  }
-
-  p {
-    text-align: center;
-    margin-bottom: $space-sm;
-  }
-
-  form {
-    max-width: 600px;
+  .contact-content {
+    max-width: 800px; // Constrain width for better readability on large screens
     margin: 0 auto;
+    padding: $space-md;
+    background: $brand-lighter; // White background for card effect
+    border-radius: 10px;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.08);
+    text-align: center;
+
+    p {
+      margin-bottom: $space-sm;
+      color: $brand-darkest;
+    }
+
+    a {
+      color: $brand-dark;
+      &:hover {
+        color: $brand-darkest;
+      }
+    }
+  }
+
+  .contact-form {
     display: flex;
     flex-direction: column;
+    gap: $space-sm;
+    margin-top: $space-md;
 
     input,
     textarea {
-      margin-bottom: $space-sm;
-      padding: 10px;
-      border: none;
+      padding: $space-sm;
+      border: 1px solid $brand-darkest;
       border-radius: 4px;
       font-family: $font-base;
+      font-size: 1rem;
+      color: $brand-dark;
+      background: $brand-lightest;
+      transition: border-color 0.3s ease;
+
+      &:focus {
+        outline: none;
+        border-color: $brand-lighter;
+      }
+    }
+
+    textarea {
+      resize: vertical;
+      min-height: 100px;
     }
 
     button {
-      padding: 10px 20px;
-      background: $bondi-blue;
-      color: #fff;
+      padding: $space-sm $space-md;
+      background: $brand-dark;
+      color: $brand-lightest;
       border: none;
       border-radius: 4px;
       font-weight: bold;
       cursor: pointer;
-      transition: background 0.3s;
+      transition: background 0.3s ease, color 0.3s ease;
 
       &:hover {
-        background: $mindaro;
-        color: $indigo-dye;
+        background: $brand-lightest;
+        color: $brand-lighter;
       }
+    }
+  }
+
+  @include respond(md) {
+    .contact-content {
+      padding: $space-lg;
+    }
+
+    .contact-form {
+      max-width: 600px; // Further constrain form width on medium screens
+      margin: $space-md auto;
+    }
+  }
+
+  @include respond(lg) {
+    .contact-content {
+      max-width: 700px; // Slightly wider for large screens
     }
   }
 }

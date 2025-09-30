@@ -4,10 +4,10 @@
   align-items: center;
   justify-content: center;
   text-align: center;
-  color: $light-color;
+  color: $brand-lighter;
 
   // Bold gradient splash background
-  background: linear-gradient(135deg, $lapis-lazuli, $bondi-blue);
+  background: linear-gradient(135deg, $brand-lighter, $brand-dark);
 
   h1 {
     font-size: 2.5rem;
@@ -16,6 +16,6 @@
 
   p {
     font-size: 1.25rem;
-    color: $mindaro; // highlight under the name
+    color: $brand-dark; // highlight under the name
   }
 }

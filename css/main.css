@@ -1,3 +1,4 @@
+@charset "UTF-8";
 * {
   box-sizing: border-box;
   margin: 0;
@@ -13,21 +14,88 @@
 body {
   font-family: "Roboto", Arial, sans-serif;
   line-height: 1.6;
-  color: #333;
-  background-color: #fff;
+  color: #1a2a44;
+  background-color: #f8fafc;
 }
 
 html {
   scroll-behavior: smooth;
 }
 
+a {
+  color: #1a2a44;
+  text-decoration: none;
+}
+a:hover {
+  color: #829ab1;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5 {
+  font-weight: bold;
+  color: #1a2a44;
+}
+
+/* ==========================
+   Global Section Headings
+   ========================== */
+section h2 {
+  text-align: center;
+  margin-bottom: 2rem;
+  font-size: 1.8rem;
+}
+
+section h3 {
+  margin: 1rem 0 0.5rem;
+  font-size: 1.25rem;
+}
+
+/* Small devices (≥576px) */
+@media (min-width: 576px) {
+  section h2 {
+    font-size: 2rem;
+  }
+  section h3 {
+    font-size: 1.3rem;
+  }
+}
+/* Medium devices (≥768px) */
+@media (min-width: 768px) {
+  section h2 {
+    font-size: 2.1rem;
+  }
+  section h3 {
+    font-size: 1.35rem;
+  }
+}
+/* Large devices (≥992px) */
+@media (min-width: 992px) {
+  section h2 {
+    font-size: 2.15rem;
+  }
+  section h3 {
+    font-size: 1.4rem;
+  }
+}
+/* Extra-large devices (≥1200px) */
+@media (min-width: 1200px) {
+  section h2 {
+    font-size: 2.2rem;
+  }
+  section h3 {
+    font-size: 1.5rem;
+  }
+}
 .sidebar {
   position: fixed;
   top: 0;
   left: 0;
   height: 100%;
   width: 220px;
-  background: #333;
+  background: #1a2a44;
   color: #fff;
   padding: 20px;
   display: flex;
@@ -39,20 +107,19 @@ html {
   transform: translateX(0);
 }
 .sidebar h1 a {
-  color: #d9ed92;
+  color: #ff6b6b;
   text-decoration: none;
   font-size: 2rem;
   font-weight: bold;
   margin-bottom: 2rem;
 }
 .sidebar a {
-  color: #fff;
-  text-decoration: none;
+  color: #f8fafc;
   margin-bottom: 1rem;
   font-weight: 500;
 }
 .sidebar a:hover {
-  color: #d9ed92;
+  color: #829ab1;
 }
 .sidebar .social {
   margin-top: auto;
@@ -64,7 +131,7 @@ html {
   font-size: 1.2rem;
 }
 .sidebar .social a:hover {
-  color: #168aad;
+  color: #f8fafc;
 }
 @media (min-width: 768px) {
   .sidebar {
@@ -88,7 +155,7 @@ html {
   left: 1rem;
   z-index: 1000;
   font-size: 1.5rem;
-  color: #333;
+  color: #1a2a44;
   cursor: pointer;
 }
 @media (min-width: 768px) {
@@ -103,8 +170,8 @@ html {
   align-items: center;
   justify-content: center;
   text-align: center;
-  color: #f9f9f9;
-  background: linear-gradient(135deg, #1e6091, #168aad);
+  color: #829ab1;
+  background: linear-gradient(135deg, #829ab1, #334e68);
 }
 .hero h1 {
   font-size: 2.5rem;
@@ -112,75 +179,122 @@ html {
 }
 .hero p {
   font-size: 1.25rem;
-  color: #d9ed92;
+  color: #334e68;
 }
 
-.projects {
+/* ==========================
+   Portfolio Section
+   ========================== */
+#portfolio {
+  padding: 3rem 1rem;
+  background-color: #f9f9f9;
+}
+#portfolio .container {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+#portfolio h2 {
+  text-align: center;
+  margin-bottom: 2rem;
+  font-size: 1.8rem;
+}
+#portfolio .projects {
   display: grid;
   grid-template-columns: 1fr;
   gap: 2rem;
 }
+#portfolio .project {
+  background: #fff;
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+  text-align: center;
+}
+#portfolio .project img {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+#portfolio .project h3 {
+  margin: 1rem 0 0.5rem;
+  font-size: 1.25rem;
+}
+#portfolio .project p {
+  font-size: 0.95rem;
+  margin: 0 1rem 1rem;
+}
+#portfolio .project a {
+  display: inline-block;
+  margin-bottom: 1rem;
+  padding: 0.5rem 1rem;
+  background: #0077b6;
+  color: #fff;
+  border-radius: 4px;
+  text-decoration: none;
+  font-size: 0.9rem;
+  transition: background 0.2s ease;
+}
+#portfolio .project a:hover {
+  background: #005f87;
+}
+#portfolio .project:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+}
+
+/* ==========================
+   Responsive Breakpoints
+   ========================== */
+/* Small devices (≥576px) */
 @media (min-width: 576px) {
-  .projects {
+  #portfolio .projects {
     grid-template-columns: repeat(2, 1fr);
   }
 }
+/* Medium devices (≥768px) */
 @media (min-width: 768px) {
-  .projects {
-    grid-template-columns: repeat(3, 1fr);
+  #portfolio h2 {
+    font-size: 2rem;
+  }
+  #portfolio .projects {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 2.5rem;
+  }
+  #portfolio .project h3 {
+    font-size: 1.35rem;
+  }
+  #portfolio .project p {
+    font-size: 1rem;
   }
 }
+/* Large devices (≥992px) */
 @media (min-width: 992px) {
-  .projects {
+  #portfolio .projects {
     grid-template-columns: repeat(3, 1fr);
+  }
+  #portfolio .project h3 {
+    font-size: 1.4rem;
+  }
+}
+/* Extra-large devices (≥1200px) */
+@media (min-width: 1200px) {
+  #portfolio {
+    padding: 4rem 1rem;
+  }
+  #portfolio h2 {
+    font-size: 2.2rem;
+  }
+  #portfolio .projects {
     gap: 3rem;
   }
-}
-@media (min-width: 1200px) {
-  .projects {
-    grid-template-columns: repeat(4, 1fr);
+  #portfolio .project h3 {
+    font-size: 1.5rem;
+  }
+  #portfolio .project p {
+    font-size: 1.05rem;
   }
 }
-
-.project {
-  background: #f9f9f9;
-  border-radius: 8px;
-  overflow: hidden;
-  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
-  text-align: center;
-  transition: transform 0.2s ease, box-shadow 0.2s ease;
-}
-.project:hover {
-  transform: translateY(-5px);
-  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.15);
-}
-.project img {
-  width: 100%;
-  height: 200px;
-  object-fit: cover;
-  display: block;
-}
-.project h3 {
-  font-size: 1.25rem;
-  margin: 1rem 0;
-  color: #1e6091;
-}
-.project a {
-  display: inline-block;
-  margin-bottom: 2rem;
-  padding: 0.5rem 1rem;
-  background: #168aad;
-  color: #fff;
-  text-decoration: none;
-  border-radius: 4px;
-  font-weight: bold;
-  transition: background 0.3s, color 0.3s;
-}
-.project a:hover {
-  background: #d9ed92;
-  color: #333;
-}
-
 .header {
   text-align: center;
   padding: 100px 0;
@@ -194,41 +308,111 @@ html {
 }
 
 .contact {
-  background: #99d98c;
-  padding: 20px;
-  color: #184e77;
-  margin-top: 20px;
-  border-radius: 8px;
+  padding: 2rem 0;
+  background: #f8fafc;
 }
-.contact h2 {
-  margin-top: 0;
-  color: #168aad;
+.contact .contact-content {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 2rem;
+  background: #829ab1;
+  border-radius: 10px;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.08);
+  text-align: center;
 }
-.contact form {
+.contact .contact-content p {
+  margin-bottom: 1rem;
+  color: #1a2a44;
+}
+.contact .contact-content a {
+  color: #334e68;
+}
+.contact .contact-content a:hover {
+  color: #1a2a44;
+}
+.contact .contact-form {
   display: flex;
   flex-direction: column;
+  gap: 1rem;
+  margin-top: 2rem;
 }
-.contact form input,
-.contact form textarea {
-  margin-bottom: 10px;
-  padding: 10px;
-  border: 1px solid #1a759f;
+.contact .contact-form input,
+.contact .contact-form textarea {
+  padding: 1rem;
+  border: 1px solid #1a2a44;
   border-radius: 4px;
+  font-family: "Roboto", Arial, sans-serif;
+  font-size: 1rem;
+  color: #334e68;
+  background: #f8fafc;
+  transition: border-color 0.3s ease;
 }
-.contact form button {
-  padding: 10px 20px;
-  background: #168aad;
-  color: #fff;
+.contact .contact-form input:focus,
+.contact .contact-form textarea:focus {
+  outline: none;
+  border-color: #829ab1;
+}
+.contact .contact-form textarea {
+  resize: vertical;
+  min-height: 100px;
+}
+.contact .contact-form button {
+  padding: 1rem 2rem;
+  background: #334e68;
+  color: #f8fafc;
   border: none;
   border-radius: 4px;
-  cursor: pointer;
   font-weight: bold;
+  cursor: pointer;
+  transition: background 0.3s ease, color 0.3s ease;
 }
-.contact form button:hover {
-  background: #d9ed92;
-  color: #184e77;
+.contact .contact-form button:hover {
+  background: #f8fafc;
+  color: #829ab1;
+}
+@media (min-width: 768px) {
+  .contact .contact-content {
+    padding: 3rem;
+  }
+  .contact .contact-form {
+    max-width: 600px;
+    margin: 2rem auto;
+  }
+}
+@media (min-width: 992px) {
+  .contact .contact-content {
+    max-width: 700px;
+  }
+}
+
+.footer {
+  background: linear-gradient(90deg, #829ab1, #f8fafc);
+  padding: 2rem;
+  text-align: center;
+  font-size: 0.9rem;
+}
+.footer p {
+  color: #1a2a44;
+  text-decoration: none;
+  margin: 0;
+}
+.footer a {
+  color: #1a2a44;
+  text-decoration: none;
+  margin: 0 0.5rem;
+}
+.footer a:hover {
+  color: #334e68;
+}
+.footer a i {
+  font-size: 1.2rem;
+  color: #1a2a44;
+  vertical-align: middle;
+  line-height: 1;
 }
 
 body {
   margin: 0;
 }
+
+/*# sourceMappingURL=main.css.map */

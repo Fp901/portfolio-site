@@ -1,17 +1,29 @@
 .footer {
-  background: linear-gradient(90deg, $indigo-dye, $cerulean);
+  background: linear-gradient(90deg, $brand-lighter, $brand-lightest);
   padding: $space-md;
   text-align: center;
-  color: $light-color;
   font-size: 0.9rem;
 
+  p {
+    color: $brand-darkest; // Dark slate (#1C2526)
+    text-decoration: none;
+    margin: 0;
+  }
+
   a {
-    color: $mindaro; // lime accent
+    color: $brand-darkest; // Dark slate (#1C2526)
     text-decoration: none;
     margin: 0 0.5rem;
 
     &:hover {
-      color: $light-green-2;
+      color: $brand-dark; // Emerald green (#10B981)
+    }
+
+    i {
+      font-size: 1.2rem; // Ensure icons are visible
+      color: $brand-darkest; // Dark slate (#1C2526)
+      vertical-align: middle;
+      line-height: 1;
     }
   }
 }

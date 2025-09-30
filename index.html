@@ -3,185 +3,139 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-
     <title>Francois Pretorius - Portfolio</title>
-    <meta
-      name="description"
-      content="Portfolio of Francois Pretorius, showcasing web development, cybersecurity, and coding projects."
-    />
-    <meta name="author" content="Francois Pretorius" />
-
-    <!-- Favicon -->
-    <link rel="icon" href="favicon.ico" type="image/x-icon" />
-
-    <!-- Google Fonts -->
-    <link
-      href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap"
-      rel="stylesheet"
-    />
-
-    <!-- Font Awesome -->
-    <link
-      rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
-    />
-
-    <!-- Main Styles -->
     <link rel="stylesheet" href="css/main.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
+    />
   </head>
-
   <body>
-    <!-- Burger menu (mobile only) -->
-    <div class="burger">
-      <i class="fas fa-bars"></i>
-    </div>
-
-    <!-- Sidebar / Nav -->
+    <div class="burger">☰</div>
     <nav class="sidebar">
-      <h1>
-        <a href="index.html">FP</a>
-      </h1>
-      <a href="about.html">About Me</a>
+      <h1><a href="#hero">FP</a></h1>
+      <a href="#about">About Me</a>
       <a href="#portfolio">My Portfolio</a>
-      <a href="coding.html">Coding Examples</a>
-      <a href="scs.html">SCS Scheme</a>
+      <a href="#coding">Coding Examples</a>
+      <a href="#scs">SCS Scheme</a>
       <a href="#contact">Contact Me</a>
       <div class="social">
-        <a href="https://www.linkedin.com/in/YOUR-LINK" target="_blank">
-          <i class="fab fa-linkedin-in"></i>
-        </a>
-        <a href="https://github.com/YOUR-GITHUB" target="_blank">
-          <i class="fab fa-github"></i>
-        </a>
+        <a href="https://github.com/francoispretorius" target="_blank"
+          ><i class="fab fa-github"></i
+        ></a>
+        <a href="https://linkedin.com/in/francoispretorius" target="_blank"
+          ><i class="fab fa-linkedin"></i
+        ></a>
       </div>
     </nav>
 
-    <!-- Main content -->
-    <main class="content">
-      <!-- Hero / Banner -->
-      <header class="hero" id="about">
+    <div class="content">
+      <section id="hero" class="hero">
         <div class="container">
-          <h1>My Name is Francois Pretorius</h1>
-          <p>Web Developer & Cybersecurity Graduate</p>
+          <h1>Francois Pretorius</h1>
+          <p>Web Developer</p>
         </div>
-      </header>
+      </section>
 
-      <!-- Portfolio Section -->
-      <section class="portfolio" id="portfolio">
-        <div class="container">
-          <h2>My Portfolio</h2>
-          <div class="projects">
-            <div class="project">
-              <img
-                src="/assets/images/inventory.jpg"
-                alt="Inventory Management System"
-              />
-              <h3>Inventory Management</h3>
-              <p>
-                A Java-based system for adding, updating, and tracking inventory
-                with transaction logging.
-              </p>
-              <a href="" target="_blank">View Project &gt;</a>
-            </div>
-            <div class="project">
-              <img src="/assets/images/python.jpg" alt="Password Manager" />
-              <h3>Password Manager</h3>
-              <p>
-                A secure Python CLI password manager using hashing, encryption,
-                and MVC design.
-              </p>
-              <a
-                href="https://github.com/Fp901/password_manager"
-                target="_blank"
-                >View Project &gt;</a
-              >
-            </div>
-            <div class="project">
-              <img src="/assets/images/site-replica.png" alt="Site Replica" />
-              <h3>Site Replica</h3>
-              <p>
-                Recreation of the Netmatters homepage using HTML and SASS for
-                front-end practice.
-              </p>
-              <a href="https://github.com/Fp901/site-replica" target="_blank"
-                >View Project &gt;</a
-              >
-            </div>
-            <div class="project">
-              <img src="/assets/images/portfolio.jpg" alt="Portfolio Site" />
-              <h3>Portfolio Site</h3>
-              <p>
-                A responsive personal landing page built with HTML and SCSS to
-                showcase projects.
-              </p>
-              <a href="https://github.com/Fp901/portfolio-site" target="_blank"
-                >View Project &gt;</a
-              >
-            </div>
-            <div class="project">
-              <img src="/assets/images/tv-me.png" alt="TV-me Site" />
-              <h3>TV-me Site</h3>
-              <p>
-                A responsive app using the TVmaze API to show schedules, shows,
-                and celebrity data.
-              </p>
-              <a href="https://github.com/Fp901/TV-me-site" target="_blank"
-                >View Project &gt;</a
-              >
-            </div>
-            <div class="project">
-              <img src="/assets/images/java.jpg" alt="DbHub Project" />
-              <h3>DbHub</h3>
-              <p>
-                A Java desktop application with MySQL integration for secure
-                enterprise data management.
-              </p>
-              <a href="https://github.com/Fp901/DbHub" target="_blank"
-                >View Project &gt;</a
-              >
-            </div>
+      <section id="portfolio" class="container">
+        <h2>My Portfolio</h2>
+        <div class="projects">
+          <div class="project">
+            <img
+              src="/assets/images/inventory.jpg"
+              alt="Inventory Management"
+            />
+            <h3>Inventory Management</h3>
+            <p>
+              A Java-based system for adding, updating, and tracking inventory
+              with transaction logging.
+            </p>
+            <a href="#">View Project</a>
+          </div>
+          <div class="project">
+            <img src="/assets/images/password.jpg" alt="Password Manager" />
+            <h3>Password Manager</h3>
+            <p>
+              A secure Python CLI password manager using hashing, encryption,
+              and MVC design.
+            </p>
+            <a href="#">View Project</a>
+          </div>
+          <div class="project">
+            <img src="/assets/images/site-replica.png" alt="Site Replica" />
+            <h3>Site Replica</h3>
+            <p>
+              Recreation of the Netmatters homepage using HTML and SASS for
+              front-end practice.
+            </p>
+            <a href="#">View Project</a>
+          </div>
+          <div class="project">
+            <img src="/assets/images/portfolio.jpg" alt="Portfolio Site" />
+            <h3>Portfolio Site</h3>
+            <p>
+              A responsive personal landing page built with HTML and SCSS to
+              showcase projects.
+            </p>
+            <a href="#">View Project</a>
+          </div>
+          <div class="project">
+            <img src="/assets/images/tv-me.png" alt="TV-me Site" />
+            <h3>TV-me Site</h3>
+            <p>
+              A responsive app using the TVmaze API to show schedules, shows,
+              and celebrity data.
+            </p>
+            <a href="#">View Project</a>
+          </div>
+          <div class="project">
+            <img src="/assets/images/java.jpg" alt="DbHub" />
+            <h3>DbHub</h3>
+            <p>
+              A Java desktop application with MySQL integration for secure
+              enterprise data management.
+            </p>
+            <a href="#">View Project</a>
           </div>
         </div>
       </section>
 
-      <!-- Contact Section -->
-      <section class="contact" id="contact">
+      <section id="contact" class="contact">
         <div class="container">
           <h2>Get In Touch</h2>
-          <p>
-            I am a recent computing graduate specialising in cybersecurity, data
-            analytics, and web development. Passionate about solving real-world
-            challenges, I bring technical expertise and entrepreneurial
-            experience.
-          </p>
-          <p><strong>Email:</strong> francois.pretorius@example.com</p>
-          <p><strong>Phone:</strong> +44 0000 000 000</p>
-
-          <form>
-            <input type="text" placeholder="First Name*" required />
-            <input type="text" placeholder="Last Name*" required />
-            <input type="email" placeholder="Email Address*" required />
-            <input type="text" placeholder="Subject" />
-            <textarea placeholder="Message"></textarea>
-            <button type="submit">Submit</button>
-          </form>
+          <div class="contact-content">
+            <p>Feel free to reach out for collaborations or inquiries!</p>
+            <p>
+              Email:
+              <a href="mailto:francois.pretorius@example.com"
+                >francois.pretorius@gmail.com</a
+              >
+            </p>
+            <p>Phone: <a href="tel:+447727977855">+44 7727977855</a></p>
+            <form class="contact-form">
+              <input type="text" placeholder="Your Name" required />
+              <input type="email" placeholder="Your Email" required />
+              <textarea placeholder="Your Message" rows="5" required></textarea>
+              <button type="submit">Submit</button>
+            </form>
+          </div>
         </div>
       </section>
 
-      <!-- Back to Top -->
-      <div class="back-to-top">
-        <a href="#">Back To Top</a>
-      </div>
-      <!-- Footer -->
-      <footer class="footer">
-        <p>
-          © 2025 Francois Pretorius |
-          <a href="https://github.com/YOUR-GITHUB" target="_blank">GitHub</a> ·
-          <a href="https://www.linkedin.com/in/YOUR-LINK" target="_blank"
-            >LinkedIn</a
-          >
-        </p>
-      </footer>
-    </main>
+      <a href="#hero" class="back-to-top">Back To Top</a>
+    </div>
+
+    <footer class="footer">
+      <p>
+        © 2025 Francois Pretorius |
+        <a href="https://github.com/francoispretorius" target="_blank"
+          ><i class="fab fa-github"></i
+        ></a>
+        ·
+        <a href="https://linkedin.com/in/francoispretorius" target="_blank"
+          ><i class="fab fa-linkedin"></i
+        ></a>
+      </p>
+    </footer>
   </body>
 </html>
