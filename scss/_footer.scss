@@ -1,51 +1,47 @@
 .footer {
-  background: linear-gradient(
-    135deg,
-    $brand-lightest 0%,
-    $brand-lighter 100%
-  ); // Subtle gradient using light palette for depth
-  padding: $space-sm $space-sm; // Reduced from $space-md for less height
-  text-align: center;
-  font-size: 0.95rem; // Slightly smaller base for compactness
-  border-top: 1px solid rgba(130, 154, 177, 0.3); // Tinted with $brand-lighter for subtle separation
-  box-shadow: 0 -4px 12px rgba(26, 42, 68, 0.05); // Inset shadow using $brand-darkest tint for elevation
+  background: linear-gradient(135deg, $brand-lightest 0%, $brand-lighter 100%);
+  padding: $space-sm $space-sm;
+  text-align: left; // ✅ left align always
+  font-size: 0.95rem;
+  border-top: 1px solid rgba(130, 154, 177, 0.3);
+  box-shadow: 0 -4px 12px rgba(26, 42, 68, 0.05);
 
   p {
     color: $brand-darkest;
     text-decoration: none;
     margin: 0 0 $space-xs 0;
-    font-size: 0.9rem; // Smaller for tighter fit
-    font-weight: 500; // Slight boldness for impact
+    font-size: 0.9rem;
+    font-weight: 500;
   }
 
   a {
     color: $brand-dark;
     text-decoration: none;
     margin: 0 0.5rem;
-    transition: all 0.3s ease; // Smooth transitions
+    transition: all 0.3s ease;
 
     &:hover {
-      color: $brand-pinkish; // Pink accent for vibrant hover
-      transform: scale(1.1); // Subtle scale on hover for interactivity
+      color: $brand-pinkish;
+      transform: scale(1.1);
     }
 
     i {
-      font-size: 1.4rem; // Reduced from 1.8rem for less vertical space
+      font-size: 1.4rem;
       color: $brand-dark;
       vertical-align: middle;
       line-height: 1;
       margin: 0 0.25rem;
       transition: all 0.3s ease;
-      text-shadow: 0 1px 2px rgba(26, 42, 68, 0.2); // Subtle shadow for depth
+      text-shadow: 0 1px 2px rgba(26, 42, 68, 0.2);
 
       &:hover {
         color: $brand-pinkish;
-        transform: scale(1.2) rotate(5deg); // Fun scale + rotate for engagement
+        transform: scale(1.2) rotate(5deg);
       }
     }
   }
 
-  /* Responsive scaling (adjusted to scale less aggressively) */
+  /* Responsive scaling */
   @media (min-width: $break-sm) {
     font-size: 1rem;
     padding: $space-sm $space-md;
@@ -63,7 +59,7 @@
 
   @media (min-width: $break-lg) {
     font-size: 1.1rem;
-    padding: $space-md $space-md; // Slight increase but still compact
+    padding: $space-md $space-md;
     i {
       font-size: 1.7rem;
     }

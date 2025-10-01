@@ -60,10 +60,11 @@
   }
 
   p {
-    font-size: 1.25rem;
+    font-size: 1.5rem;
     color: $brand-pinkish;
     font-style: italic;
-    max-width: 600px;
+    font-weight: 600;
+    max-width: 700px;
     margin: 0 auto $space-lg auto;
     animation: fadeInUp 1s ease-out 0.4s both;
 
@@ -74,7 +75,7 @@
   }
 
   .cta-btn {
-    background: $brand-pinkish;
+    background: $brand-darkest;
     color: $brand-lightest;
     padding: 0.75rem 1.5rem;
     border-radius: 30px;
@@ -87,7 +88,7 @@
     animation: pulse 2s infinite;
 
     &:hover {
-      background: $brand-dark;
+      background: $brand-pinkish;
       box-shadow: 0 6px 16px rgba(16, 185, 129, 0.4);
       transform: translateY(-2px);
     }
