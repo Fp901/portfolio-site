@@ -1,0 +1,40 @@
+// _coding.scss
+
+#coding {
+  padding: $space-lg $space-sm;
+  background: $brand-lightest; // Consistent light bg
+  text-align: center; // Center content
+
+  h2 {
+    text-align: center;
+    margin-bottom: $space-md;
+    font-size: 2rem;
+
+    @media (min-width: $break-md) {
+      font-size: 2.5rem;
+    }
+    @media (min-width: $break-xl) {
+      font-size: 3rem;
+    }
+  }
+
+  p {
+    color: $brand-darkest;
+    font-size: 1.5rem; // Larger for emphasis on "Coming Soon"
+    font-style: italic; // Subtle style
+    margin: $space-lg auto; // Space around
+    max-width: 600px;
+
+    @media (min-width: $break-md) {
+      font-size: 1.8rem;
+    }
+    @media (min-width: $break-xl) {
+      font-size: 2rem;
+    }
+  }
+
+  /* Responsive padding */
+  @media (min-width: $break-sm) {
+    padding: $space-lg $space-md;
+  }
+}

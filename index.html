@@ -13,13 +13,13 @@
   <body>
     <div class="burger">☰</div>
     <nav class="sidebar">
-      <h1><a href="#hero">FP</a></h1>
+      <h1><a href="index.html">FP</a></h1>
 
       <div class="nav-links">
-        <a href="#about">About Me</a>
+        <a href="about.html">About Me</a>
         <a href="#portfolio">My Portfolio</a>
-        <a href="#coding">Coding Examples</a>
-        <a href="#scs">SCS Scheme</a>
+        <a href="coding.html">Coding Examples</a>
+        <a href="scs.html">SCS Scheme</a>
         <a href="#contact">Contact Me</a>
       </div>
 
@@ -144,9 +144,9 @@
         </div>
       </section>
 
-      <a href="#hero" class="back-to-top" aria-label="Back to top">
-        <i class="fas fa-arrow-up"></i> Back To Top
-      </a>
+      <a href="#hero" class="back-to-top"
+        ><i class="fas fa-arrow-up"></i> Back To Top</a
+      >
     </div>
 
     <footer class="footer">
@@ -162,9 +162,21 @@
       </p>
     </footer>
     <script>
+      const burger = document.querySelector(".burger");
+      const sidebar = document.querySelector(".sidebar");
+      burger.addEventListener("click", () => {
+        sidebar.classList.toggle("open");
+      });
+      const navLinks = document.querySelectorAll(".nav-links a");
+      navLinks.forEach((link) => {
+        link.addEventListener("click", () => {
+          if (window.innerWidth < 992) {
+            sidebar.classList.remove("open");
+          }
+        });
+      });
       window.addEventListener("scroll", () => {
         if (window.scrollY > 100) {
-          // Show after scrolling 100px
           document.body.classList.add("scrolled");
         } else {
           document.body.classList.remove("scrolled");

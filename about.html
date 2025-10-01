@@ -3,66 +3,116 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>About Me - Francois Pretorius</title>
+    <title>Francois Pretorius - About Me</title>
     <link rel="stylesheet" href="css/main.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
+    />
   </head>
   <body>
-    <!-- Sidebar -->
+    <div class="burger">☰</div>
     <nav class="sidebar">
       <h1><a href="index.html">FP</a></h1>
-      <a href="about.html" class="active">About Me</a>
-      <a href="index.html#portfolio">My Portfolio</a>
-      <a href="coding.html">Coding Examples</a>
-      <a href="scs.html">SCS Scheme</a>
-      <a href="index.html#contact">Contact Me</a>
+
+      <div class="nav-links">
+        <a href="about.html">About Me</a>
+        <a href="index.html#portfolio">My Portfolio</a>
+        <a href="coding.html">Coding Examples</a>
+        <a href="scs.html">SCS Scheme</a>
+        <a href="index.html#contact">Contact Me</a>
+      </div>
+
       <div class="social">
-        <a href="https://www.linkedin.com/in/YOUR-LINK" target="_blank"
-          ><i class="fab fa-linkedin-in"></i
-        ></a>
-        <a href="https://github.com/YOUR-GITHUB" target="_blank"
-          ><i class="fab fa-github"></i
-        ></a>
+        <a href="https://github.com/francoispretorius" target="_blank">
+          <i class="fab fa-github"></i>
+        </a>
+        <a href="https://linkedin.com/in/francoispretorius" target="_blank">
+          <i class="fab fa-linkedin"></i>
+        </a>
       </div>
     </nav>
 
-    <!-- Content -->
-    <main class="content">
-      <section class="about">
+    <div class="content">
+      <section id="about">
         <div class="container">
-          <h1>About Me</h1>
-          <p>
-            I am Francois Pretorius, a recent computing graduate specialising in
-            cybersecurity, data analytics, and web development. My passion lies
-            in solving real-world challenges through secure and innovative
-            solutions.
-          </p>
-          <h2>Skills</h2>
-          <ul>
-            <li>Proficient in Java, Python, HTML, CSS, JavaScript</li>
-            <li>Cybersecurity & Network Security (wired & wireless)</li>
-            <li>Database management and SQL</li>
-            <li>Machine Learning (PyTorch, TensorFlow, Scikit-Learn)</li>
-            <li>Leadership and Project Management</li>
-          </ul>
+          <h2>About Me</h2>
+          <div class="about-card">
+            <p>
+              I am a recent computing graduate specialising in cybersecurity,
+              data analytics, and web development. My passion lies in solving
+              real-world challenges through secure and innovative solutions.
+            </p>
 
-          <h2>Education & Qualifications</h2>
-          <p>
-            <strong>University of Suffolk</strong> – BSc (Hons) Computer Science
-            (Cyber Security)
-          </p>
-          <p>
-            <strong>Ballymaloe Business of Food</strong> – Specialist Business
-            Training for Hospitality
-          </p>
-          <p><strong>RYA Yacht Master Offshore</strong></p>
+            <h3>Skills</h3>
+            <ul>
+              <li>Proficient in Java, Python, HTML, CSS, JavaScript</li>
+              <li>Cybersecurity & Network Security (wired & wireless)</li>
+              <li>Database management and SQL</li>
+              <li>Machine Learning (PyTorch, TensorFlow, Scikit-Learn)</li>
+              <li>Leadership and Project Management</li>
+            </ul>
 
-          <h2>Interests</h2>
-          <p>
-            Technology & Innovation, Entrepreneurship, Sports, Fitness, Golf,
-            Tennis, Mountaineering, Sailing.
-          </p>
+            <h3>Education & Qualifications</h3>
+            <ul>
+              <li>
+                University of Suffolk – BSc (Hons) Computer Science (Cyber
+                Security)
+              </li>
+              <li>
+                Ballymaloe Business of Food – Specialist Business Training for
+                Hospitality
+              </li>
+              <li>RYA Yacht Master Offshore</li>
+            </ul>
+
+            <h3>Interests</h3>
+            <p>
+              Technology & Innovation, Entrepreneurship, Sports, Fitness, Golf,
+              Tennis, Mountaineering, Sailing.
+            </p>
+          </div>
         </div>
       </section>
-    </main>
+
+      <a href="#about" class="back-to-top"
+        ><i class="fas fa-arrow-up"></i> Back To Top</a
+      >
+    </div>
+
+    <footer class="footer">
+      <p>
+        © 2025 Francois Pretorius |
+        <a href="https://github.com/francoispretorius" target="_blank"
+          ><i class="fab fa-github"></i
+        ></a>
+        ·
+        <a href="https://linkedin.com/in/francoispretorius" target="_blank"
+          ><i class="fab fa-linkedin"></i
+        ></a>
+      </p>
+    </footer>
+    <script>
+      const burger = document.querySelector(".burger");
+      const sidebar = document.querySelector(".sidebar");
+      burger.addEventListener("click", () => {
+        sidebar.classList.toggle("open");
+      });
+      const navLinks = document.querySelectorAll(".nav-links a");
+      navLinks.forEach((link) => {
+        link.addEventListener("click", () => {
+          if (window.innerWidth < 992) {
+            sidebar.classList.remove("open");
+          }
+        });
+      });
+      window.addEventListener("scroll", () => {
+        if (window.scrollY > 100) {
+          document.body.classList.add("scrolled");
+        } else {
+          document.body.classList.remove("scrolled");
+        }
+      });
+    </script>
   </body>
 </html>
