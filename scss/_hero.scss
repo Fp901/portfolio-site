@@ -2,17 +2,18 @@
   position: relative;
   height: 100vh;
   display: flex;
+  flex-direction: column; // stack content + scroll prompt
   align-items: center;
-  justify-content: center;
+  justify-content: space-between; // push scroll prompt to bottom
   text-align: center;
   color: $brand-lightest;
-  overflow: hidden; // Prevent any overflow issues, especially on small screens
+  overflow: hidden;
 
-  background-image: url("/portfolio-site/assets/images/maxim-berg-DqZltTH2-9U-unsplash.jpg"); // replace with your chosen image
+  background-image: url("/portfolio-site/assets/images/maxim-berg-DqZltTH2-9U-unsplash.jpg");
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
-  background-attachment: scroll; // Changed from fixed to prevent issues on small screens
+  background-attachment: scroll;
 
   &::before {
     content: "";
@@ -24,19 +25,22 @@
     background: linear-gradient(
       to bottom,
       rgba(26, 42, 68, 0.7),
-      // Darker at top for focus on text
-      rgba(26, 42, 68, 0.4) // Lighter at bottom to reveal more image
-    ); // Gradient overlay for depth and better visual hierarchy
+      rgba(26, 42, 68, 0.4)
+    );
     z-index: 0;
   }
 
-  .container {
-    max-width: 1200px;
-    padding: 0 1rem; // Reduced from 2rem to prevent overflow on small screens
+  .hero-content {
+    flex: 1; // fill available vertical space
+    display: flex;
+    flex-direction: column;
+    justify-content: center; // center text vertically
+    align-items: center;
+    z-index: 1;
+    padding: 0 1rem;
 
-    // Extra reduction for very small screens
     @media (max-width: 320px) {
-      padding: 0 0.5rem; // Minimal padding down to 280px
+      padding: 0 0.5rem;
     }
   }
 
@@ -44,12 +48,11 @@
     font-size: 2.5rem;
     margin-bottom: $space-sm;
     color: $brand-lightest;
-    font-weight: bold; // Emphasize boldness
-    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5); // Shadow for readability over image
-    letter-spacing: 1px; // Slight spacing for modern feel
-    animation: fadeInUp 1s ease-out 0.2s both; // Staggered animation
+    font-weight: bold;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+    letter-spacing: 1px;
+    animation: fadeInUp 1s ease-out 0.2s both;
 
-    // Scale down on very small screens to fit
     @media (max-width: 320px) {
       font-size: 2rem;
       letter-spacing: 0.5px;
@@ -59,15 +62,14 @@
   p {
     font-size: 1.25rem;
     color: $brand-pinkish;
-    font-style: italic; // Subtle italic for emphasis
-    max-width: 600px; // Prevent overly wide on large screens
-    margin: 0 auto $space-lg auto; // Increased margin to make more room below text
-    animation: fadeInUp 1s ease-out 0.4s both; // Further stagger
+    font-style: italic;
+    max-width: 600px;
+    margin: 0 auto $space-lg auto;
+    animation: fadeInUp 1s ease-out 0.4s both;
 
-    // Scale down on small screens
     @media (max-width: 320px) {
       font-size: 1.1rem;
-      max-width: 90%; // Use percentage for tiny screens
+      max-width: 90%;
     }
   }
 
@@ -79,47 +81,43 @@
     font-weight: bold;
     display: inline-block;
     margin-top: 1.5rem;
-    transition: all 0.3s ease; // Smooth all transitions
-    box-shadow: 0 4px 12px rgba(255, 107, 107, 0.3); // Pinkish glow shadow
-    transform: translateY(0); // Base for hover lift
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 12px rgba(255, 107, 107, 0.3);
+    transform: translateY(0);
+    animation: pulse 2s infinite;
 
     &:hover {
       background: $brand-dark;
-      box-shadow: 0 6px 16px rgba(16, 185, 129, 0.4); // Shift to green tint on hover
-      transform: translateY(-2px); // Subtle lift
+      box-shadow: 0 6px 16px rgba(16, 185, 129, 0.4);
+      transform: translateY(-2px);
     }
 
-    // Pulse animation for attention (optional, subtle)
-    animation: pulse 2s infinite;
-
-    // Adjust on small screens
     @media (max-width: 320px) {
       padding: 0.6rem 1.2rem;
       font-size: 0.95rem;
     }
   }
-
   .scroll-prompt {
-    margin-top: 12rem; // Increased from $space-md to push it lower
+    margin-bottom: 2rem;
     display: flex;
     flex-direction: column;
     align-items: center;
     color: $brand-lightest;
     font-size: 1rem;
-    text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.7); // Match text shadow
-    animation: fadeInUp 1s ease-out 0.6s both; // Delayed entrance
+    text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.7);
+    animation: fadeInUp 1s ease-out 0.6s both;
 
     span {
-      margin-bottom: $space-xs; // Space between text and arrow
+      margin-bottom: $space-xs;
     }
 
     i {
-      font-size: 1.5rem; // Size of the arrow
-      animation: bounce 1.5s infinite; // Subtle bounce animation
+      font-size: 1.5rem;
+      animation: bounce 1.5s infinite;
     }
   }
 
-  // Keyframe animations for entrance
+  // Animations
   @keyframes fadeInUp {
     from {
       opacity: 0;
@@ -147,10 +145,11 @@
       transform: translateY(0);
     }
     50% {
-      transform: translateY(-0.5rem); // Slight upward bounce
+      transform: translateY(-0.5rem);
     }
   }
 
+  // Responsive scaling
   @media (min-width: 576px) {
     h1 {
       font-size: 3rem;
@@ -207,22 +206,6 @@
       font-size: 1.4rem;
       i {
         font-size: 2.5rem;
-      }
-    }
-  }
-
-  // Mobile tweaks for better impact and no gaps
-  @media (max-width: 320px) {
-    .cta-btn {
-      padding: 0.6rem 1.2rem; // Smaller on tiny screens
-    }
-    .container {
-      padding: 0 0.5rem; // Ensure no overflow
-    }
-    .scroll-prompt {
-      font-size: 0.8rem;
-      i {
-        font-size: 1rem;
       }
     }
   }

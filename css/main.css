@@ -446,8 +446,9 @@ footer {
   position: relative;
   height: 100vh;
   display: flex;
+  flex-direction: column;
   align-items: center;
-  justify-content: center;
+  justify-content: space-between;
   text-align: center;
   color: #f8fafc;
   overflow: hidden;
@@ -458,7 +459,7 @@ footer {
   background-attachment: scroll;
 }
 
-/* line 17, ../../../Desktop/personal-page/portfolio-site/scss/_hero.scss */
+/* line 18, ../../../Desktop/personal-page/portfolio-site/scss/_hero.scss */
 .hero::before {
   content: "";
   position: absolute;
@@ -471,19 +472,24 @@ footer {
 }
 
 /* line 33, ../../../Desktop/personal-page/portfolio-site/scss/_hero.scss */
-.hero .container {
-  max-width: 1200px;
+.hero .hero-content {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  z-index: 1;
   padding: 0 1rem;
 }
 
 @media (max-width: 320px) {
   /* line 33, ../../../Desktop/personal-page/portfolio-site/scss/_hero.scss */
-  .hero .container {
+  .hero .hero-content {
     padding: 0 0.5rem;
   }
 }
 
-/* line 43, ../../../Desktop/personal-page/portfolio-site/scss/_hero.scss */
+/* line 47, ../../../Desktop/personal-page/portfolio-site/scss/_hero.scss */
 .hero h1 {
   font-size: 2.5rem;
   margin-bottom: 1rem;
@@ -495,14 +501,14 @@ footer {
 }
 
 @media (max-width: 320px) {
-  /* line 43, ../../../Desktop/personal-page/portfolio-site/scss/_hero.scss */
+  /* line 47, ../../../Desktop/personal-page/portfolio-site/scss/_hero.scss */
   .hero h1 {
     font-size: 2rem;
     letter-spacing: 0.5px;
   }
 }
 
-/* line 59, ../../../Desktop/personal-page/portfolio-site/scss/_hero.scss */
+/* line 62, ../../../Desktop/personal-page/portfolio-site/scss/_hero.scss */
 .hero p {
   font-size: 1.25rem;
   color: #ff6b6b;
@@ -513,14 +519,14 @@ footer {
 }
 
 @media (max-width: 320px) {
-  /* line 59, ../../../Desktop/personal-page/portfolio-site/scss/_hero.scss */
+  /* line 62, ../../../Desktop/personal-page/portfolio-site/scss/_hero.scss */
   .hero p {
     font-size: 1.1rem;
     max-width: 90%;
   }
 }
 
-/* line 74, ../../../Desktop/personal-page/portfolio-site/scss/_hero.scss */
+/* line 76, ../../../Desktop/personal-page/portfolio-site/scss/_hero.scss */
 .hero .cta-btn {
   background: #ff6b6b;
   color: #f8fafc;
@@ -535,7 +541,7 @@ footer {
   animation: pulse 2s infinite;
 }
 
-/* line 86, ../../../Desktop/personal-page/portfolio-site/scss/_hero.scss */
+/* line 89, ../../../Desktop/personal-page/portfolio-site/scss/_hero.scss */
 .hero .cta-btn:hover {
   background: #334e68;
   box-shadow: 0 6px 16px rgba(16, 185, 129, 0.4);
@@ -543,16 +549,16 @@ footer {
 }
 
 @media (max-width: 320px) {
-  /* line 74, ../../../Desktop/personal-page/portfolio-site/scss/_hero.scss */
+  /* line 76, ../../../Desktop/personal-page/portfolio-site/scss/_hero.scss */
   .hero .cta-btn {
     padding: 0.6rem 1.2rem;
     font-size: 0.95rem;
   }
 }
 
-/* line 102, ../../../Desktop/personal-page/portfolio-site/scss/_hero.scss */
+/* line 100, ../../../Desktop/personal-page/portfolio-site/scss/_hero.scss */
 .hero .scroll-prompt {
-  margin-top: 12rem;
+  margin-bottom: 2rem;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -562,12 +568,12 @@ footer {
   animation: fadeInUp 1s ease-out 0.6s both;
 }
 
-/* line 112, ../../../Desktop/personal-page/portfolio-site/scss/_hero.scss */
+/* line 110, ../../../Desktop/personal-page/portfolio-site/scss/_hero.scss */
 .hero .scroll-prompt span {
   margin-bottom: 0.5rem;
 }
 
-/* line 116, ../../../Desktop/personal-page/portfolio-site/scss/_hero.scss */
+/* line 114, ../../../Desktop/personal-page/portfolio-site/scss/_hero.scss */
 .hero .scroll-prompt i {
   font-size: 1.5rem;
   animation: bounce 1.5s infinite;
@@ -605,97 +611,78 @@ footer {
 }
 
 @media (min-width: 576px) {
-  /* line 155, ../../../Desktop/personal-page/portfolio-site/scss/_hero.scss */
+  /* line 154, ../../../Desktop/personal-page/portfolio-site/scss/_hero.scss */
   .hero h1 {
     font-size: 3rem;
   }
-  /* line 158, ../../../Desktop/personal-page/portfolio-site/scss/_hero.scss */
+  /* line 157, ../../../Desktop/personal-page/portfolio-site/scss/_hero.scss */
   .hero p {
     font-size: 1.3rem;
   }
-  /* line 161, ../../../Desktop/personal-page/portfolio-site/scss/_hero.scss */
+  /* line 160, ../../../Desktop/personal-page/portfolio-site/scss/_hero.scss */
   .hero .scroll-prompt {
     font-size: 1.1rem;
   }
-  /* line 163, ../../../Desktop/personal-page/portfolio-site/scss/_hero.scss */
+  /* line 162, ../../../Desktop/personal-page/portfolio-site/scss/_hero.scss */
   .hero .scroll-prompt i {
     font-size: 1.8rem;
   }
 }
 
 @media (min-width: 768px) {
-  /* line 170, ../../../Desktop/personal-page/portfolio-site/scss/_hero.scss */
+  /* line 169, ../../../Desktop/personal-page/portfolio-site/scss/_hero.scss */
   .hero h1 {
     font-size: 3.5rem;
   }
-  /* line 173, ../../../Desktop/personal-page/portfolio-site/scss/_hero.scss */
+  /* line 172, ../../../Desktop/personal-page/portfolio-site/scss/_hero.scss */
   .hero p {
     font-size: 1.35rem;
   }
-  /* line 176, ../../../Desktop/personal-page/portfolio-site/scss/_hero.scss */
+  /* line 175, ../../../Desktop/personal-page/portfolio-site/scss/_hero.scss */
   .hero .scroll-prompt {
     font-size: 1.2rem;
   }
-  /* line 178, ../../../Desktop/personal-page/portfolio-site/scss/_hero.scss */
+  /* line 177, ../../../Desktop/personal-page/portfolio-site/scss/_hero.scss */
   .hero .scroll-prompt i {
     font-size: 2rem;
   }
 }
 
 @media (min-width: 992px) {
-  /* line 185, ../../../Desktop/personal-page/portfolio-site/scss/_hero.scss */
+  /* line 184, ../../../Desktop/personal-page/portfolio-site/scss/_hero.scss */
   .hero h1 {
     font-size: 4rem;
   }
-  /* line 188, ../../../Desktop/personal-page/portfolio-site/scss/_hero.scss */
+  /* line 187, ../../../Desktop/personal-page/portfolio-site/scss/_hero.scss */
   .hero p {
     font-size: 1.4rem;
   }
-  /* line 191, ../../../Desktop/personal-page/portfolio-site/scss/_hero.scss */
+  /* line 190, ../../../Desktop/personal-page/portfolio-site/scss/_hero.scss */
   .hero .scroll-prompt {
     font-size: 1.3rem;
   }
-  /* line 193, ../../../Desktop/personal-page/portfolio-site/scss/_hero.scss */
+  /* line 192, ../../../Desktop/personal-page/portfolio-site/scss/_hero.scss */
   .hero .scroll-prompt i {
     font-size: 2.2rem;
   }
 }
 
 @media (min-width: 1200px) {
-  /* line 200, ../../../Desktop/personal-page/portfolio-site/scss/_hero.scss */
+  /* line 199, ../../../Desktop/personal-page/portfolio-site/scss/_hero.scss */
   .hero h1 {
     font-size: 4.5rem;
   }
-  /* line 203, ../../../Desktop/personal-page/portfolio-site/scss/_hero.scss */
+  /* line 202, ../../../Desktop/personal-page/portfolio-site/scss/_hero.scss */
   .hero p {
     font-size: 1.5rem;
   }
-  /* line 206, ../../../Desktop/personal-page/portfolio-site/scss/_hero.scss */
+  /* line 205, ../../../Desktop/personal-page/portfolio-site/scss/_hero.scss */
   .hero .scroll-prompt {
     font-size: 1.4rem;
   }
-  /* line 208, ../../../Desktop/personal-page/portfolio-site/scss/_hero.scss */
+  /* line 207, ../../../Desktop/personal-page/portfolio-site/scss/_hero.scss */
   .hero .scroll-prompt i {
     font-size: 2.5rem;
-  }
-}
-
-@media (max-width: 320px) {
-  /* line 216, ../../../Desktop/personal-page/portfolio-site/scss/_hero.scss */
-  .hero .cta-btn {
-    padding: 0.6rem 1.2rem;
-  }
-  /* line 219, ../../../Desktop/personal-page/portfolio-site/scss/_hero.scss */
-  .hero .container {
-    padding: 0 0.5rem;
-  }
-  /* line 222, ../../../Desktop/personal-page/portfolio-site/scss/_hero.scss */
-  .hero .scroll-prompt {
-    font-size: 0.8rem;
-  }
-  /* line 224, ../../../Desktop/personal-page/portfolio-site/scss/_hero.scss */
-  .hero .scroll-prompt i {
-    font-size: 1rem;
   }
 }
 
