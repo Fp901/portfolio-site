@@ -8,7 +8,7 @@
   color: $brand-lightest;
   overflow: hidden; // Prevent any overflow issues, especially on small screens
 
-  background-image: url("../assets/images/maxim-berg-DqZltTH2-9U-unsplash.jpg"); // replace with your chosen image
+  background-image: url("/portfolio-site/assets/images/maxim-berg-DqZltTH2-9U-unsplash.jpg"); // replace with your chosen image
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
@@ -61,7 +61,7 @@
     color: $brand-pinkish;
     font-style: italic; // Subtle italic for emphasis
     max-width: 600px; // Prevent overly wide on large screens
-    margin: 0 auto $space-sm auto;
+    margin: 0 auto $space-lg auto; // Increased margin to make more room below text
     animation: fadeInUp 1s ease-out 0.4s both; // Further stagger
 
     // Scale down on small screens
@@ -99,6 +99,26 @@
     }
   }
 
+  .scroll-prompt {
+    margin-top: 12rem; // Increased from $space-md to push it lower
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    color: $brand-lightest;
+    font-size: 1rem;
+    text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.7); // Match text shadow
+    animation: fadeInUp 1s ease-out 0.6s both; // Delayed entrance
+
+    span {
+      margin-bottom: $space-xs; // Space between text and arrow
+    }
+
+    i {
+      font-size: 1.5rem; // Size of the arrow
+      animation: bounce 1.5s infinite; // Subtle bounce animation
+    }
+  }
+
   // Keyframe animations for entrance
   @keyframes fadeInUp {
     from {
@@ -121,12 +141,28 @@
     }
   }
 
+  @keyframes bounce {
+    0%,
+    100% {
+      transform: translateY(0);
+    }
+    50% {
+      transform: translateY(-0.5rem); // Slight upward bounce
+    }
+  }
+
   @media (min-width: 576px) {
     h1 {
       font-size: 3rem;
     }
     p {
       font-size: 1.3rem;
+    }
+    .scroll-prompt {
+      font-size: 1.1rem;
+      i {
+        font-size: 1.8rem;
+      }
     }
   }
 
@@ -137,6 +173,12 @@
     p {
       font-size: 1.35rem;
     }
+    .scroll-prompt {
+      font-size: 1.2rem;
+      i {
+        font-size: 2rem;
+      }
+    }
   }
 
   @media (min-width: 992px) {
@@ -145,6 +187,12 @@
     }
     p {
       font-size: 1.4rem;
+    }
+    .scroll-prompt {
+      font-size: 1.3rem;
+      i {
+        font-size: 2.2rem;
+      }
     }
   }
 
@@ -155,6 +203,12 @@
     p {
       font-size: 1.5rem;
     }
+    .scroll-prompt {
+      font-size: 1.4rem;
+      i {
+        font-size: 2.5rem;
+      }
+    }
   }
 
   // Mobile tweaks for better impact and no gaps
@@ -164,6 +218,12 @@
     }
     .container {
       padding: 0 0.5rem; // Ensure no overflow
+    }
+    .scroll-prompt {
+      font-size: 0.8rem;
+      i {
+        font-size: 1rem;
+      }
     }
   }
 }
