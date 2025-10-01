@@ -11,6 +11,11 @@
   margin: 0 auto;
   padding: 0 1.5rem;
 
+  // Fix for very small screens: Reduce padding to prevent overflow
+  @media (max-width: 320px) {
+    padding: 0 0.5rem; // Minimal padding down to 280px
+  }
+
   @media (min-width: 576px) {
     max-width: 540px;
   }
@@ -31,6 +36,7 @@
 html {
   height: 100%; // Ensure full height for sticky footer
   scroll-behavior: smooth;
+  overflow-x: hidden; // Prevent horizontal scroll globally
 }
 
 body {
@@ -42,6 +48,7 @@ body {
   color: $brand-darkest;
   background-color: $brand-lightest;
   font-size: 1rem;
+  overflow-x: hidden; // No horizontal overflow on body
 }
 
 a {

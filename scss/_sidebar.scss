@@ -11,6 +11,7 @@
   flex-direction: column;
   transform: translateX(-100%); // hidden on XS
   transition: transform 0.3s ease;
+  z-index: 1001; // Higher than burger to overlay it when open
 
   &.open {
     transform: translateX(0);
@@ -38,6 +39,7 @@
     text-decoration: none;
     font-weight: 500;
     line-height: 1.2;
+    padding: $space-sm; // Increase touch area
 
     &:hover {
       color: $brand-pinkish;
@@ -108,12 +110,64 @@
   position: fixed;
   top: 1rem;
   left: 1rem;
-  z-index: 1000;
-  font-size: 1.5rem;
-  color: $brand-darkest;
+  z-index: 1000; // Below sidebar when open
   cursor: pointer;
+  width: 3rem; // Increased base width for better visibility
+  height: 2.5rem; // Increased base height for spacing
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around; // Increased spacing between lines
+  padding: $space-xs; // Small padding for touch target
+  transition: opacity 0.3s ease; // Smooth hide/show
 
-  // hide burger on large+ screens
+  // Three bold lines
+  & > span {
+    background: $brand-darkest; // Match brand color
+    height: 5px; // Thicker lines for boldness
+    width: 100%;
+    border-radius: 2px; // Slight rounding
+    transition: all 0.3s ease;
+  }
+
+  // Hide burger when sidebar is open
+  .sidebar.open ~ & {
+    opacity: 0; // Fade out when sidebar is open
+    pointer-events: none; // Disable clicks
+  }
+
+  // Animation for open state
+  &.open {
+    & > span:nth-child(1) {
+      transform: translateY(0.8rem) rotate(45deg);
+    }
+    & > span:nth-child(2) {
+      opacity: 0; // Middle line disappears
+    }
+    & > span:nth-child(3) {
+      transform: translateY(-0.8rem) rotate(-45deg);
+    }
+  }
+
+  // Responsive adjustments
+  @media (max-width: $break-sm) {
+    width: 3.5rem; // Larger on very small screens
+    height: 3rem; // Taller to prevent merging
+    & > span {
+      height: 6px; // Even bolder
+    }
+  }
+
+  @media (min-width: $break-sm) {
+    width: 3.8rem; // Grow for tablets
+    height: 3.2rem;
+  }
+
+  @media (min-width: $break-md) {
+    width: 4rem; // Further growth for medium screens
+    height: 3.4rem;
+  }
+
+  // Hide on large screens where sidebar is visible
   @media (min-width: 992px) {
     display: none;
   }

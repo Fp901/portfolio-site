@@ -6,13 +6,13 @@
   justify-content: center;
   text-align: center;
   color: $brand-lightest;
-  overflow: hidden; // Prevent any overflow issues
+  overflow: hidden; // Prevent any overflow issues, especially on small screens
 
-  background-image: url("/assets/images/maxim-berg-DqZltTH2-9U-unsplash.jpg"); // replace with your chosen image
+  background-image: url("../assets/images/maxim-berg-DqZltTH2-9U-unsplash.jpg"); // replace with your chosen image
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
-  background-attachment: fixed; // Parallax-like effect for subtle movement
+  background-attachment: scroll; // Changed from fixed to prevent issues on small screens
 
   &::before {
     content: "";
@@ -32,10 +32,12 @@
 
   .container {
     max-width: 1200px;
-    padding: 0 2rem;
-    position: relative;
-    z-index: 1; // Ensure content is above overlay
-    animation: fadeInUp 1s ease-out; // Subtle entrance animation
+    padding: 0 1rem; // Reduced from 2rem to prevent overflow on small screens
+
+    // Extra reduction for very small screens
+    @media (max-width: 320px) {
+      padding: 0 0.5rem; // Minimal padding down to 280px
+    }
   }
 
   h1 {
@@ -46,6 +48,12 @@
     text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5); // Shadow for readability over image
     letter-spacing: 1px; // Slight spacing for modern feel
     animation: fadeInUp 1s ease-out 0.2s both; // Staggered animation
+
+    // Scale down on very small screens to fit
+    @media (max-width: 320px) {
+      font-size: 2rem;
+      letter-spacing: 0.5px;
+    }
   }
 
   p {
@@ -55,6 +63,12 @@
     max-width: 600px; // Prevent overly wide on large screens
     margin: 0 auto $space-sm auto;
     animation: fadeInUp 1s ease-out 0.4s both; // Further stagger
+
+    // Scale down on small screens
+    @media (max-width: 320px) {
+      font-size: 1.1rem;
+      max-width: 90%; // Use percentage for tiny screens
+    }
   }
 
   .cta-btn {
@@ -77,6 +91,12 @@
 
     // Pulse animation for attention (optional, subtle)
     animation: pulse 2s infinite;
+
+    // Adjust on small screens
+    @media (max-width: 320px) {
+      padding: 0.6rem 1.2rem;
+      font-size: 0.95rem;
+    }
   }
 
   // Keyframe animations for entrance
@@ -137,10 +157,13 @@
     }
   }
 
-  // Mobile tweaks for better impact
-  @media (max-width: 576px) {
+  // Mobile tweaks for better impact and no gaps
+  @media (max-width: 320px) {
     .cta-btn {
-      padding: 1rem 2rem; // Larger touch target on mobile
+      padding: 0.6rem 1.2rem; // Smaller on tiny screens
+    }
+    .container {
+      padding: 0 0.5rem; // Ensure no overflow
     }
   }
 }
