@@ -232,78 +232,117 @@ footer {
   left: 0;
   height: 100%;
   width: 200px;
-  background: #1a2a44;
+  background: linear-gradient(180deg, #1a2a44 0%, #131f32 100%);
   color: #fff;
-  padding: 20px;
+  padding: 20px 20px 20px 15px;
   display: flex;
   flex-direction: column;
   transform: translateX(-100%);
   transition: transform 0.3s ease;
   z-index: 1001;
+  box-sizing: border-box;
+  box-shadow: 2px 0 8px rgba(0, 0, 0, 0.2);
   /* ---- Responsive breakpoints ---- */
 }
 
-/* line 16, ../../../Desktop/personal-page/portfolio-site/scss/_sidebar.scss */
+/* line 22, ../../../Desktop/personal-page/portfolio-site/scss/_sidebar.scss */
 .sidebar.open {
   transform: translateX(0);
 }
 
-/* line 20, ../../../Desktop/personal-page/portfolio-site/scss/_sidebar.scss */
+/* line 26, ../../../Desktop/personal-page/portfolio-site/scss/_sidebar.scss */
 .sidebar h1 {
-  margin-bottom: 2.5rem;
+  margin: 0 0 3rem 0;
+  padding: 0;
+  width: 100%;
 }
 
-/* line 24, ../../../Desktop/personal-page/portfolio-site/scss/_sidebar.scss */
+/* line 32, ../../../Desktop/personal-page/portfolio-site/scss/_sidebar.scss */
 .sidebar h1 a {
   color: #ff6b6b;
   text-decoration: none;
-  font-size: 2.5rem;
+  font-size: 2.25rem;
   font-weight: bold;
+  display: block;
+  padding-left: 0;
 }
 
-/* line 31, ../../../Desktop/personal-page/portfolio-site/scss/_sidebar.scss */
+/* line 41, ../../../Desktop/personal-page/portfolio-site/scss/_sidebar.scss */
 .sidebar .nav-links {
   display: flex;
   flex-direction: column;
-  gap: 1rem;
+  gap: 1.2rem;
+  width: 100%;
+  padding-left: 0;
 }
 
-/* line 37, ../../../Desktop/personal-page/portfolio-site/scss/_sidebar.scss */
+/* line 49, ../../../Desktop/personal-page/portfolio-site/scss/_sidebar.scss */
 .sidebar .nav-links a {
   color: #f8fafc;
   text-decoration: none;
   font-weight: 500;
   line-height: 1.2;
-  padding: 1rem;
+  padding: 1rem 1rem 1rem 0;
+  display: block;
+  position: relative;
+  transition: color 0.3s ease, transform 0.2s ease;
 }
 
-/* line 44, ../../../Desktop/personal-page/portfolio-site/scss/_sidebar.scss */
+/* line 59, ../../../Desktop/personal-page/portfolio-site/scss/_sidebar.scss */
 .sidebar .nav-links a:hover {
   color: #ff6b6b;
+  transform: translateX(5px);
 }
 
-/* line 49, ../../../Desktop/personal-page/portfolio-site/scss/_sidebar.scss */
+/* line 65, ../../../Desktop/personal-page/portfolio-site/scss/_sidebar.scss */
+.sidebar .nav-links a:after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 50%;
+  height: 1px;
+  background: rgba(248, 250, 252, 0.2);
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+/* line 77, ../../../Desktop/personal-page/portfolio-site/scss/_sidebar.scss */
+.sidebar .nav-links a:hover:after {
+  opacity: 1;
+}
+
+/* line 82, ../../../Desktop/personal-page/portfolio-site/scss/_sidebar.scss */
 .sidebar .social {
-  margin-top: auto;
+  margin-top: 1.5rem;
   display: flex;
-  gap: 1rem;
+  justify-content: flex-start;
+  gap: 1.5rem;
+  width: 100%;
+  padding-left: 0;
 }
 
-/* line 54, ../../../Desktop/personal-page/portfolio-site/scss/_sidebar.scss */
+/* line 91, ../../../Desktop/personal-page/portfolio-site/scss/_sidebar.scss */
 .sidebar .social a {
   color: #fff;
   font-size: 1.8rem;
+  transition: color 0.3s ease;
 }
 
-/* line 58, ../../../Desktop/personal-page/portfolio-site/scss/_sidebar.scss */
+/* line 97, ../../../Desktop/personal-page/portfolio-site/scss/_sidebar.scss */
 .sidebar .social a:hover {
-  color: #f8fafc;
+  color: #ff6b6b;
 }
 
 @media (min-width: 576px) {
   /* line 1, ../../../Desktop/personal-page/portfolio-site/scss/_sidebar.scss */
   .sidebar {
     width: 240px;
+    padding-left: 20px;
+  }
+  /* line 107, ../../../Desktop/personal-page/portfolio-site/scss/_sidebar.scss */
+  .sidebar h1 a {
+    font-size: 2.5rem;
   }
 }
 
@@ -311,8 +350,9 @@ footer {
   /* line 1, ../../../Desktop/personal-page/portfolio-site/scss/_sidebar.scss */
   .sidebar {
     width: 280px;
+    padding-left: 25px;
   }
-  /* line 74, ../../../Desktop/personal-page/portfolio-site/scss/_sidebar.scss */
+  /* line 116, ../../../Desktop/personal-page/portfolio-site/scss/_sidebar.scss */
   .sidebar .social a {
     font-size: 2rem;
   }
@@ -323,8 +363,9 @@ footer {
   .sidebar {
     transform: translateX(0);
     width: 320px;
+    padding-left: 30px;
   }
-  /* line 83, ../../../Desktop/personal-page/portfolio-site/scss/_sidebar.scss */
+  /* line 126, ../../../Desktop/personal-page/portfolio-site/scss/_sidebar.scss */
   .sidebar .social a {
     font-size: 2.2rem;
   }
@@ -334,33 +375,35 @@ footer {
   /* line 1, ../../../Desktop/personal-page/portfolio-site/scss/_sidebar.scss */
   .sidebar {
     width: 360px;
+    padding-left: 35px;
   }
-  /* line 91, ../../../Desktop/personal-page/portfolio-site/scss/_sidebar.scss */
+  /* line 135, ../../../Desktop/personal-page/portfolio-site/scss/_sidebar.scss */
   .sidebar .social a {
     font-size: 2.5rem;
   }
 }
 
-/* line 97, ../../../Desktop/personal-page/portfolio-site/scss/_sidebar.scss */
+/* line 141, ../../../Desktop/personal-page/portfolio-site/scss/_sidebar.scss */
 .content {
   margin-left: 0;
+  flex-grow: 1;
 }
 
 @media (min-width: 992px) {
-  /* line 97, ../../../Desktop/personal-page/portfolio-site/scss/_sidebar.scss */
+  /* line 141, ../../../Desktop/personal-page/portfolio-site/scss/_sidebar.scss */
   .content {
     margin-left: 320px;
   }
 }
 
 @media (min-width: 1200px) {
-  /* line 97, ../../../Desktop/personal-page/portfolio-site/scss/_sidebar.scss */
+  /* line 141, ../../../Desktop/personal-page/portfolio-site/scss/_sidebar.scss */
   .content {
     margin-left: 360px;
   }
 }
 
-/* line 109, ../../../Desktop/personal-page/portfolio-site/scss/_sidebar.scss */
+/* line 154, ../../../Desktop/personal-page/portfolio-site/scss/_sidebar.scss */
 .burger {
   position: fixed;
   top: 1rem;
@@ -376,7 +419,7 @@ footer {
   transition: opacity 0.3s ease;
 }
 
-/* line 124, ../../../Desktop/personal-page/portfolio-site/scss/_sidebar.scss */
+/* line 168, ../../../Desktop/personal-page/portfolio-site/scss/_sidebar.scss */
 .burger > span {
   background: #1a2a44;
   height: 5px;
@@ -385,41 +428,41 @@ footer {
   transition: all 0.3s ease;
 }
 
-/* line 133, ../../../Desktop/personal-page/portfolio-site/scss/_sidebar.scss */
+/* line 176, ../../../Desktop/personal-page/portfolio-site/scss/_sidebar.scss */
 .sidebar.open ~ .burger {
   opacity: 0;
   pointer-events: none;
 }
 
-/* line 140, ../../../Desktop/personal-page/portfolio-site/scss/_sidebar.scss */
+/* line 182, ../../../Desktop/personal-page/portfolio-site/scss/_sidebar.scss */
 .burger.open > span:nth-child(1) {
   transform: translateY(0.8rem) rotate(45deg);
 }
 
-/* line 143, ../../../Desktop/personal-page/portfolio-site/scss/_sidebar.scss */
+/* line 185, ../../../Desktop/personal-page/portfolio-site/scss/_sidebar.scss */
 .burger.open > span:nth-child(2) {
   opacity: 0;
 }
 
-/* line 146, ../../../Desktop/personal-page/portfolio-site/scss/_sidebar.scss */
+/* line 188, ../../../Desktop/personal-page/portfolio-site/scss/_sidebar.scss */
 .burger.open > span:nth-child(3) {
   transform: translateY(-0.8rem) rotate(-45deg);
 }
 
 @media (max-width: 576px) {
-  /* line 109, ../../../Desktop/personal-page/portfolio-site/scss/_sidebar.scss */
+  /* line 154, ../../../Desktop/personal-page/portfolio-site/scss/_sidebar.scss */
   .burger {
     width: 3.5rem;
     height: 3rem;
   }
-  /* line 155, ../../../Desktop/personal-page/portfolio-site/scss/_sidebar.scss */
+  /* line 196, ../../../Desktop/personal-page/portfolio-site/scss/_sidebar.scss */
   .burger > span {
     height: 6px;
   }
 }
 
 @media (min-width: 576px) {
-  /* line 109, ../../../Desktop/personal-page/portfolio-site/scss/_sidebar.scss */
+  /* line 154, ../../../Desktop/personal-page/portfolio-site/scss/_sidebar.scss */
   .burger {
     width: 3.8rem;
     height: 3.2rem;
@@ -427,7 +470,7 @@ footer {
 }
 
 @media (min-width: 768px) {
-  /* line 109, ../../../Desktop/personal-page/portfolio-site/scss/_sidebar.scss */
+  /* line 154, ../../../Desktop/personal-page/portfolio-site/scss/_sidebar.scss */
   .burger {
     width: 4rem;
     height: 3.4rem;
@@ -435,7 +478,7 @@ footer {
 }
 
 @media (min-width: 992px) {
-  /* line 109, ../../../Desktop/personal-page/portfolio-site/scss/_sidebar.scss */
+  /* line 154, ../../../Desktop/personal-page/portfolio-site/scss/_sidebar.scss */
   .burger {
     display: none;
   }

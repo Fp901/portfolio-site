@@ -3,35 +3,47 @@
   top: 0;
   left: 0;
   height: 100%;
-  width: 200px; // base size on XS
-  background: $brand-darkest;
+  width: 200px; // Base size on XS
+  background: linear-gradient(
+    180deg,
+    $brand-darkest 0%,
+    darken($brand-darkest, 5%) 100%
+  ); // Subtle gradient for depth
   color: #fff;
-  padding: 20px;
+  padding: 20px 20px 20px 15px; // Consistent left padding
   display: flex;
   flex-direction: column;
-  transform: translateX(-100%); // hidden on XS
+  transform: translateX(-100%); // Hidden on XS
   transition: transform 0.3s ease;
-  z-index: 1001; // Higher than burger to overlay it when open
+  z-index: 1001; // Higher than burger
+  box-sizing: border-box;
+  box-shadow: 2px 0 8px rgba(0, 0, 0, 0.2); // Subtle shadow for modern look
 
   &.open {
     transform: translateX(0);
   }
 
   h1 {
-    margin-bottom: 2.5rem; // space between FP and menu
+    margin: 0 0 3rem 0; // Increased bottom margin for hierarchy
+    padding: 0; // No padding to align with sidebar's left margin
+    width: 100%;
   }
 
   h1 a {
     color: $brand-pinkish;
     text-decoration: none;
-    font-size: 2.5rem; // bigger logo
+    font-size: 2.25rem; // Slightly smaller for balance
     font-weight: bold;
+    display: block;
+    padding-left: 0; // Ensure alignment
   }
 
   .nav-links {
     display: flex;
     flex-direction: column;
-    gap: 1rem; // spacing between menu items
+    gap: 1.2rem; // Slightly larger gap for clarity
+    width: 100%;
+    padding-left: 0;
   }
 
   .nav-links a {
@@ -39,26 +51,51 @@
     text-decoration: none;
     font-weight: 500;
     line-height: 1.2;
-    padding: $space-sm; // Increase touch area
+    padding: $space-sm $space-sm $space-sm 0; // Remove left padding, keep others
+    display: block;
+    position: relative; // For divider effect
+    transition: color 0.3s ease, transform 0.2s ease; // Smooth hover
 
     &:hover {
       color: $brand-pinkish;
+      transform: translateX(5px); // Subtle shift on hover
+    }
+
+    // Subtle divider
+    &:after {
+      content: "";
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      width: 50%;
+      height: 1px;
+      background: rgba($brand-lightest, 0.2);
+      opacity: 0;
+      transition: opacity 0.3s ease;
+    }
+
+    &:hover:after {
+      opacity: 1;
     }
   }
 
   .social {
-    margin-top: auto; // keep socials at bottom
+    margin-top: 1.5rem; // Slightly larger gap below nav-links
     display: flex;
-    gap: 1rem;
+    justify-content: flex-start; // Left-aligned
+    gap: 1.5rem; // Larger gap for balance
+    width: 100%;
+    padding-left: 0;
+  }
 
-    a {
-      color: #fff;
-      font-size: 1.8rem; // Increased from 1.2rem for larger icons
+  .social a {
+    color: #fff;
+    font-size: 1.8rem;
+    transition: color 0.3s ease; // Smooth color transition
+  }
 
-      &:hover {
-        color: $brand-lightest;
-      }
-    }
+  .social a:hover {
+    color: $brand-pinkish; // Match nav-links hover color
   }
 
   /* ---- Responsive breakpoints ---- */
@@ -66,13 +103,18 @@
   // Small devices (≥576px)
   @media (min-width: 576px) {
     width: 240px;
+    padding-left: 20px;
+    h1 a {
+      font-size: 2.5rem; // Scale up logo
+    }
   }
 
   // Medium devices (≥768px)
   @media (min-width: 768px) {
     width: 280px;
+    padding-left: 25px;
     .social a {
-      font-size: 2rem; // Slightly larger on medium screens
+      font-size: 2rem;
     }
   }
 
@@ -80,25 +122,28 @@
   @media (min-width: 992px) {
     transform: translateX(0);
     width: 320px;
+    padding-left: 30px;
     .social a {
-      font-size: 2.2rem; // Scaled up for larger sidebar
+      font-size: 2.2rem;
     }
   }
 
   // Extra-large devices (≥1200px)
   @media (min-width: 1200px) {
     width: 360px;
+    padding-left: 35px;
     .social a {
-      font-size: 2.5rem; // Even larger on XL for balance
+      font-size: 2.5rem;
     }
   }
 }
 
 .content {
   margin-left: 0;
+  flex-grow: 1; // Ensure content grows (from global styles)
 
   @media (min-width: 992px) {
-    margin-left: 320px; // match sidebar width
+    margin-left: 320px; // Match sidebar width
   }
 
   @media (min-width: 1200px) {
@@ -110,64 +155,59 @@
   position: fixed;
   top: 1rem;
   left: 1rem;
-  z-index: 1000; // Below sidebar when open
+  z-index: 1000;
   cursor: pointer;
-  width: 3rem; // Increased base width for better visibility
-  height: 2.5rem; // Increased base height for spacing
+  width: 3rem;
+  height: 2.5rem;
   display: flex;
   flex-direction: column;
-  justify-content: space-around; // Increased spacing between lines
-  padding: $space-xs; // Small padding for touch target
-  transition: opacity 0.3s ease; // Smooth hide/show
+  justify-content: space-around;
+  padding: $space-xs;
+  transition: opacity 0.3s ease;
 
-  // Three bold lines
   & > span {
-    background: $brand-darkest; // Match brand color
-    height: 5px; // Thicker lines for boldness
+    background: $brand-darkest;
+    height: 5px;
     width: 100%;
-    border-radius: 2px; // Slight rounding
+    border-radius: 2px;
     transition: all 0.3s ease;
   }
 
-  // Hide burger when sidebar is open
   .sidebar.open ~ & {
-    opacity: 0; // Fade out when sidebar is open
-    pointer-events: none; // Disable clicks
+    opacity: 0;
+    pointer-events: none;
   }
 
-  // Animation for open state
   &.open {
     & > span:nth-child(1) {
       transform: translateY(0.8rem) rotate(45deg);
     }
     & > span:nth-child(2) {
-      opacity: 0; // Middle line disappears
+      opacity: 0;
     }
     & > span:nth-child(3) {
       transform: translateY(-0.8rem) rotate(-45deg);
     }
   }
 
-  // Responsive adjustments
   @media (max-width: $break-sm) {
-    width: 3.5rem; // Larger on very small screens
-    height: 3rem; // Taller to prevent merging
+    width: 3.5rem;
+    height: 3rem;
     & > span {
-      height: 6px; // Even bolder
+      height: 6px;
     }
   }
 
   @media (min-width: $break-sm) {
-    width: 3.8rem; // Grow for tablets
+    width: 3.8rem;
     height: 3.2rem;
   }
 
   @media (min-width: $break-md) {
-    width: 4rem; // Further growth for medium screens
+    width: 4rem;
     height: 3.4rem;
   }
 
-  // Hide on large screens where sidebar is visible
   @media (min-width: 992px) {
     display: none;
   }
