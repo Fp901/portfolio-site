@@ -1,29 +1,78 @@
 .footer {
-  background: linear-gradient(90deg, $brand-lighter, $brand-lightest);
-  padding: $space-md;
+  background: linear-gradient(
+    135deg,
+    $brand-lightest 0%,
+    $brand-lighter 100%
+  ); // Subtle gradient using light palette for depth
+  padding: $space-md $space-sm;
   text-align: center;
-  font-size: 0.9rem;
+  font-size: 1rem;
+  border-top: 1px solid rgba(130, 154, 177, 0.3); // Tinted with $brand-lighter for subtle separation
+  box-shadow: 0 -4px 12px rgba(26, 42, 68, 0.05); // Inset shadow using $brand-darkest tint for elevation
 
   p {
-    color: $brand-darkest; // Dark slate (#1C2526)
+    color: $brand-darkest;
     text-decoration: none;
-    margin: 0;
+    margin: 0 0 $space-xs 0;
+    font-size: 0.95rem;
+    font-weight: 500; // Slight boldness for impact
   }
 
   a {
-    color: $brand-darkest; // Dark slate (#1C2526)
+    color: $brand-dark;
     text-decoration: none;
     margin: 0 0.5rem;
+    transition: all 0.3s ease; // Smooth transitions
 
     &:hover {
-      color: $brand-dark; // Emerald green (#10B981)
+      color: $brand-pinkish; // Pink accent for vibrant hover
+      transform: scale(1.1); // Subtle scale on hover for interactivity
     }
 
     i {
-      font-size: 1.2rem; // Ensure icons are visible
-      color: $brand-darkest; // Dark slate (#1C2526)
+      font-size: 1.8rem; // Even larger for more presence
+      color: $brand-dark;
       vertical-align: middle;
       line-height: 1;
+      margin: 0 0.25rem;
+      transition: all 0.3s ease;
+      text-shadow: 0 1px 2px rgba(26, 42, 68, 0.2); // Subtle shadow for depth
+
+      &:hover {
+        color: $brand-pinkish;
+        transform: scale(1.2) rotate(5deg); // Fun scale + rotate for engagement
+      }
+    }
+  }
+
+  /* Responsive scaling */
+  @media (min-width: $break-sm) {
+    font-size: 1.05rem;
+    padding: $space-md $space-md;
+    i {
+      font-size: 2rem;
+    }
+  }
+
+  @media (min-width: $break-md) {
+    font-size: 1.1rem;
+    i {
+      font-size: 2.1rem;
+    }
+  }
+
+  @media (min-width: $break-lg) {
+    font-size: 1.15rem;
+    padding: $space-lg $space-md;
+    i {
+      font-size: 2.2rem;
+    }
+  }
+
+  @media (min-width: $break-xl) {
+    font-size: 1.2rem;
+    i {
+      font-size: 2.4rem;
     }
   }
 }

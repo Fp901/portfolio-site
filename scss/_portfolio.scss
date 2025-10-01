@@ -1,148 +1,165 @@
-/* ==========================
-   Portfolio Section
-   ========================== */
 #portfolio {
-  padding: 3rem 1rem;
-  background-color: transparent; // let body background show through
-
-  .container {
-    max-width: 1200px;
-    margin: 0 auto;
-  }
+  padding: $space-lg $space-sm;
+  background: $brand-lightest; // Light background for the section
 
   h2 {
     text-align: center;
-    margin-bottom: 2rem;
-    font-size: 1.8rem;
+    margin-bottom: $space-md;
+    font-size: 2rem;
+
+    @media (min-width: $break-md) {
+      font-size: 2.5rem;
+    }
+    @media (min-width: $break-xl) {
+      font-size: 3rem;
+    }
   }
 
   .projects {
     display: grid;
-    grid-template-columns: 1fr;
-    gap: 2rem;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: $space-sm;
+
+    @media (min-width: $break-md) {
+      gap: $space-md;
+    }
+    @media (min-width: $break-xl) {
+      gap: $space-lg;
+    }
   }
 
   .project {
-    background: $brand-lightest;
+    background: #fff;
     border-radius: 8px;
     overflow: hidden;
-    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
-    transition: transform 0.2s ease, box-shadow 0.2s ease;
-    text-align: center;
+    border: 1px solid rgba(0, 0, 0, 0.05); // Subtle border for definition
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08); // Enhanced base shadow for depth
     display: flex;
-    flex-direction: column; // keep content stacked
-    height: 100%; // ensure equal card heights
+    flex-direction: column;
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+
+    &:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 12px 24px rgba(0, 0, 0, 0.15); // Stronger hover shadow
+    }
 
     img {
       width: 100%;
-      height: 200px; // fixed height for all images
-      object-fit: cover; // crop instead of stretch
+      height: auto;
+      aspect-ratio: 16/9;
+      object-fit: cover;
       display: block;
     }
 
-    h3 {
-      margin: 1rem 0 0.5rem;
+    .project-content {
+      padding: $space-sm;
+      display: flex;
+      flex-direction: column;
+      flex-grow: 1;
+      min-height: 150px;
+      color: $brand-darkest;
+      text-align: center; // Center text (h3 and p)
+
+      h3 {
+        margin-bottom: $space-xs;
+        font-size: 1.2rem;
+        color: $brand-darkest;
+        white-space: normal;
+      }
+
+      p {
+        flex-grow: 1;
+        margin-bottom: $space-sm;
+        font-size: 1rem;
+        color: $brand-darkest;
+        line-height: 1.5;
+        white-space: normal;
+        hyphens: none;
+      }
+
+      a {
+        align-self: center; // Center the button horizontally
+        background: $brand-dark;
+        color: $brand-lightest;
+        padding: 0.6rem 1.2rem;
+        border-radius: 4px;
+        text-decoration: none;
+        font-weight: bold;
+        font-size: 1rem;
+        transition: background 0.3s ease;
+
+        &:hover {
+          background: $brand-pinkish;
+        }
+      }
+    }
+  }
+
+  /* Responsive scaling */
+  @media (min-width: $break-sm) {
+    padding: $space-lg $space-md;
+    .project .project-content {
+      padding: $space-sm;
+    }
+    .project .project-content h3 {
       font-size: 1.25rem;
     }
-
-    p {
-      font-size: 0.95rem;
-      margin: 0 1rem 1rem;
-      flex-grow: 1; // pushes button down if text is short
+    .project .project-content p {
+      font-size: 1.05rem;
     }
-
-    a {
-      display: inline-block; // ensures button only as wide as its content
-      align-self: center; // centers the button horizontally
-      margin: 0 0 1rem; // bottom spacing
-      padding: 0.5rem 1rem;
-      background: #0077b6;
-      color: #fff;
-      border-radius: 4px;
-      text-decoration: none;
-      font-size: 0.9rem;
-      transition: background 0.2s ease;
-
-      &:hover {
-        background: #005f87;
-      }
-    }
-    &:hover {
-      transform: translateY(-4px);
-      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+    .project .project-content a {
+      font-size: 1.05rem;
+      padding: 0.7rem 1.3rem;
     }
   }
-}
 
-/* ==========================
-   Responsive Breakpoints
-   ========================== */
-
-/* Small devices (≥576px) */
-@media (min-width: 576px) {
-  #portfolio {
-    .projects {
-      grid-template-columns: repeat(2, 1fr);
+  @media (min-width: $break-md) {
+    .project .project-content {
+      padding: $space-md;
+      min-height: 180px;
+    }
+    .project .project-content h3 {
+      font-size: 1.3rem;
+    }
+    .project .project-content p {
+      font-size: 1.1rem;
+    }
+    .project .project-content a {
+      font-size: 1.1rem;
+      padding: 0.8rem 1.5rem;
     }
   }
-}
 
-/* Medium devices (≥768px) */
-@media (min-width: 768px) {
-  #portfolio {
-    h2 {
-      font-size: 2rem;
+  @media (min-width: $break-lg) {
+    .project .project-content {
+      padding: 1.5rem;
     }
-
-    .projects {
-      grid-template-columns: repeat(2, 1fr);
-      gap: 2.5rem;
+    .project .project-content h3 {
+      font-size: 1.4rem;
     }
-
-    .project {
-      h3 {
-        font-size: 1.35rem;
-      }
-
-      p {
-        font-size: 1rem;
-      }
+    .project .project-content p {
+      font-size: 1.15rem;
+    }
+    .project .project-content a {
+      font-size: 1.15rem;
+      padding: 0.9rem 1.6rem;
     }
   }
-}
 
-/* Large devices (≥992px) */
-@media (min-width: 992px) {
-  #portfolio {
-    .projects {
-      grid-template-columns: repeat(3, 1fr);
+  @media (min-width: $break-xl) {
+    .project .project-content {
+      padding: 1.75rem;
+      min-height: 200px;
     }
-
-    .project {
-      h3 {
-        font-size: 1.4rem;
-      }
+    .project .project-content h3 {
+      font-size: 1.5rem;
     }
-  }
-}
-
-/* Extra-large devices (≥1200px) */
-@media (min-width: 1200px) {
-  #portfolio {
-    padding: 4rem 1rem;
-
-    .projects {
-      gap: 3rem;
+    .project .project-content p {
+      font-size: 1.2rem;
     }
-
-    .project {
-      h3 {
-        font-size: 1.5rem;
-      }
-
-      p {
-        font-size: 1.05rem;
-      }
+    .project .project-content a {
+      font-size: 1.2rem;
+      padding: 1rem 1.8rem;
     }
   }
 }

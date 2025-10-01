@@ -6,11 +6,13 @@
   justify-content: center;
   text-align: center;
   color: $brand-lightest;
+  overflow: hidden; // Prevent any overflow issues
 
   background-image: url("/assets/images/maxim-berg-DqZltTH2-9U-unsplash.jpg"); // replace with your chosen image
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
+  background-attachment: fixed; // Parallax-like effect for subtle movement
 
   &::before {
     content: "";
@@ -19,25 +21,40 @@
     left: 0;
     width: 100%;
     height: 100%;
-    background: rgba(26, 42, 68, 0.55); // brand-darkest overlay
+    background: linear-gradient(
+      to bottom,
+      rgba(26, 42, 68, 0.7),
+      // Darker at top for focus on text
+      rgba(26, 42, 68, 0.4) // Lighter at bottom to reveal more image
+    ); // Gradient overlay for depth and better visual hierarchy
     z-index: 0;
   }
 
   .container {
+    max-width: 1200px;
+    padding: 0 2rem;
     position: relative;
-    z-index: 1;
-    padding: 0 1rem;
+    z-index: 1; // Ensure content is above overlay
+    animation: fadeInUp 1s ease-out; // Subtle entrance animation
   }
 
   h1 {
     font-size: 2.5rem;
     margin-bottom: $space-sm;
     color: $brand-lightest;
+    font-weight: bold; // Emphasize boldness
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5); // Shadow for readability over image
+    letter-spacing: 1px; // Slight spacing for modern feel
+    animation: fadeInUp 1s ease-out 0.2s both; // Staggered animation
   }
 
   p {
     font-size: 1.25rem;
     color: $brand-pinkish;
+    font-style: italic; // Subtle italic for emphasis
+    max-width: 600px; // Prevent overly wide on large screens
+    margin: 0 auto $space-sm auto;
+    animation: fadeInUp 1s ease-out 0.4s both; // Further stagger
   }
 
   .cta-btn {
@@ -48,10 +65,39 @@
     font-weight: bold;
     display: inline-block;
     margin-top: 1.5rem;
-    transition: background 0.3s ease;
+    transition: all 0.3s ease; // Smooth all transitions
+    box-shadow: 0 4px 12px rgba(255, 107, 107, 0.3); // Pinkish glow shadow
+    transform: translateY(0); // Base for hover lift
 
     &:hover {
       background: $brand-dark;
+      box-shadow: 0 6px 16px rgba(16, 185, 129, 0.4); // Shift to green tint on hover
+      transform: translateY(-2px); // Subtle lift
+    }
+
+    // Pulse animation for attention (optional, subtle)
+    animation: pulse 2s infinite;
+  }
+
+  // Keyframe animations for entrance
+  @keyframes fadeInUp {
+    from {
+      opacity: 0;
+      transform: translateY(30px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+
+  @keyframes pulse {
+    0%,
+    100% {
+      box-shadow: 0 4px 12px rgba(255, 107, 107, 0.3);
+    }
+    50% {
+      box-shadow: 0 4px 12px rgba(255, 107, 107, 0.5);
     }
   }
 
@@ -88,6 +134,13 @@
     }
     p {
       font-size: 1.5rem;
+    }
+  }
+
+  // Mobile tweaks for better impact
+  @media (max-width: 576px) {
+    .cta-btn {
+      padding: 1rem 2rem; // Larger touch target on mobile
     }
   }
 }

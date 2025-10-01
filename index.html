@@ -14,18 +14,22 @@
     <div class="burger">☰</div>
     <nav class="sidebar">
       <h1><a href="#hero">FP</a></h1>
-      <a href="#about">About Me</a>
-      <a href="#portfolio">My Portfolio</a>
-      <a href="#coding">Coding Examples</a>
-      <a href="#scs">SCS Scheme</a>
-      <a href="#contact">Contact Me</a>
+
+      <div class="nav-links">
+        <a href="#about">About Me</a>
+        <a href="#portfolio">My Portfolio</a>
+        <a href="#coding">Coding Examples</a>
+        <a href="#scs">SCS Scheme</a>
+        <a href="#contact">Contact Me</a>
+      </div>
+
       <div class="social">
-        <a href="https://github.com/francoispretorius" target="_blank"
-          ><i class="fab fa-github"></i
-        ></a>
-        <a href="https://linkedin.com/in/francoispretorius" target="_blank"
-          ><i class="fab fa-linkedin"></i
-        ></a>
+        <a href="https://github.com/francoispretorius" target="_blank">
+          <i class="fab fa-github"></i>
+        </a>
+        <a href="https://linkedin.com/in/francoispretorius" target="_blank">
+          <i class="fab fa-linkedin"></i>
+        </a>
       </div>
     </nav>
 
@@ -37,69 +41,87 @@
         </div>
       </section>
 
-      <section id="portfolio" class="container">
-        <h2>My Portfolio</h2>
-        <div class="projects">
-          <div class="project">
-            <img
-              src="/assets/images/inventory.jpg"
-              alt="Inventory Management"
-            />
-            <h3>Inventory Management</h3>
-            <p>
-              A Java-based system for adding, updating, and tracking inventory
-              with transaction logging.
-            </p>
-            <a href="#">View Project</a>
-          </div>
-          <div class="project">
-            <img src="/assets/images/password.jpg" alt="Password Manager" />
-            <h3>Password Manager</h3>
-            <p>
-              A secure Python CLI password manager using hashing, encryption,
-              and MVC design.
-            </p>
-            <a href="#">View Project</a>
-          </div>
-          <div class="project">
-            <img src="/assets/images/site-replica.png" alt="Site Replica" />
-            <h3>Site Replica</h3>
-            <p>
-              Recreation of the Netmatters homepage using HTML and SASS for
-              front-end practice.
-            </p>
-            <a href="#">View Project</a>
-          </div>
-          <div class="project">
-            <img src="/assets/images/portfolio.jpg" alt="Portfolio Site" />
-            <h3>Portfolio Site</h3>
-            <p>
-              A responsive personal landing page built with HTML and SCSS to
-              showcase projects.
-            </p>
-            <a href="#">View Project</a>
-          </div>
-          <div class="project">
-            <img src="/assets/images/tv-me.png" alt="TV-me Site" />
-            <h3>TV-me Site</h3>
-            <p>
-              A responsive app using the TVmaze API to show schedules, shows,
-              and celebrity data.
-            </p>
-            <a href="#">View Project</a>
-          </div>
-          <div class="project">
-            <img src="/assets/images/java.jpg" alt="DbHub" />
-            <h3>DbHub</h3>
-            <p>
-              A Java desktop application with MySQL integration for secure
-              enterprise data management.
-            </p>
-            <a href="#">View Project</a>
+      <section id="portfolio">
+        <div class="container">
+          <h2>My Portfolio</h2>
+          <div class="projects">
+            <div class="project">
+              <img
+                src="assets/images/inventory.jpg"
+                alt="Inventory Management"
+              />
+              <div class="project-content">
+                <h3>Inventory Management</h3>
+                <p>
+                  A Java-based system for adding, updating, and tracking
+                  inventory with transaction logging.
+                </p>
+                <a href="#">View Project</a>
+              </div>
+            </div>
+
+            <div class="project">
+              <img src="assets/images/password.jpg" alt="Password Manager" />
+              <div class="project-content">
+                <h3>Password Manager</h3>
+                <p>
+                  A secure Python CLI password manager using hashing,
+                  encryption, and MVC design.
+                </p>
+                <a href="#">View Project</a>
+              </div>
+            </div>
+
+            <div class="project">
+              <img src="assets/images/site-replica.png" alt="Site Replica" />
+              <div class="project-content">
+                <h3>Site Replica</h3>
+                <p>
+                  Recreation of the Netmatters homepage using HTML and SASS for
+                  front-end practice.
+                </p>
+                <a href="#">View Project</a>
+              </div>
+            </div>
+
+            <div class="project">
+              <img src="assets/images/portfolio.jpg" alt="Portfolio Site" />
+              <div class="project-content">
+                <h3>Portfolio Site</h3>
+                <p>
+                  A responsive personal landing page built with HTML and SCSS to
+                  showcase projects.
+                </p>
+                <a href="#">View Project</a>
+              </div>
+            </div>
+
+            <div class="project">
+              <img src="assets/images/tv-me.png" alt="TV-me Site" />
+              <div class="project-content">
+                <h3>TV-me Site</h3>
+                <p>
+                  A responsive app using the TVmaze API to show schedules,
+                  shows, and celebrity data.
+                </p>
+                <a href="#">View Project</a>
+              </div>
+            </div>
+
+            <div class="project">
+              <img src="assets/images/java.jpg" alt="DbHub" />
+              <div class="project-content">
+                <h3>DbHub</h3>
+                <p>
+                  A Java desktop application with MySQL integration for secure
+                  enterprise data management.
+                </p>
+                <a href="#">View Project</a>
+              </div>
+            </div>
           </div>
         </div>
       </section>
-
       <section id="contact" class="contact">
         <div class="container">
           <h2>Get In Touch</h2>
@@ -122,7 +144,9 @@
         </div>
       </section>
 
-      <a href="#hero" class="back-to-top">Back To Top</a>
+      <a href="#hero" class="back-to-top" aria-label="Back to top">
+        <i class="fas fa-arrow-up"></i> Back To Top
+      </a>
     </div>
 
     <footer class="footer">
@@ -137,5 +161,15 @@
         ></a>
       </p>
     </footer>
+    <script>
+      window.addEventListener("scroll", () => {
+        if (window.scrollY > 100) {
+          // Show after scrolling 100px
+          document.body.classList.add("scrolled");
+        } else {
+          document.body.classList.remove("scrolled");
+        }
+      });
+    </script>
   </body>
 </html>
