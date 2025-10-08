@@ -93,20 +93,35 @@
         }
       }
     }
+
+    /* ✨ Fade-in animation (slower & smoother) */
+    opacity: 0;
+    transform: translateY(40px);
+    transition: opacity 1s cubic-bezier(0.25, 0.1, 0.25, 1),
+      transform 1s cubic-bezier(0.25, 0.1, 0.25, 1);
+
+    &.visible {
+      opacity: 1;
+      transform: translateY(0);
+    }
   }
 
   /* Responsive scaling */
   @media (min-width: $break-sm) {
     padding: $space-lg $space-md;
+
     .project .project-content {
       padding: $space-sm;
     }
+
     .project .project-content h3 {
       font-size: 1.25rem;
     }
+
     .project .project-content p {
       font-size: 1.05rem;
     }
+
     .project .project-content a {
       font-size: 1.05rem;
       padding: 0.7rem 1.3rem;
@@ -118,12 +133,15 @@
       padding: $space-md;
       min-height: 180px;
     }
+
     .project .project-content h3 {
       font-size: 1.3rem;
     }
+
     .project .project-content p {
       font-size: 1.1rem;
     }
+
     .project .project-content a {
       font-size: 1.1rem;
       padding: 0.8rem 1.5rem;
@@ -134,12 +152,15 @@
     .project .project-content {
       padding: 1.5rem;
     }
+
     .project .project-content h3 {
       font-size: 1.4rem;
     }
+
     .project .project-content p {
       font-size: 1.15rem;
     }
+
     .project .project-content a {
       font-size: 1.15rem;
       padding: 0.9rem 1.6rem;
@@ -151,12 +172,15 @@
       padding: 1.75rem;
       min-height: 200px;
     }
+
     .project .project-content h3 {
       font-size: 1.5rem;
     }
+
     .project .project-content p {
       font-size: 1.2rem;
     }
+
     .project .project-content a {
       font-size: 1.2rem;
       padding: 1rem 1.8rem;

@@ -54,7 +54,7 @@
     padding: $space-sm $space-sm $space-sm 0; // Remove left padding, keep others
     display: block;
     position: relative; // For divider effect
-    transition: color 0.3s ease, transform 0.2s ease; // Smooth hover
+    transition: color 0.3s ease, transform 0.25s ease;
 
     &:hover {
       color: $brand-pinkish;
@@ -77,6 +77,18 @@
     &:hover:after {
       opacity: 1;
     }
+
+    /* Active link highlight (✨ New) */
+    &.active {
+      color: $brand-pinkish;
+      font-weight: 600;
+      transform: translateX(4px);
+      &:after {
+        opacity: 1;
+        width: 100%;
+        background: rgba($brand-pinkish, 0.4);
+      }
+    }
   }
 
   .social {
@@ -92,10 +104,10 @@
     color: #fff;
     font-size: 1.8rem;
     transition: color 0.3s ease; // Smooth color transition
-  }
 
-  .social a:hover {
-    color: $brand-pinkish; // Match nav-links hover color
+    &:hover {
+      color: $brand-pinkish; // Match nav-links hover color
+    }
   }
 
   /* ---- Responsive breakpoints ---- */
@@ -138,6 +150,7 @@
   }
 }
 
+/* ---- Content Area ---- */
 .content {
   margin-left: 0;
   flex-grow: 1; // Ensure content grows (from global styles)
@@ -151,6 +164,7 @@
   }
 }
 
+/* ---- Burger Menu ---- */
 .burger {
   position: fixed;
   top: 1rem;
