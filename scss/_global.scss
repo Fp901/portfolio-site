@@ -128,6 +128,20 @@ footer {
   flex-shrink: 0; // Prevent compression
 }
 
+/* ====================
+   Scroll Progress Bar
+==================== */
+#progress-bar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 4px;
+  width: 0;
+  background: $brand-pinkish;
+  z-index: 2000;
+  transition: width 0.2s ease-out;
+}
+
 /* Typography scaling */
 @media (min-width: 576px) {
   body {

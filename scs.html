@@ -97,27 +97,7 @@
         ></a>
       </p>
     </footer>
-    <script>
-      const burger = document.querySelector(".burger");
-      const sidebar = document.querySelector(".sidebar");
-      burger.addEventListener("click", () => {
-        sidebar.classList.toggle("open");
-      });
-      const navLinks = document.querySelectorAll(".nav-links a");
-      navLinks.forEach((link) => {
-        link.addEventListener("click", () => {
-          if (window.innerWidth < 992) {
-            sidebar.classList.remove("open");
-          }
-        });
-      });
-      window.addEventListener("scroll", () => {
-        if (window.scrollY > 100) {
-          document.body.classList.add("scrolled");
-        } else {
-          document.body.classList.remove("scrolled");
-        }
-      });
-    </script>
+
+    <script src="js/main.js"></script>
   </body>
 </html>

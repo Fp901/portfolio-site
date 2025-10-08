@@ -9,7 +9,7 @@
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
     />
-    <base href="/portfolio-site/" />
+    <!-- Removed base href to fix local file paths -->
   </head>
   <body>
     <div class="burger">
@@ -17,6 +17,7 @@
       <span></span>
       <span></span>
     </div>
+
     <nav class="sidebar">
       <h1><a href="index.html">FP</a></h1>
 
@@ -133,6 +134,7 @@
           </div>
         </div>
       </section>
+
       <section id="contact" class="contact">
         <div class="container">
           <h2>Get In Touch</h2>
@@ -172,27 +174,7 @@
         ></a>
       </p>
     </footer>
-    <script>
-      const burger = document.querySelector(".burger");
-      const sidebar = document.querySelector(".sidebar");
-      burger.addEventListener("click", () => {
-        sidebar.classList.toggle("open");
-      });
-      const navLinks = document.querySelectorAll(".nav-links a");
-      navLinks.forEach((link) => {
-        link.addEventListener("click", () => {
-          if (window.innerWidth < 992) {
-            sidebar.classList.remove("open");
-          }
-        });
-      });
-      window.addEventListener("scroll", () => {
-        if (window.scrollY > 100) {
-          document.body.classList.add("scrolled");
-        } else {
-          document.body.classList.remove("scrolled");
-        }
-      });
-    </script>
+
+    <script src="js/main.js"></script>
   </body>
 </html>

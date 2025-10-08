@@ -164,62 +164,77 @@ footer {
   flex-shrink: 0;
 }
 
+/* ====================
+   Scroll Progress Bar
+==================== */
+/* line 134, ../../../Desktop/personal-page/portfolio-site/scss/_global.scss */
+#progress-bar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 4px;
+  width: 0;
+  background: #ff6b6b;
+  z-index: 2000;
+  transition: width 0.2s ease-out;
+}
+
 /* Typography scaling */
 @media (min-width: 576px) {
-  /* line 133, ../../../Desktop/personal-page/portfolio-site/scss/_global.scss */
+  /* line 147, ../../../Desktop/personal-page/portfolio-site/scss/_global.scss */
   body {
     font-size: 1.125rem;
   }
-  /* line 136, ../../../Desktop/personal-page/portfolio-site/scss/_global.scss */
+  /* line 150, ../../../Desktop/personal-page/portfolio-site/scss/_global.scss */
   section h2 {
     font-size: 2.5rem;
   }
-  /* line 139, ../../../Desktop/personal-page/portfolio-site/scss/_global.scss */
+  /* line 153, ../../../Desktop/personal-page/portfolio-site/scss/_global.scss */
   section h3 {
     font-size: 1.6rem;
   }
 }
 
 @media (min-width: 768px) {
-  /* line 145, ../../../Desktop/personal-page/portfolio-site/scss/_global.scss */
+  /* line 159, ../../../Desktop/personal-page/portfolio-site/scss/_global.scss */
   body {
     font-size: 1.25rem;
   }
-  /* line 148, ../../../Desktop/personal-page/portfolio-site/scss/_global.scss */
+  /* line 162, ../../../Desktop/personal-page/portfolio-site/scss/_global.scss */
   section h2 {
     font-size: 3rem;
   }
-  /* line 151, ../../../Desktop/personal-page/portfolio-site/scss/_global.scss */
+  /* line 165, ../../../Desktop/personal-page/portfolio-site/scss/_global.scss */
   section h3 {
     font-size: 1.8rem;
   }
 }
 
 @media (min-width: 992px) {
-  /* line 157, ../../../Desktop/personal-page/portfolio-site/scss/_global.scss */
+  /* line 171, ../../../Desktop/personal-page/portfolio-site/scss/_global.scss */
   body {
     font-size: 1.375rem;
   }
-  /* line 160, ../../../Desktop/personal-page/portfolio-site/scss/_global.scss */
+  /* line 174, ../../../Desktop/personal-page/portfolio-site/scss/_global.scss */
   section h2 {
     font-size: 3.5rem;
   }
-  /* line 163, ../../../Desktop/personal-page/portfolio-site/scss/_global.scss */
+  /* line 177, ../../../Desktop/personal-page/portfolio-site/scss/_global.scss */
   section h3 {
     font-size: 2rem;
   }
 }
 
 @media (min-width: 1200px) {
-  /* line 169, ../../../Desktop/personal-page/portfolio-site/scss/_global.scss */
+  /* line 183, ../../../Desktop/personal-page/portfolio-site/scss/_global.scss */
   body {
     font-size: 1.5rem;
   }
-  /* line 172, ../../../Desktop/personal-page/portfolio-site/scss/_global.scss */
+  /* line 186, ../../../Desktop/personal-page/portfolio-site/scss/_global.scss */
   section h2 {
     font-size: 4rem;
   }
-  /* line 175, ../../../Desktop/personal-page/portfolio-site/scss/_global.scss */
+  /* line 189, ../../../Desktop/personal-page/portfolio-site/scss/_global.scss */
   section h3 {
     font-size: 2.25rem;
   }
@@ -1603,41 +1618,50 @@ footer {
   }
 }
 
-/* line 1, ../../../Desktop/personal-page/portfolio-site/scss/_footer.scss */
+/* ====================
+   Footer (Centered + Responsive)
+==================== */
+/* line 5, ../../../Desktop/personal-page/portfolio-site/scss/_footer.scss */
 .footer {
   background: linear-gradient(135deg, #f8fafc 0%, #829ab1 100%);
   padding: 1rem 1rem;
-  text-align: left;
+  text-align: center;
   font-size: 0.95rem;
   border-top: 1px solid rgba(130, 154, 177, 0.3);
   box-shadow: 0 -4px 12px rgba(26, 42, 68, 0.05);
+  position: relative;
+  z-index: 10;
+  width: 100%;
+  /* Inner container to keep content centered nicely */
   /* Responsive scaling */
 }
 
-/* line 9, ../../../Desktop/personal-page/portfolio-site/scss/_footer.scss */
+/* line 17, ../../../Desktop/personal-page/portfolio-site/scss/_footer.scss */
 .footer p {
   color: #1a2a44;
   text-decoration: none;
-  margin: 0 0 0.5rem 0;
+  margin: 0;
   font-size: 0.9rem;
   font-weight: 500;
+  display: inline-block;
 }
 
-/* line 17, ../../../Desktop/personal-page/portfolio-site/scss/_footer.scss */
+/* line 26, ../../../Desktop/personal-page/portfolio-site/scss/_footer.scss */
 .footer a {
   color: #334e68;
   text-decoration: none;
   margin: 0 0.5rem;
   transition: all 0.3s ease;
+  display: inline-block;
 }
 
-/* line 23, ../../../Desktop/personal-page/portfolio-site/scss/_footer.scss */
+/* line 33, ../../../Desktop/personal-page/portfolio-site/scss/_footer.scss */
 .footer a:hover {
   color: #ff6b6b;
   transform: scale(1.1);
 }
 
-/* line 28, ../../../Desktop/personal-page/portfolio-site/scss/_footer.scss */
+/* line 38, ../../../Desktop/personal-page/portfolio-site/scss/_footer.scss */
 .footer a i {
   font-size: 1.4rem;
   color: #334e68;
@@ -1648,53 +1672,55 @@ footer {
   text-shadow: 0 1px 2px rgba(26, 42, 68, 0.2);
 }
 
-/* line 37, ../../../Desktop/personal-page/portfolio-site/scss/_footer.scss */
+/* line 47, ../../../Desktop/personal-page/portfolio-site/scss/_footer.scss */
 .footer a i:hover {
   color: #ff6b6b;
   transform: scale(1.2) rotate(5deg);
 }
 
 @media (min-width: 576px) {
-  /* line 1, ../../../Desktop/personal-page/portfolio-site/scss/_footer.scss */
+  /* line 5, ../../../Desktop/personal-page/portfolio-site/scss/_footer.scss */
   .footer {
     font-size: 1rem;
     padding: 1rem 2rem;
   }
-  /* line 48, ../../../Desktop/personal-page/portfolio-site/scss/_footer.scss */
+  /* line 58, ../../../Desktop/personal-page/portfolio-site/scss/_footer.scss */
   .footer i {
     font-size: 1.5rem;
   }
 }
 
 @media (min-width: 768px) {
-  /* line 1, ../../../Desktop/personal-page/portfolio-site/scss/_footer.scss */
+  /* line 5, ../../../Desktop/personal-page/portfolio-site/scss/_footer.scss */
   .footer {
     font-size: 1.05rem;
   }
-  /* line 55, ../../../Desktop/personal-page/portfolio-site/scss/_footer.scss */
+  /* line 65, ../../../Desktop/personal-page/portfolio-site/scss/_footer.scss */
   .footer i {
     font-size: 1.6rem;
   }
 }
 
 @media (min-width: 992px) {
-  /* line 1, ../../../Desktop/personal-page/portfolio-site/scss/_footer.scss */
+  /* line 5, ../../../Desktop/personal-page/portfolio-site/scss/_footer.scss */
   .footer {
     font-size: 1.1rem;
     padding: 2rem 2rem;
+    /* Offset for sidebar on large screens */
+    margin-left: 250px;
   }
-  /* line 63, ../../../Desktop/personal-page/portfolio-site/scss/_footer.scss */
+  /* line 73, ../../../Desktop/personal-page/portfolio-site/scss/_footer.scss */
   .footer i {
     font-size: 1.7rem;
   }
 }
 
 @media (min-width: 1200px) {
-  /* line 1, ../../../Desktop/personal-page/portfolio-site/scss/_footer.scss */
+  /* line 5, ../../../Desktop/personal-page/portfolio-site/scss/_footer.scss */
   .footer {
     font-size: 1.15rem;
   }
-  /* line 70, ../../../Desktop/personal-page/portfolio-site/scss/_footer.scss */
+  /* line 83, ../../../Desktop/personal-page/portfolio-site/scss/_footer.scss */
   .footer i {
     font-size: 1.8rem;
   }
