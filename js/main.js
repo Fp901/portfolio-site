@@ -1,5 +1,5 @@
 // ==============================
-// main.js — Step 4: Active Navigation Highlight (Fixed & Improved)
+// main.js — Enhanced + Visible Version
 // ==============================
 
 document.addEventListener("DOMContentLoaded", () => {
@@ -34,9 +34,9 @@ document.addEventListener("DOMContentLoaded", () => {
   });
 
   /* ------------------------------
-     Fade-In Animations
-  ------------------------------ */
-  const fadeItems = document.querySelectorAll(".project, section");
+   Fade-In Animations (Fixed)
+------------------------------ */
+  const fadeItems = document.querySelectorAll(".fade-item");
 
   if ("IntersectionObserver" in window) {
     const observer = new IntersectionObserver(
@@ -48,47 +48,50 @@ document.addEventListener("DOMContentLoaded", () => {
           }
         });
       },
-      { threshold: 0.2 }
+      { threshold: 0.1 }
     );
 
-    fadeItems.forEach((item) => observer.observe(item));
+    fadeItems.forEach((item) => {
+      observer.observe(item);
+
+      // ✅ Instantly show items already visible on page load
+      const rect = item.getBoundingClientRect();
+      if (rect.top < window.innerHeight && rect.bottom > 0) {
+        item.classList.add("visible");
+        observer.unobserve(item);
+      }
+    });
   } else {
     fadeItems.forEach((item) => item.classList.add("visible"));
   }
 
   /* ------------------------------
-     Active Navigation Highlight (Fixed)
+     Active Navigation Highlight
   ------------------------------ */
   const sections = document.querySelectorAll("section[id]");
   const navItems = document.querySelectorAll(".nav-links a");
 
   const activateSection = () => {
     let current = "";
-    const scrollPos = window.scrollY + window.innerHeight / 2;
-    const docBottom =
-      document.documentElement.scrollHeight - window.innerHeight - 5;
+    const scrollY = window.scrollY;
 
     sections.forEach((section) => {
-      const top = section.offsetTop - 200;
-      const bottom = top + section.offsetHeight;
-      if (scrollPos >= top && scrollPos < bottom) {
+      const sectionTop = section.offsetTop - 200;
+      const sectionHeight = section.offsetHeight;
+      if (scrollY >= sectionTop && scrollY < sectionTop + sectionHeight) {
         current = section.getAttribute("id");
       }
     });
 
-    // Highlight last section when at page bottom
-    if (window.scrollY >= docBottom) {
-      current = sections[sections.length - 1].id;
-    }
-
     navItems.forEach((link) => {
-      link.classList.toggle(
-        "active",
-        link.getAttribute("href").includes(current)
-      );
+      link.classList.remove("active");
+      const href = link.getAttribute("href").replace("#", "");
+      if (href === current) {
+        link.classList.add("active");
+      }
     });
   };
 
   window.addEventListener("scroll", activateSection);
-  window.addEventListener("resize", activateSection);
+  activateSection(); // run once on load
 });

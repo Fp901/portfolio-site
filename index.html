@@ -10,13 +10,16 @@
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
     />
   </head>
+
   <body>
+    <!-- Burger Menu -->
     <div class="burger">
       <span></span>
       <span></span>
       <span></span>
     </div>
 
+    <!-- Sidebar Navigation -->
     <nav class="sidebar">
       <h1><a href="#hero">FP</a></h1>
       <div class="nav-links">
@@ -37,12 +40,16 @@
       </div>
     </nav>
 
+    <!-- Main Content -->
     <div class="content">
       <!-- HERO SECTION -->
-      <section id="hero" class="hero">
+      <section id="hero" class="hero fade-item">
         <div class="hero-content container">
           <h1>Francois Pretorius</h1>
-          <p>Web Developer</p>
+          <p class="tagline">
+            Web Developer & Cybersecurity Enthusiast — combining design, code,
+            and security to build trustworthy digital solutions.
+          </p>
           <a href="#portfolio" class="cta-btn">My Work</a>
         </div>
 
@@ -53,38 +60,28 @@
       </section>
 
       <!-- ABOUT SECTION -->
-      <section id="about" class="about">
+      <section id="about" class="about fade-item">
         <div class="container">
           <h2>About Me</h2>
-          <p>
-            I'm Francois Pretorius, a dedicated and detail-oriented Web
-            Developer and Cybersecurity student with a passion for creating
-            modern, responsive, and secure digital experiences. With a strong
-            foundation in both front-end and back-end development, I enjoy
-            bringing functionality and design together to build efficient,
-            user-friendly solutions.
-          </p>
-          <p>
-            My expertise includes technologies such as HTML, CSS/SCSS,
-            JavaScript, and Python, as well as frameworks and tools like Flask,
-            Node.js, and Git. I’m also skilled in working with relational
-            databases, secure coding practices, and responsive design.
-          </p>
-          <p>
-            Currently pursuing a BSc (Hons) in Computing (Cyber Security) at the
-            University of Suffolk, I aim to bridge the gap between development
-            and security—ensuring the systems I build are not just functional,
-            but resilient and safe.
-          </p>
+          <div class="about-content">
+            <p>
+              Hi, I’m a Web Developer and Cybersecurity graduate with a passion
+              for building fast, secure, and user-focused web applications.
+            </p>
+            <p>
+              I blend clean design with solid back-end development to create
+              digital experiences that are as safe as they are smooth.
+            </p>
+          </div>
         </div>
       </section>
 
       <!-- PORTFOLIO SECTION -->
-      <section id="portfolio">
+      <section id="portfolio" class="fade-item">
         <div class="container">
           <h2>My Portfolio</h2>
           <div class="projects">
-            <div class="project">
+            <div class="project fade-item">
               <img
                 src="assets/images/inventory.jpg"
                 alt="Inventory Management"
@@ -99,7 +96,7 @@
               </div>
             </div>
 
-            <div class="project">
+            <div class="project fade-item">
               <img src="assets/images/password.jpg" alt="Password Manager" />
               <div class="project-content">
                 <h3>Password Manager</h3>
@@ -111,7 +108,7 @@
               </div>
             </div>
 
-            <div class="project">
+            <div class="project fade-item">
               <img src="assets/images/site-replica.png" alt="Site Replica" />
               <div class="project-content">
                 <h3>Site Replica</h3>
@@ -123,7 +120,7 @@
               </div>
             </div>
 
-            <div class="project">
+            <div class="project fade-item">
               <img src="assets/images/portfolio.jpg" alt="Portfolio Site" />
               <div class="project-content">
                 <h3>Portfolio Site</h3>
@@ -135,7 +132,7 @@
               </div>
             </div>
 
-            <div class="project">
+            <div class="project fade-item">
               <img src="assets/images/tv-me.png" alt="TV-me Site" />
               <div class="project-content">
                 <h3>TV-me Site</h3>
@@ -147,7 +144,7 @@
               </div>
             </div>
 
-            <div class="project">
+            <div class="project fade-item">
               <img src="assets/images/java.jpg" alt="DbHub" />
               <div class="project-content">
                 <h3>DbHub</h3>
@@ -163,47 +160,15 @@
       </section>
 
       <!-- CODING EXAMPLES SECTION -->
-      <section id="coding" class="coding">
+      <section id="coding" class="coding fade-item">
         <div class="container">
           <h2>Coding Examples</h2>
-          <p>
-            Below are a few examples that showcase my coding skills, including
-            Java, Python, and web-based projects. I focus on building clean,
-            efficient, and secure code following modern design principles and
-            development practices.
-          </p>
-
-          <div class="coding-examples">
-            <div class="example">
-              <h3>Python – Password Manager</h3>
-              <p>
-                Demonstrates the use of encryption and hashing for secure
-                password storage, file handling, and command-line interface
-                development.
-              </p>
-            </div>
-
-            <div class="example">
-              <h3>Java – Inventory Management</h3>
-              <p>
-                Implements data structures and OOP principles to create a robust
-                application for managing stock and recording transactions.
-              </p>
-            </div>
-
-            <div class="example">
-              <h3>Web Development – Portfolio Site</h3>
-              <p>
-                Showcases responsive front-end design using SCSS and JavaScript
-                for smooth animations, user interactions, and accessibility.
-              </p>
-            </div>
-          </div>
+          <p>Coming soon...</p>
         </div>
       </section>
 
       <!-- CONTACT SECTION -->
-      <section id="contact" class="contact">
+      <section id="contact" class="contact fade-item">
         <div class="container">
           <h2>Get In Touch</h2>
           <div class="contact-content">
@@ -215,6 +180,7 @@
               >
             </p>
             <p>Phone: <a href="tel:+447727977855">+44 7727977855</a></p>
+
             <form class="contact-form">
               <input type="text" placeholder="Your Name" required />
               <input type="email" placeholder="Your Email" required />
@@ -226,34 +192,38 @@
       </section>
 
       <!-- SCS SCHEME SECTION -->
-      <section id="scs" class="scs">
+      <section id="scs" class="scs fade-item">
         <div class="container">
           <h2>SCS Scheme</h2>
-          <p>
-            The SCS Scheme has provided me with hands-on experience and the
-            opportunity to develop both my technical and professional skills. It
-            focuses on personal growth, collaboration, and applied learning in
-            real-world scenarios.
-          </p>
-          <p>
-            During my time in the SCS program, I’ve been able to apply academic
-            knowledge to practical situations, work in teams to solve
-            cybersecurity challenges, and learn how technology can be leveraged
-            responsibly and ethically.
-          </p>
-          <p>
-            This experience has enhanced my confidence, adaptability, and
-            communication skills—preparing me to contribute effectively in any
-            professional IT environment.
-          </p>
+          <div class="scs-content">
+            <p>
+              The SCS Scheme has provided me with hands-on experience and the
+              opportunity to develop both my technical and professional skills.
+              It focuses on personal growth, collaboration, and applied learning
+              in real-world scenarios.
+            </p>
+            <p>
+              During my time in the SCS program, I’ve been able to apply
+              academic knowledge to practical situations, work in teams to solve
+              cybersecurity challenges, and learn how technology can be
+              leveraged responsibly and ethically.
+            </p>
+            <p>
+              This experience has enhanced my confidence, adaptability, and
+              communication skills—preparing me to contribute effectively in any
+              professional IT environment.
+            </p>
+          </div>
         </div>
       </section>
 
-      <a href="#hero" class="back-to-top"
-        ><i class="fas fa-arrow-up"></i> Back To Top</a
-      >
+      <!-- BACK TO TOP -->
+      <a href="#hero" class="back-to-top">
+        <i class="fas fa-arrow-up"></i> Back To Top
+      </a>
     </div>
 
+    <!-- FOOTER -->
     <footer class="footer">
       <p>
         © 2025 Francois Pretorius |

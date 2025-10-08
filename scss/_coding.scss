@@ -2,8 +2,8 @@
 
 #coding {
   padding: $space-lg $space-sm;
-  background: $brand-lightest; // Consistent light bg
-  text-align: center; // Center content
+  background: $brand-lightest; // Consistent with other sections
+  text-align: center;
 
   h2 {
     text-align: center;
@@ -18,18 +18,31 @@
     }
   }
 
+  /* ✅ Consistent container */
+  .container {
+    max-width: 1200px; // match About / Portfolio / Contact
+    margin: 0 auto;
+    padding: 0 $space-sm;
+
+    @media (min-width: $break-md) {
+      padding: 0 $space-md;
+    }
+  }
+
   p {
     color: $brand-darkest;
-    font-size: 1.5rem; // Larger for emphasis on "Coming Soon"
-    font-style: italic; // Subtle style
-    margin: $space-lg auto; // Space around
-    max-width: 600px;
+    font-size: 1.5rem;
+    font-style: italic;
+    margin: $space-lg auto;
+    max-width: 700px; // ✅ slightly wider for readability
 
     @media (min-width: $break-md) {
       font-size: 1.8rem;
+      max-width: 800px;
     }
     @media (min-width: $break-xl) {
       font-size: 2rem;
+      max-width: 900px;
     }
   }
 

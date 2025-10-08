@@ -1,8 +1,7 @@
-// _about.scss
-
 #about {
   padding: $space-lg $space-sm;
-  background: $brand-lightest; // Match portfolio/contact
+  background: $brand-lightest;
+  color: $brand-darkest;
 
   h2 {
     text-align: center;
@@ -12,127 +11,61 @@
     @media (min-width: $break-md) {
       font-size: 2.5rem;
     }
+
     @media (min-width: $break-xl) {
       font-size: 3rem;
     }
   }
 
   .container {
-    max-width: 900px; // Narrower for readability
+    max-width: 1100px;
     margin: 0 auto;
-  }
-
-  .about-card {
-    max-width: 700px; // Increased from 600px for wider card
-    margin: 0 auto;
-    background: #fff;
-    border-radius: 12px; // Softer radius for card feel
-    border: 1px solid rgba(0, 0, 0, 0.05); // Subtle border
-    box-shadow: 0 8px 24px rgba(51, 78, 104, 0.1); // Deeper shadow for elevation
-    padding: $space-sm; // Slightly reduced base padding for mobile
-    transition: transform 0.3s ease, box-shadow 0.3s ease; // Hover lift like portfolio
-
-    &:hover {
-      transform: translateY(-4px); // Subtle lift on hover
-      box-shadow: 0 16px 32px rgba(51, 78, 104, 0.15);
-    }
-
-    p {
-      color: $brand-darkest;
-      font-size: 1rem;
-      line-height: 1.6;
-      margin-bottom: $space-md;
-      text-align: left; // Left for readability in card
-      padding: 0 $space-sm; // Add horizontal padding for breathing room
-
-      @media (min-width: $break-md) {
-        font-size: 1.1rem;
-      }
-      @media (min-width: $break-lg) {
-        font-size: 1.15rem;
-      }
-      @media (min-width: $break-xl) {
-        font-size: 1.2rem;
-      }
-    }
-
-    h3 {
-      text-align: left; // Left for structure
-      margin: $space-md 0 $space-sm 0;
-      font-size: 1.5rem;
-      color: $brand-darkest;
-      border-bottom: 2px solid $brand-lighter; // Subtle underline for sections
-      padding-bottom: $space-xs;
-      padding-left: $space-sm; // Align with text
-
-      @media (min-width: $break-md) {
-        font-size: 1.8rem;
-      }
-      @media (min-width: $break-xl) {
-        font-size: 2rem;
-      }
-    }
-
-    ul {
-      list-style-type: none; // Custom bullets for modern look
-      padding-left: $space-sm; // Indent to align with text
-      margin-bottom: $space-md;
-      color: $brand-darkest;
-      font-size: 1rem;
-      line-height: 1.6;
-
-      li {
-        margin-bottom: $space-xs;
-        position: relative;
-        padding-left: $space-lg; // Increased space for arrow + gap
-
-        &::before {
-          content: "→"; // Arrow icon for dynamic feel
-          position: absolute;
-          left: 0;
-          color: $brand-pinkish; // Brand accent
-          font-weight: 900; // Bolder weight for emphasis
-          font-size: 1.2rem; // Larger for better visibility
-        }
-      }
-
-      @media (min-width: $break-md) {
-        font-size: 1.1rem;
-        padding-left: $space-md;
-      }
-      @media (min-width: $break-lg) {
-        font-size: 1.15rem;
-      }
-      @media (min-width: $break-xl) {
-        font-size: 1.2rem;
-      }
-    }
-
-    /* Mobile-first responsiveness */
-    @media (max-width: $break-sm) {
-      max-width: 100%; // Full width on very small screens
-      padding: $space-sm;
-      border-radius: 8px; // Softer on mobile
-      box-shadow: 0 4px 12px rgba(51, 78, 104, 0.08); // Lighter shadow
-    }
-
-    @media (min-width: $break-sm) {
-      padding: $space-md; // Scale up padding
-      max-width: 750px; // Gradual widen
-    }
+    padding: 0 $space-sm;
 
     @media (min-width: $break-md) {
-      padding: $space-lg;
-      max-width: 800px; // Wider on tablet
+      padding: 0 $space-md;
     }
 
     @media (min-width: $break-lg) {
-      max-width: 850px; // Even wider on desktop
+      padding: 0 $space-lg;
     }
   }
 
-  /* Responsive padding */
-  @media (min-width: $break-sm) {
-    padding: $space-lg $space-md;
+  .about-content {
+    max-width: 900px;
+    margin: 0 auto;
+    text-align: left;
+    font-size: 1rem;
+    line-height: 1.8;
+    letter-spacing: 0.2px;
+    padding: $space-md 0;
+
+    p {
+      margin-bottom: $space-md;
+
+      @media (min-width: $break-sm) {
+        font-size: 1.05rem;
+      }
+
+      @media (min-width: $break-md) {
+        font-size: 1.1rem;
+      }
+
+      @media (min-width: $break-lg) {
+        font-size: 1.15rem;
+      }
+    }
+  }
+
+  /* ✨ Fade-in animation */
+  &.fade-item {
+    opacity: 0;
+    transform: translateY(40px);
+    transition: opacity 1s ease-out, transform 1s ease-out;
+
+    &.visible {
+      opacity: 1 !important;
+      transform: translateY(0);
+    }
   }
 }

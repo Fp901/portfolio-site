@@ -2,39 +2,38 @@
   position: relative;
   height: 100vh;
   display: flex;
-  flex-direction: column; // stack content + scroll prompt
+  flex-direction: column; // Stack content + scroll prompt
   align-items: center;
-  justify-content: space-between; // push scroll prompt to bottom
+  justify-content: space-between;
   text-align: center;
   color: $brand-lightest;
   overflow: hidden;
 
-  background-image: url("/portfolio-site/assets/images/maxim-berg-DqZltTH2-9U-unsplash.jpg");
-  background-size: cover;
-  background-position: center;
-  background-repeat: no-repeat;
-  background-attachment: scroll;
+  /* 🌈 Animated brand gradient background */
+  background: linear-gradient(
+    -45deg,
+    $brand-darkest,
+    $brand-pinkish,
+    $brand-lighter,
+    $brand-dark
+  );
+  background-size: 400% 400%;
+  animation: gradientShift 15s ease infinite;
 
+  /* Subtle overlay for text contrast */
   &::before {
     content: "";
     position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background: linear-gradient(
-      to bottom,
-      rgba(26, 42, 68, 0.7),
-      rgba(26, 42, 68, 0.4)
-    );
+    inset: 0;
+    background: rgba(0, 0, 0, 0.25);
     z-index: 0;
   }
 
   .hero-content {
-    flex: 1; // fill available vertical space
+    flex: 1;
     display: flex;
     flex-direction: column;
-    justify-content: center; // center text vertically
+    justify-content: center;
     align-items: center;
     z-index: 1;
     padding: 0 1rem;
@@ -49,28 +48,32 @@
     margin-bottom: $space-sm;
     color: $brand-lightest;
     font-weight: bold;
-    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.4);
     letter-spacing: 1px;
     animation: fadeInUp 1s ease-out 0.2s both;
 
     @media (max-width: 320px) {
       font-size: 2rem;
-      letter-spacing: 0.5px;
     }
   }
 
-  p {
-    font-size: 1.5rem;
-    color: $brand-pinkish;
-    font-style: italic;
-    font-weight: 600;
+  .tagline {
+    font-size: 1.1rem;
+    font-weight: 500;
+    color: $brand-lightest;
+    margin-bottom: $space-md;
     max-width: 700px;
-    margin: 0 auto $space-lg auto;
+    opacity: 0.9;
+    line-height: 1.6;
+    z-index: 1;
     animation: fadeInUp 1s ease-out 0.4s both;
 
-    @media (max-width: 320px) {
-      font-size: 1.1rem;
-      max-width: 90%;
+    @media (min-width: $break-md) {
+      font-size: 1.2rem;
+    }
+
+    @media (min-width: $break-lg) {
+      font-size: 1.3rem;
     }
   }
 
@@ -83,21 +86,17 @@
     display: inline-block;
     margin-top: 1.5rem;
     transition: all 0.3s ease;
-    box-shadow: 0 4px 12px rgba(255, 107, 107, 0.3);
+    box-shadow: 0 4px 12px rgba($brand-pinkish, 0.3);
     transform: translateY(0);
     animation: pulse 2s infinite;
 
     &:hover {
       background: $brand-pinkish;
-      box-shadow: 0 6px 16px rgba(16, 185, 129, 0.4);
+      box-shadow: 0 6px 16px rgba($brand-pinkish, 0.4);
       transform: translateY(-2px);
     }
-
-    @media (max-width: 320px) {
-      padding: 0.6rem 1.2rem;
-      font-size: 0.95rem;
-    }
   }
+
   .scroll-prompt {
     margin-bottom: 2rem;
     display: flex;
@@ -118,7 +117,20 @@
     }
   }
 
-  // Animations
+  /* 🌈 Gradient animation */
+  @keyframes gradientShift {
+    0% {
+      background-position: 0% 50%;
+    }
+    50% {
+      background-position: 100% 50%;
+    }
+    100% {
+      background-position: 0% 50%;
+    }
+  }
+
+  /* ✨ Animations */
   @keyframes fadeInUp {
     from {
       opacity: 0;
@@ -133,10 +145,10 @@
   @keyframes pulse {
     0%,
     100% {
-      box-shadow: 0 4px 12px rgba(255, 107, 107, 0.3);
+      box-shadow: 0 4px 12px rgba($brand-pinkish, 0.3);
     }
     50% {
-      box-shadow: 0 4px 12px rgba(255, 107, 107, 0.5);
+      box-shadow: 0 4px 12px rgba($brand-pinkish, 0.5);
     }
   }
 
@@ -150,19 +162,13 @@
     }
   }
 
-  // Responsive scaling
+  /* 📱 Responsive scaling */
   @media (min-width: 576px) {
     h1 {
       font-size: 3rem;
     }
-    p {
-      font-size: 1.3rem;
-    }
-    .scroll-prompt {
-      font-size: 1.1rem;
-      i {
-        font-size: 1.8rem;
-      }
+    .scroll-prompt i {
+      font-size: 1.8rem;
     }
   }
 
@@ -170,44 +176,17 @@
     h1 {
       font-size: 3.5rem;
     }
-    p {
-      font-size: 1.35rem;
-    }
-    .scroll-prompt {
-      font-size: 1.2rem;
-      i {
-        font-size: 2rem;
-      }
-    }
   }
 
   @media (min-width: 992px) {
     h1 {
       font-size: 4rem;
     }
-    p {
-      font-size: 1.4rem;
-    }
-    .scroll-prompt {
-      font-size: 1.3rem;
-      i {
-        font-size: 2.2rem;
-      }
-    }
   }
 
   @media (min-width: 1200px) {
     h1 {
       font-size: 4.5rem;
-    }
-    p {
-      font-size: 1.5rem;
-    }
-    .scroll-prompt {
-      font-size: 1.4rem;
-      i {
-        font-size: 2.5rem;
-      }
     }
   }
 }

@@ -142,6 +142,21 @@ footer {
   transition: width 0.2s ease-out;
 }
 
+/* =========================================
+   Global Fade Animation (used site-wide)
+========================================= */
+.fade-item {
+  opacity: 0;
+  transform: translateY(40px);
+  transition: opacity 1s cubic-bezier(0.25, 0.1, 0.25, 1),
+    transform 1s cubic-bezier(0.25, 0.1, 0.25, 1);
+}
+
+.fade-item.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
 /* Typography scaling */
 @media (min-width: 576px) {
   body {
