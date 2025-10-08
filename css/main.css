@@ -257,6 +257,12 @@ footer {
   z-index: 1001;
   box-sizing: border-box;
   box-shadow: 2px 0 8px rgba(0, 0, 0, 0.2);
+  /* ====================================
+     NAV LINKS (No underline version)
+  ==================================== */
+  /* ====================================
+     SOCIAL LINKS
+  ==================================== */
   /* ---- Responsive breakpoints ---- */
 }
 
@@ -291,58 +297,31 @@ footer {
   padding-left: 0;
 }
 
-/* line 49, ../../../Desktop/personal-page/portfolio-site/scss/_sidebar.scss */
+/* line 52, ../../../Desktop/personal-page/portfolio-site/scss/_sidebar.scss */
 .sidebar .nav-links a {
   color: #f8fafc;
   text-decoration: none;
   font-weight: 500;
   line-height: 1.2;
-  padding: 1rem 1rem 1rem 0;
+  padding: 1rem 0;
   display: block;
-  position: relative;
   transition: color 0.3s ease, transform 0.25s ease;
-  /* Active link highlight (✨ New) */
 }
 
-/* line 59, ../../../Desktop/personal-page/portfolio-site/scss/_sidebar.scss */
+/* line 61, ../../../Desktop/personal-page/portfolio-site/scss/_sidebar.scss */
 .sidebar .nav-links a:hover {
   color: #ff6b6b;
   transform: translateX(5px);
 }
 
-/* line 65, ../../../Desktop/personal-page/portfolio-site/scss/_sidebar.scss */
-.sidebar .nav-links a:after {
-  content: "";
-  position: absolute;
-  bottom: 0;
-  left: 0;
-  width: 50%;
-  height: 1px;
-  background: rgba(248, 250, 252, 0.2);
-  opacity: 0;
-  transition: opacity 0.3s ease;
-}
-
-/* line 77, ../../../Desktop/personal-page/portfolio-site/scss/_sidebar.scss */
-.sidebar .nav-links a:hover:after {
-  opacity: 1;
-}
-
-/* line 82, ../../../Desktop/personal-page/portfolio-site/scss/_sidebar.scss */
+/* line 66, ../../../Desktop/personal-page/portfolio-site/scss/_sidebar.scss */
 .sidebar .nav-links a.active {
   color: #ff6b6b;
   font-weight: 600;
   transform: translateX(4px);
 }
 
-/* line 86, ../../../Desktop/personal-page/portfolio-site/scss/_sidebar.scss */
-.sidebar .nav-links a.active:after {
-  opacity: 1;
-  width: 100%;
-  background: rgba(255, 107, 107, 0.4);
-}
-
-/* line 94, ../../../Desktop/personal-page/portfolio-site/scss/_sidebar.scss */
+/* line 76, ../../../Desktop/personal-page/portfolio-site/scss/_sidebar.scss */
 .sidebar .social {
   margin-top: 1.5rem;
   display: flex;
@@ -352,14 +331,14 @@ footer {
   padding-left: 0;
 }
 
-/* line 103, ../../../Desktop/personal-page/portfolio-site/scss/_sidebar.scss */
+/* line 84, ../../../Desktop/personal-page/portfolio-site/scss/_sidebar.scss */
 .sidebar .social a {
   color: #fff;
   font-size: 1.8rem;
   transition: color 0.3s ease;
 }
 
-/* line 108, ../../../Desktop/personal-page/portfolio-site/scss/_sidebar.scss */
+/* line 89, ../../../Desktop/personal-page/portfolio-site/scss/_sidebar.scss */
 .sidebar .social a:hover {
   color: #ff6b6b;
 }
@@ -370,7 +349,7 @@ footer {
     width: 240px;
     padding-left: 20px;
   }
-  /* line 119, ../../../Desktop/personal-page/portfolio-site/scss/_sidebar.scss */
+  /* line 99, ../../../Desktop/personal-page/portfolio-site/scss/_sidebar.scss */
   .sidebar h1 a {
     font-size: 2.5rem;
   }
@@ -382,7 +361,7 @@ footer {
     width: 280px;
     padding-left: 25px;
   }
-  /* line 128, ../../../Desktop/personal-page/portfolio-site/scss/_sidebar.scss */
+  /* line 107, ../../../Desktop/personal-page/portfolio-site/scss/_sidebar.scss */
   .sidebar .social a {
     font-size: 2rem;
   }
@@ -395,7 +374,7 @@ footer {
     width: 320px;
     padding-left: 30px;
   }
-  /* line 138, ../../../Desktop/personal-page/portfolio-site/scss/_sidebar.scss */
+  /* line 116, ../../../Desktop/personal-page/portfolio-site/scss/_sidebar.scss */
   .sidebar .social a {
     font-size: 2.2rem;
   }
@@ -407,35 +386,35 @@ footer {
     width: 360px;
     padding-left: 35px;
   }
-  /* line 147, ../../../Desktop/personal-page/portfolio-site/scss/_sidebar.scss */
+  /* line 124, ../../../Desktop/personal-page/portfolio-site/scss/_sidebar.scss */
   .sidebar .social a {
     font-size: 2.5rem;
   }
 }
 
 /* ---- Content Area ---- */
-/* line 154, ../../../Desktop/personal-page/portfolio-site/scss/_sidebar.scss */
+/* line 131, ../../../Desktop/personal-page/portfolio-site/scss/_sidebar.scss */
 .content {
   margin-left: 0;
   flex-grow: 1;
 }
 
 @media (min-width: 992px) {
-  /* line 154, ../../../Desktop/personal-page/portfolio-site/scss/_sidebar.scss */
+  /* line 131, ../../../Desktop/personal-page/portfolio-site/scss/_sidebar.scss */
   .content {
     margin-left: 320px;
   }
 }
 
 @media (min-width: 1200px) {
-  /* line 154, ../../../Desktop/personal-page/portfolio-site/scss/_sidebar.scss */
+  /* line 131, ../../../Desktop/personal-page/portfolio-site/scss/_sidebar.scss */
   .content {
     margin-left: 360px;
   }
 }
 
 /* ---- Burger Menu ---- */
-/* line 168, ../../../Desktop/personal-page/portfolio-site/scss/_sidebar.scss */
+/* line 145, ../../../Desktop/personal-page/portfolio-site/scss/_sidebar.scss */
 .burger {
   position: fixed;
   top: 1rem;
@@ -451,7 +430,7 @@ footer {
   transition: opacity 0.3s ease;
 }
 
-/* line 182, ../../../Desktop/personal-page/portfolio-site/scss/_sidebar.scss */
+/* line 159, ../../../Desktop/personal-page/portfolio-site/scss/_sidebar.scss */
 .burger > span {
   background: #1a2a44;
   height: 5px;
@@ -460,41 +439,41 @@ footer {
   transition: all 0.3s ease;
 }
 
-/* line 190, ../../../Desktop/personal-page/portfolio-site/scss/_sidebar.scss */
+/* line 167, ../../../Desktop/personal-page/portfolio-site/scss/_sidebar.scss */
 .sidebar.open ~ .burger {
   opacity: 0;
   pointer-events: none;
 }
 
-/* line 196, ../../../Desktop/personal-page/portfolio-site/scss/_sidebar.scss */
+/* line 173, ../../../Desktop/personal-page/portfolio-site/scss/_sidebar.scss */
 .burger.open > span:nth-child(1) {
   transform: translateY(0.8rem) rotate(45deg);
 }
 
-/* line 199, ../../../Desktop/personal-page/portfolio-site/scss/_sidebar.scss */
+/* line 176, ../../../Desktop/personal-page/portfolio-site/scss/_sidebar.scss */
 .burger.open > span:nth-child(2) {
   opacity: 0;
 }
 
-/* line 202, ../../../Desktop/personal-page/portfolio-site/scss/_sidebar.scss */
+/* line 179, ../../../Desktop/personal-page/portfolio-site/scss/_sidebar.scss */
 .burger.open > span:nth-child(3) {
   transform: translateY(-0.8rem) rotate(-45deg);
 }
 
 @media (max-width: 576px) {
-  /* line 168, ../../../Desktop/personal-page/portfolio-site/scss/_sidebar.scss */
+  /* line 145, ../../../Desktop/personal-page/portfolio-site/scss/_sidebar.scss */
   .burger {
     width: 3.5rem;
     height: 3rem;
   }
-  /* line 210, ../../../Desktop/personal-page/portfolio-site/scss/_sidebar.scss */
+  /* line 187, ../../../Desktop/personal-page/portfolio-site/scss/_sidebar.scss */
   .burger > span {
     height: 6px;
   }
 }
 
 @media (min-width: 576px) {
-  /* line 168, ../../../Desktop/personal-page/portfolio-site/scss/_sidebar.scss */
+  /* line 145, ../../../Desktop/personal-page/portfolio-site/scss/_sidebar.scss */
   .burger {
     width: 3.8rem;
     height: 3.2rem;
@@ -502,7 +481,7 @@ footer {
 }
 
 @media (min-width: 768px) {
-  /* line 168, ../../../Desktop/personal-page/portfolio-site/scss/_sidebar.scss */
+  /* line 145, ../../../Desktop/personal-page/portfolio-site/scss/_sidebar.scss */
   .burger {
     width: 4rem;
     height: 3.4rem;
@@ -510,7 +489,7 @@ footer {
 }
 
 @media (min-width: 992px) {
-  /* line 168, ../../../Desktop/personal-page/portfolio-site/scss/_sidebar.scss */
+  /* line 145, ../../../Desktop/personal-page/portfolio-site/scss/_sidebar.scss */
   .burger {
     display: none;
   }

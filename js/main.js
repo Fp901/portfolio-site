@@ -1,5 +1,5 @@
 // ==============================
-// main.js — Step 4: Active Navigation Highlight
+// main.js — Step 4: Active Navigation Highlight (Fixed & Improved)
 // ==============================
 
 document.addEventListener("DOMContentLoaded", () => {
@@ -44,7 +44,6 @@ document.addEventListener("DOMContentLoaded", () => {
         entries.forEach((entry) => {
           if (entry.isIntersecting) {
             entry.target.classList.add("visible");
-            // Keep fade once behavior (no re-fade)
             obs.unobserve(entry.target);
           }
         });
@@ -58,27 +57,38 @@ document.addEventListener("DOMContentLoaded", () => {
   }
 
   /* ------------------------------
-     Active Navigation Highlight
+     Active Navigation Highlight (Fixed)
   ------------------------------ */
   const sections = document.querySelectorAll("section[id]");
   const navItems = document.querySelectorAll(".nav-links a");
 
   const activateSection = () => {
     let current = "";
+    const scrollPos = window.scrollY + window.innerHeight / 2;
+    const docBottom =
+      document.documentElement.scrollHeight - window.innerHeight - 5;
+
     sections.forEach((section) => {
-      const sectionTop = section.offsetTop - 150;
-      if (scrollY >= sectionTop) {
+      const top = section.offsetTop - 200;
+      const bottom = top + section.offsetHeight;
+      if (scrollPos >= top && scrollPos < bottom) {
         current = section.getAttribute("id");
       }
     });
 
+    // Highlight last section when at page bottom
+    if (window.scrollY >= docBottom) {
+      current = sections[sections.length - 1].id;
+    }
+
     navItems.forEach((link) => {
-      link.classList.remove("active");
-      if (link.getAttribute("href").includes(current)) {
-        link.classList.add("active");
-      }
+      link.classList.toggle(
+        "active",
+        link.getAttribute("href").includes(current)
+      );
     });
   };
 
   window.addEventListener("scroll", activateSection);
+  window.addEventListener("resize", activateSection);
 });
