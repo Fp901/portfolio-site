@@ -1,189 +1,95 @@
 #portfolio {
-  padding: $space-lg $space-sm;
-  background: $brand-lightest; // Light background for the section
+  background: $brand-lightest;
+  padding: clamp($space-md, 6vw) $space-sm;
 
   h2 {
     text-align: center;
     margin-bottom: $space-md;
-    font-size: 2rem;
-
-    @media (min-width: $break-md) {
-      font-size: 2.5rem;
-    }
-    @media (min-width: $break-xl) {
-      font-size: 3rem;
-    }
+    font-size: clamp(1.8rem, 4vw, 3rem);
+    font-weight: 700;
   }
 
   .projects {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-    gap: $space-sm;
-
-    @media (min-width: $break-md) {
-      gap: $space-md;
-    }
-    @media (min-width: $break-xl) {
-      gap: $space-lg;
-    }
+    gap: clamp(
+      $space-md,
+      4vw,
+      $space-lg
+    ); // ✅ More spacing between stacked cards
+    margin-top: $space-md;
   }
 
   .project {
     background: #fff;
-    border-radius: 8px;
+    border-radius: 10px;
     overflow: hidden;
-    border: 1px solid rgba(0, 0, 0, 0.05); // Subtle border for definition
-    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08); // Enhanced base shadow for depth
+    border: 1px solid rgba(0, 0, 0, 0.05);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
     display: flex;
     flex-direction: column;
-    transition: transform 0.2s ease, box-shadow 0.2s ease;
+    transition: transform 0.25s ease, box-shadow 0.25s ease;
 
     &:hover {
-      transform: translateY(-5px);
-      box-shadow: 0 12px 24px rgba(0, 0, 0, 0.15); // Stronger hover shadow
+      transform: translateY(-6px);
+      box-shadow: 0 12px 24px rgba(0, 0, 0, 0.15);
     }
 
     img {
       width: 100%;
-      height: auto;
-      aspect-ratio: 16/9;
+      aspect-ratio: 16 / 9;
       object-fit: cover;
       display: block;
     }
 
     .project-content {
-      padding: $space-sm;
+      padding: clamp($space-sm, 2vw, $space-md);
       display: flex;
       flex-direction: column;
       flex-grow: 1;
-      min-height: 150px;
+      text-align: center;
       color: $brand-darkest;
-      text-align: center; // Center text (h3 and p)
 
       h3 {
         margin-bottom: $space-xs;
-        font-size: 1.2rem;
+        font-size: clamp(1.1rem, 2vw, 1.4rem);
         color: $brand-darkest;
-        white-space: normal;
+        font-weight: 600;
       }
 
       p {
         flex-grow: 1;
         margin-bottom: $space-sm;
-        font-size: 1rem;
-        color: $brand-darkest;
-        line-height: 1.5;
-        white-space: normal;
-        hyphens: none;
+        font-size: clamp(0.95rem, 1.5vw, 1.15rem);
+        line-height: 1.6;
       }
 
       a {
-        align-self: center; // Center the button horizontally
+        align-self: center;
         background: $brand-dark;
         color: $brand-lightest;
-        padding: 0.6rem 1.2rem;
-        border-radius: 4px;
+        padding: clamp(0.6rem, 1.5vw, 0.9rem) clamp(1rem, 2vw, 1.6rem);
+        border-radius: 6px;
         text-decoration: none;
         font-weight: bold;
-        font-size: 1rem;
-        transition: background 0.3s ease;
+        font-size: clamp(0.95rem, 1.5vw, 1.15rem);
+        transition: background 0.3s ease, transform 0.2s ease;
 
         &:hover {
           background: $brand-pinkish;
+          transform: translateY(-2px);
         }
       }
     }
 
-    /* ✨ Fade-in animation (slower & smoother) */
+    /* ✨ Fade-in animation */
     opacity: 0;
     transform: translateY(40px);
-    transition: opacity 1s cubic-bezier(0.25, 0.1, 0.25, 1),
-      transform 1s cubic-bezier(0.25, 0.1, 0.25, 1);
+    transition: opacity 1s ease-out, transform 1s ease-out;
 
     &.visible {
       opacity: 1;
       transform: translateY(0);
-    }
-  }
-
-  /* Responsive scaling */
-  @media (min-width: $break-sm) {
-    padding: $space-lg $space-md;
-
-    .project .project-content {
-      padding: $space-sm;
-    }
-
-    .project .project-content h3 {
-      font-size: 1.25rem;
-    }
-
-    .project .project-content p {
-      font-size: 1.05rem;
-    }
-
-    .project .project-content a {
-      font-size: 1.05rem;
-      padding: 0.7rem 1.3rem;
-    }
-  }
-
-  @media (min-width: $break-md) {
-    .project .project-content {
-      padding: $space-md;
-      min-height: 180px;
-    }
-
-    .project .project-content h3 {
-      font-size: 1.3rem;
-    }
-
-    .project .project-content p {
-      font-size: 1.1rem;
-    }
-
-    .project .project-content a {
-      font-size: 1.1rem;
-      padding: 0.8rem 1.5rem;
-    }
-  }
-
-  @media (min-width: $break-lg) {
-    .project .project-content {
-      padding: 1.5rem;
-    }
-
-    .project .project-content h3 {
-      font-size: 1.4rem;
-    }
-
-    .project .project-content p {
-      font-size: 1.15rem;
-    }
-
-    .project .project-content a {
-      font-size: 1.15rem;
-      padding: 0.9rem 1.6rem;
-    }
-  }
-
-  @media (min-width: $break-xl) {
-    .project .project-content {
-      padding: 1.75rem;
-      min-height: 200px;
-    }
-
-    .project .project-content h3 {
-      font-size: 1.5rem;
-    }
-
-    .project .project-content p {
-      font-size: 1.2rem;
-    }
-
-    .project .project-content a {
-      font-size: 1.2rem;
-      padding: 1rem 1.8rem;
     }
   }
 }
