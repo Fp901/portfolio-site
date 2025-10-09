@@ -1,5 +1,6 @@
 #contact {
   background: $brand-lightest;
+  margin-bottom: clamp($space-lg, 8vw); // adds dynamic gap below contact
   padding: clamp($space-md, 6vw) $space-sm;
   color: $brand-darkest;
 

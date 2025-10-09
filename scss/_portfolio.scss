@@ -1,6 +1,14 @@
 #portfolio {
   background: $brand-lightest;
-  padding: clamp($space-md, 6vw) $space-sm;
+  color: $brand-darkest;
+  padding: clamp($space-md, 6vw, $space-lg) $space-sm;
+
+  /* ✅ Style the existing container from your HTML */
+  .container {
+    max-width: 1400px; // matches About and SCS sections
+    margin: 0 auto;
+    padding: 0 clamp($space-sm, 4vw, $space-lg);
+  }
 
   h2 {
     text-align: center;
@@ -12,11 +20,7 @@
   .projects {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-    gap: clamp(
-      $space-md,
-      4vw,
-      $space-lg
-    ); // ✅ More spacing between stacked cards
+    gap: clamp($space-md, 4vw, $space-lg);
     margin-top: $space-md;
   }
 

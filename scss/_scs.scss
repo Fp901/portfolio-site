@@ -16,7 +16,7 @@
   }
 
   .container {
-    max-width: 1100px;
+    max-width: 1400px; // ✅ increased from 1100px to match About section
     margin: 0 auto;
     padding: 0 clamp($space-sm, 4vw, $space-lg);
   }
