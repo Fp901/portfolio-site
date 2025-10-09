@@ -34,8 +34,8 @@ document.addEventListener("DOMContentLoaded", () => {
   });
 
   /* ------------------------------
-   Fade-In Animations (Fixed)
------------------------------- */
+     Fade-In Animations (Fixed)
+  ------------------------------ */
   const fadeItems = document.querySelectorAll(".fade-item");
 
   if ("IntersectionObserver" in window) {
@@ -66,7 +66,42 @@ document.addEventListener("DOMContentLoaded", () => {
   }
 
   /* ------------------------------
-     Active Navigation Highlight
+     Portfolio Scroll Fade-in
+  ------------------------------ */
+  const projectCards = document.querySelectorAll("#portfolio .project");
+
+  if ("IntersectionObserver" in window) {
+    const projectObserver = new IntersectionObserver(
+      (entries, obs) => {
+        entries.forEach((entry, index) => {
+          if (entry.isIntersecting) {
+            // ✨ Smooth staggered reveal
+            setTimeout(() => {
+              entry.target.classList.add("visible");
+            }, index * 120);
+            obs.unobserve(entry.target);
+          }
+        });
+      },
+      { threshold: 0.15 }
+    );
+
+    projectCards.forEach((card) => {
+      projectObserver.observe(card);
+
+      // ✅ Instantly show already visible cards on page load
+      const rect = card.getBoundingClientRect();
+      if (rect.top < window.innerHeight && rect.bottom > 0) {
+        card.classList.add("visible");
+        projectObserver.unobserve(card);
+      }
+    });
+  } else {
+    projectCards.forEach((card) => card.classList.add("visible"));
+  }
+
+  /* ------------------------------
+     Active Navigation Highlight (Fixed for bottom)
   ------------------------------ */
   const sections = document.querySelectorAll("section[id]");
   const navItems = document.querySelectorAll(".nav-links a");
@@ -74,6 +109,8 @@ document.addEventListener("DOMContentLoaded", () => {
   const activateSection = () => {
     let current = "";
     const scrollY = window.scrollY;
+    const windowBottom = scrollY + window.innerHeight;
+    const docHeight = document.documentElement.scrollHeight;
 
     sections.forEach((section) => {
       const sectionTop = section.offsetTop - 200;
@@ -82,6 +119,11 @@ document.addEventListener("DOMContentLoaded", () => {
         current = section.getAttribute("id");
       }
     });
+
+    // 🧩 Fix: if user reaches the very bottom, force 'scs' to be active
+    if (windowBottom >= docHeight - 5) {
+      current = "scs";
+    }
 
     navItems.forEach((link) => {
       link.classList.remove("active");
@@ -93,5 +135,41 @@ document.addEventListener("DOMContentLoaded", () => {
   };
 
   window.addEventListener("scroll", activateSection);
-  activateSection(); // run once on load
+  activateSection();
 });
+
+/* ------------------------------
+   Hamburger Menu Toggle + Outside Click Close
+------------------------------ */
+const burger = document.querySelector(".burger");
+const sidebar = document.querySelector(".sidebar");
+const content = document.querySelector(".content"); // main page area
+
+if (burger && sidebar) {
+  burger.addEventListener("click", (e) => {
+    e.stopPropagation(); // prevent click from bubbling
+    const isOpen = sidebar.classList.toggle("open");
+    burger.classList.toggle("open", isOpen);
+  });
+
+  // Close sidebar when clicking a link
+  const sidebarLinks = sidebar.querySelectorAll("a");
+  sidebarLinks.forEach((link) => {
+    link.addEventListener("click", () => {
+      sidebar.classList.remove("open");
+      burger.classList.remove("open");
+    });
+  });
+
+  // ✅ Close sidebar when clicking outside it
+  document.addEventListener("click", (e) => {
+    if (
+      sidebar.classList.contains("open") &&
+      !sidebar.contains(e.target) &&
+      !burger.contains(e.target)
+    ) {
+      sidebar.classList.remove("open");
+      burger.classList.remove("open");
+    }
+  });
+}

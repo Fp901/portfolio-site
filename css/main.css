@@ -261,40 +261,39 @@ footer {
   position: fixed;
   top: 0;
   left: 0;
-  height: 100%;
+  height: 100vh;
   width: 200px;
   background: linear-gradient(180deg, #1a2a44 0%, #131f32 100%);
   color: #fff;
   padding: 20px 20px 20px 15px;
   display: flex;
   flex-direction: column;
+  justify-content: flex-start;
+  align-items: flex-start;
   transform: translateX(-100%);
   transition: transform 0.3s ease;
   z-index: 1001;
   box-sizing: border-box;
   box-shadow: 2px 0 8px rgba(0, 0, 0, 0.2);
-  /* ====================================
-     NAV LINKS (No underline version)
-  ==================================== */
-  /* ====================================
-     SOCIAL LINKS
-  ==================================== */
+  overflow-y: auto;
+  /* ✅ Full-screen overlay for mobile/tablet */
   /* ---- Responsive breakpoints ---- */
 }
 
-/* line 22, ../../../Desktop/personal-page/portfolio-site/scss/_sidebar.scss */
+/* line 25, ../../../Desktop/personal-page/portfolio-site/scss/_sidebar.scss */
 .sidebar.open {
   transform: translateX(0);
 }
 
-/* line 26, ../../../Desktop/personal-page/portfolio-site/scss/_sidebar.scss */
+/* line 29, ../../../Desktop/personal-page/portfolio-site/scss/_sidebar.scss */
 .sidebar h1 {
   margin: 0 0 3rem 0;
   padding: 0;
   width: 100%;
+  flex-shrink: 0;
 }
 
-/* line 32, ../../../Desktop/personal-page/portfolio-site/scss/_sidebar.scss */
+/* line 36, ../../../Desktop/personal-page/portfolio-site/scss/_sidebar.scss */
 .sidebar h1 a {
   color: #ff6b6b;
   text-decoration: none;
@@ -304,16 +303,18 @@ footer {
   padding-left: 0;
 }
 
-/* line 41, ../../../Desktop/personal-page/portfolio-site/scss/_sidebar.scss */
+/* line 45, ../../../Desktop/personal-page/portfolio-site/scss/_sidebar.scss */
 .sidebar .nav-links {
   display: flex;
   flex-direction: column;
   gap: 1.2rem;
   width: 100%;
   padding-left: 0;
+  flex-grow: 1;
+  justify-content: flex-start;
 }
 
-/* line 52, ../../../Desktop/personal-page/portfolio-site/scss/_sidebar.scss */
+/* line 55, ../../../Desktop/personal-page/portfolio-site/scss/_sidebar.scss */
 .sidebar .nav-links a {
   color: #f8fafc;
   text-decoration: none;
@@ -324,13 +325,13 @@ footer {
   transition: color 0.3s ease, transform 0.25s ease;
 }
 
-/* line 61, ../../../Desktop/personal-page/portfolio-site/scss/_sidebar.scss */
+/* line 64, ../../../Desktop/personal-page/portfolio-site/scss/_sidebar.scss */
 .sidebar .nav-links a:hover {
   color: #ff6b6b;
   transform: translateX(5px);
 }
 
-/* line 66, ../../../Desktop/personal-page/portfolio-site/scss/_sidebar.scss */
+/* line 69, ../../../Desktop/personal-page/portfolio-site/scss/_sidebar.scss */
 .sidebar .nav-links a.active {
   color: #ff6b6b;
   font-weight: 600;
@@ -339,7 +340,7 @@ footer {
 
 /* line 76, ../../../Desktop/personal-page/portfolio-site/scss/_sidebar.scss */
 .sidebar .social {
-  margin-top: 1.5rem;
+  margin-top: auto;
   display: flex;
   justify-content: flex-start;
   gap: 1.5rem;
@@ -359,13 +360,51 @@ footer {
   color: #ff6b6b;
 }
 
+@media (max-width: 991px) {
+  /* line 1, ../../../Desktop/personal-page/portfolio-site/scss/_sidebar.scss */
+  .sidebar {
+    width: 100vw;
+    height: 100vh;
+    padding: 2rem;
+    background: linear-gradient(180deg, #1a2a44 0%, #162339 100%);
+    justify-content: flex-start;
+    align-items: flex-start;
+  }
+  /* line 108, ../../../Desktop/personal-page/portfolio-site/scss/_sidebar.scss */
+  .sidebar h1 {
+    margin-bottom: 2rem;
+  }
+  /* line 112, ../../../Desktop/personal-page/portfolio-site/scss/_sidebar.scss */
+  .sidebar .nav-links {
+    gap: 2rem;
+    align-items: flex-start;
+  }
+  /* line 116, ../../../Desktop/personal-page/portfolio-site/scss/_sidebar.scss */
+  .sidebar .nav-links a {
+    font-size: 1.5rem;
+    padding-left: 0.25rem;
+  }
+  /* line 120, ../../../Desktop/personal-page/portfolio-site/scss/_sidebar.scss */
+  .sidebar .nav-links a:hover {
+    transform: translateX(5px);
+  }
+  /* line 126, ../../../Desktop/personal-page/portfolio-site/scss/_sidebar.scss */
+  .sidebar .social {
+    margin-top: auto;
+  }
+  /* line 129, ../../../Desktop/personal-page/portfolio-site/scss/_sidebar.scss */
+  .sidebar .social a {
+    font-size: 2rem;
+  }
+}
+
 @media (min-width: 576px) {
   /* line 1, ../../../Desktop/personal-page/portfolio-site/scss/_sidebar.scss */
   .sidebar {
     width: 240px;
     padding-left: 20px;
   }
-  /* line 99, ../../../Desktop/personal-page/portfolio-site/scss/_sidebar.scss */
+  /* line 139, ../../../Desktop/personal-page/portfolio-site/scss/_sidebar.scss */
   .sidebar h1 a {
     font-size: 2.5rem;
   }
@@ -377,7 +416,7 @@ footer {
     width: 280px;
     padding-left: 25px;
   }
-  /* line 107, ../../../Desktop/personal-page/portfolio-site/scss/_sidebar.scss */
+  /* line 148, ../../../Desktop/personal-page/portfolio-site/scss/_sidebar.scss */
   .sidebar .social a {
     font-size: 2rem;
   }
@@ -390,7 +429,7 @@ footer {
     width: 320px;
     padding-left: 30px;
   }
-  /* line 116, ../../../Desktop/personal-page/portfolio-site/scss/_sidebar.scss */
+  /* line 158, ../../../Desktop/personal-page/portfolio-site/scss/_sidebar.scss */
   .sidebar .social a {
     font-size: 2.2rem;
   }
@@ -402,35 +441,35 @@ footer {
     width: 360px;
     padding-left: 35px;
   }
-  /* line 124, ../../../Desktop/personal-page/portfolio-site/scss/_sidebar.scss */
+  /* line 167, ../../../Desktop/personal-page/portfolio-site/scss/_sidebar.scss */
   .sidebar .social a {
     font-size: 2.5rem;
   }
 }
 
 /* ---- Content Area ---- */
-/* line 131, ../../../Desktop/personal-page/portfolio-site/scss/_sidebar.scss */
+/* line 174, ../../../Desktop/personal-page/portfolio-site/scss/_sidebar.scss */
 .content {
   margin-left: 0;
   flex-grow: 1;
 }
 
 @media (min-width: 992px) {
-  /* line 131, ../../../Desktop/personal-page/portfolio-site/scss/_sidebar.scss */
+  /* line 174, ../../../Desktop/personal-page/portfolio-site/scss/_sidebar.scss */
   .content {
     margin-left: 320px;
   }
 }
 
 @media (min-width: 1200px) {
-  /* line 131, ../../../Desktop/personal-page/portfolio-site/scss/_sidebar.scss */
+  /* line 174, ../../../Desktop/personal-page/portfolio-site/scss/_sidebar.scss */
   .content {
     margin-left: 360px;
   }
 }
 
 /* ---- Burger Menu ---- */
-/* line 145, ../../../Desktop/personal-page/portfolio-site/scss/_sidebar.scss */
+/* line 188, ../../../Desktop/personal-page/portfolio-site/scss/_sidebar.scss */
 .burger {
   position: fixed;
   top: 1rem;
@@ -446,7 +485,7 @@ footer {
   transition: opacity 0.3s ease;
 }
 
-/* line 159, ../../../Desktop/personal-page/portfolio-site/scss/_sidebar.scss */
+/* line 202, ../../../Desktop/personal-page/portfolio-site/scss/_sidebar.scss */
 .burger > span {
   background: #1a2a44;
   height: 5px;
@@ -455,41 +494,41 @@ footer {
   transition: all 0.3s ease;
 }
 
-/* line 167, ../../../Desktop/personal-page/portfolio-site/scss/_sidebar.scss */
+/* line 210, ../../../Desktop/personal-page/portfolio-site/scss/_sidebar.scss */
 .sidebar.open ~ .burger {
   opacity: 0;
   pointer-events: none;
 }
 
-/* line 173, ../../../Desktop/personal-page/portfolio-site/scss/_sidebar.scss */
+/* line 216, ../../../Desktop/personal-page/portfolio-site/scss/_sidebar.scss */
 .burger.open > span:nth-child(1) {
   transform: translateY(0.8rem) rotate(45deg);
 }
 
-/* line 176, ../../../Desktop/personal-page/portfolio-site/scss/_sidebar.scss */
+/* line 219, ../../../Desktop/personal-page/portfolio-site/scss/_sidebar.scss */
 .burger.open > span:nth-child(2) {
   opacity: 0;
 }
 
-/* line 179, ../../../Desktop/personal-page/portfolio-site/scss/_sidebar.scss */
+/* line 222, ../../../Desktop/personal-page/portfolio-site/scss/_sidebar.scss */
 .burger.open > span:nth-child(3) {
   transform: translateY(-0.8rem) rotate(-45deg);
 }
 
 @media (max-width: 576px) {
-  /* line 145, ../../../Desktop/personal-page/portfolio-site/scss/_sidebar.scss */
+  /* line 188, ../../../Desktop/personal-page/portfolio-site/scss/_sidebar.scss */
   .burger {
     width: 3.5rem;
     height: 3rem;
   }
-  /* line 187, ../../../Desktop/personal-page/portfolio-site/scss/_sidebar.scss */
+  /* line 231, ../../../Desktop/personal-page/portfolio-site/scss/_sidebar.scss */
   .burger > span {
     height: 6px;
   }
 }
 
 @media (min-width: 576px) {
-  /* line 145, ../../../Desktop/personal-page/portfolio-site/scss/_sidebar.scss */
+  /* line 188, ../../../Desktop/personal-page/portfolio-site/scss/_sidebar.scss */
   .burger {
     width: 3.8rem;
     height: 3.2rem;
@@ -497,7 +536,7 @@ footer {
 }
 
 @media (min-width: 768px) {
-  /* line 145, ../../../Desktop/personal-page/portfolio-site/scss/_sidebar.scss */
+  /* line 188, ../../../Desktop/personal-page/portfolio-site/scss/_sidebar.scss */
   .burger {
     width: 4rem;
     height: 3.4rem;
@@ -505,7 +544,7 @@ footer {
 }
 
 @media (min-width: 992px) {
-  /* line 145, ../../../Desktop/personal-page/portfolio-site/scss/_sidebar.scss */
+  /* line 188, ../../../Desktop/personal-page/portfolio-site/scss/_sidebar.scss */
   .burger {
     display: none;
   }
@@ -696,114 +735,222 @@ footer {
 
 /* line 1, ../../../Desktop/personal-page/portfolio-site/scss/_portfolio.scss */
 #portfolio {
+  padding: 3rem 1rem;
   background: #f8fafc;
-  color: #1a2a44;
-  padding: clamp(2rem, 6vw, 3rem) 1rem;
-  /* ✅ Style the existing container from your HTML */
+  /* Responsive scaling */
 }
 
-/* line 7, ../../../Desktop/personal-page/portfolio-site/scss/_portfolio.scss */
-#portfolio .container {
-  max-width: 1400px;
-  margin: 0 auto;
-  padding: 0 clamp(1rem, 4vw, 3rem);
-}
-
-/* line 13, ../../../Desktop/personal-page/portfolio-site/scss/_portfolio.scss */
+/* line 5, ../../../Desktop/personal-page/portfolio-site/scss/_portfolio.scss */
 #portfolio h2 {
   text-align: center;
   margin-bottom: 2rem;
-  font-size: clamp(1.8rem, 4vw, 3rem);
-  font-weight: 700;
+  font-size: 2rem;
 }
 
-/* line 20, ../../../Desktop/personal-page/portfolio-site/scss/_portfolio.scss */
+@media (min-width: 768px) {
+  /* line 5, ../../../Desktop/personal-page/portfolio-site/scss/_portfolio.scss */
+  #portfolio h2 {
+    font-size: 2.5rem;
+  }
+}
+
+@media (min-width: 1200px) {
+  /* line 5, ../../../Desktop/personal-page/portfolio-site/scss/_portfolio.scss */
+  #portfolio h2 {
+    font-size: 3rem;
+  }
+}
+
+/* line 18, ../../../Desktop/personal-page/portfolio-site/scss/_portfolio.scss */
 #portfolio .projects {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-  gap: clamp(2rem, 4vw, 3rem);
-  margin-top: 2rem;
+  gap: 1rem;
 }
 
-/* line 27, ../../../Desktop/personal-page/portfolio-site/scss/_portfolio.scss */
+@media (min-width: 768px) {
+  /* line 18, ../../../Desktop/personal-page/portfolio-site/scss/_portfolio.scss */
+  #portfolio .projects {
+    gap: 2rem;
+  }
+}
+
+@media (min-width: 1200px) {
+  /* line 18, ../../../Desktop/personal-page/portfolio-site/scss/_portfolio.scss */
+  #portfolio .projects {
+    gap: 3rem;
+  }
+}
+
+/* line 31, ../../../Desktop/personal-page/portfolio-site/scss/_portfolio.scss */
 #portfolio .project {
   background: #fff;
-  border-radius: 10px;
+  border-radius: 8px;
   overflow: hidden;
   border: 1px solid rgba(0, 0, 0, 0.05);
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
   display: flex;
   flex-direction: column;
-  transition: transform 0.25s ease, box-shadow 0.25s ease;
-  /* ✨ Fade-in animation */
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+  /* ✨ Fade-in animation (slower & smoother) */
   opacity: 0;
   transform: translateY(40px);
-  transition: opacity 1s ease-out, transform 1s ease-out;
+  transition: opacity 1s cubic-bezier(0.25, 0.1, 0.25, 1), transform 1s cubic-bezier(0.25, 0.1, 0.25, 1);
 }
 
-/* line 37, ../../../Desktop/personal-page/portfolio-site/scss/_portfolio.scss */
+/* line 41, ../../../Desktop/personal-page/portfolio-site/scss/_portfolio.scss */
 #portfolio .project:hover {
-  transform: translateY(-6px);
+  transform: translateY(-5px);
   box-shadow: 0 12px 24px rgba(0, 0, 0, 0.15);
 }
 
-/* line 42, ../../../Desktop/personal-page/portfolio-site/scss/_portfolio.scss */
+/* line 46, ../../../Desktop/personal-page/portfolio-site/scss/_portfolio.scss */
 #portfolio .project img {
   width: 100%;
-  aspect-ratio: 16 / 9;
+  height: auto;
+  aspect-ratio: 16/9;
   object-fit: cover;
   display: block;
 }
 
-/* line 49, ../../../Desktop/personal-page/portfolio-site/scss/_portfolio.scss */
+/* line 54, ../../../Desktop/personal-page/portfolio-site/scss/_portfolio.scss */
 #portfolio .project .project-content {
-  padding: clamp(1rem, 2vw, 2rem);
+  padding: 1rem;
   display: flex;
   flex-direction: column;
   flex-grow: 1;
-  text-align: center;
+  min-height: 150px;
   color: #1a2a44;
+  text-align: center;
 }
 
-/* line 57, ../../../Desktop/personal-page/portfolio-site/scss/_portfolio.scss */
+/* line 63, ../../../Desktop/personal-page/portfolio-site/scss/_portfolio.scss */
 #portfolio .project .project-content h3 {
   margin-bottom: 0.5rem;
-  font-size: clamp(1.1rem, 2vw, 1.4rem);
+  font-size: 1.2rem;
   color: #1a2a44;
-  font-weight: 600;
+  white-space: normal;
 }
 
-/* line 64, ../../../Desktop/personal-page/portfolio-site/scss/_portfolio.scss */
+/* line 70, ../../../Desktop/personal-page/portfolio-site/scss/_portfolio.scss */
 #portfolio .project .project-content p {
   flex-grow: 1;
   margin-bottom: 1rem;
-  font-size: clamp(0.95rem, 1.5vw, 1.15rem);
-  line-height: 1.6;
+  font-size: 1rem;
+  color: #1a2a44;
+  line-height: 1.5;
+  white-space: normal;
+  hyphens: none;
 }
 
-/* line 71, ../../../Desktop/personal-page/portfolio-site/scss/_portfolio.scss */
+/* line 80, ../../../Desktop/personal-page/portfolio-site/scss/_portfolio.scss */
 #portfolio .project .project-content a {
   align-self: center;
   background: #334e68;
   color: #f8fafc;
-  padding: clamp(0.6rem, 1.5vw, 0.9rem) clamp(1rem, 2vw, 1.6rem);
-  border-radius: 6px;
+  padding: 0.6rem 1.2rem;
+  border-radius: 4px;
   text-decoration: none;
   font-weight: bold;
-  font-size: clamp(0.95rem, 1.5vw, 1.15rem);
-  transition: background 0.3s ease, transform 0.2s ease;
+  font-size: 1rem;
+  transition: background 0.3s ease;
 }
 
-/* line 82, ../../../Desktop/personal-page/portfolio-site/scss/_portfolio.scss */
+/* line 91, ../../../Desktop/personal-page/portfolio-site/scss/_portfolio.scss */
 #portfolio .project .project-content a:hover {
   background: #ff6b6b;
-  transform: translateY(-2px);
 }
 
-/* line 94, ../../../Desktop/personal-page/portfolio-site/scss/_portfolio.scss */
+/* line 103, ../../../Desktop/personal-page/portfolio-site/scss/_portfolio.scss */
 #portfolio .project.visible {
   opacity: 1;
   transform: translateY(0);
+}
+
+@media (min-width: 576px) {
+  /* line 1, ../../../Desktop/personal-page/portfolio-site/scss/_portfolio.scss */
+  #portfolio {
+    padding: 3rem 2rem;
+  }
+  /* line 113, ../../../Desktop/personal-page/portfolio-site/scss/_portfolio.scss */
+  #portfolio .project .project-content {
+    padding: 1rem;
+  }
+  /* line 117, ../../../Desktop/personal-page/portfolio-site/scss/_portfolio.scss */
+  #portfolio .project .project-content h3 {
+    font-size: 1.25rem;
+  }
+  /* line 121, ../../../Desktop/personal-page/portfolio-site/scss/_portfolio.scss */
+  #portfolio .project .project-content p {
+    font-size: 1.05rem;
+  }
+  /* line 125, ../../../Desktop/personal-page/portfolio-site/scss/_portfolio.scss */
+  #portfolio .project .project-content a {
+    font-size: 1.05rem;
+    padding: 0.7rem 1.3rem;
+  }
+}
+
+@media (min-width: 768px) {
+  /* line 132, ../../../Desktop/personal-page/portfolio-site/scss/_portfolio.scss */
+  #portfolio .project .project-content {
+    padding: 2rem;
+    min-height: 180px;
+  }
+  /* line 137, ../../../Desktop/personal-page/portfolio-site/scss/_portfolio.scss */
+  #portfolio .project .project-content h3 {
+    font-size: 1.3rem;
+  }
+  /* line 141, ../../../Desktop/personal-page/portfolio-site/scss/_portfolio.scss */
+  #portfolio .project .project-content p {
+    font-size: 1.1rem;
+  }
+  /* line 145, ../../../Desktop/personal-page/portfolio-site/scss/_portfolio.scss */
+  #portfolio .project .project-content a {
+    font-size: 1.1rem;
+    padding: 0.8rem 1.5rem;
+  }
+}
+
+@media (min-width: 992px) {
+  /* line 152, ../../../Desktop/personal-page/portfolio-site/scss/_portfolio.scss */
+  #portfolio .project .project-content {
+    padding: 1.5rem;
+  }
+  /* line 156, ../../../Desktop/personal-page/portfolio-site/scss/_portfolio.scss */
+  #portfolio .project .project-content h3 {
+    font-size: 1.4rem;
+  }
+  /* line 160, ../../../Desktop/personal-page/portfolio-site/scss/_portfolio.scss */
+  #portfolio .project .project-content p {
+    font-size: 1.15rem;
+  }
+  /* line 164, ../../../Desktop/personal-page/portfolio-site/scss/_portfolio.scss */
+  #portfolio .project .project-content a {
+    font-size: 1.15rem;
+    padding: 0.9rem 1.6rem;
+  }
+}
+
+@media (min-width: 1200px) {
+  /* line 171, ../../../Desktop/personal-page/portfolio-site/scss/_portfolio.scss */
+  #portfolio .project .project-content {
+    padding: 1.75rem;
+    min-height: 200px;
+  }
+  /* line 176, ../../../Desktop/personal-page/portfolio-site/scss/_portfolio.scss */
+  #portfolio .project .project-content h3 {
+    font-size: 1.5rem;
+  }
+  /* line 180, ../../../Desktop/personal-page/portfolio-site/scss/_portfolio.scss */
+  #portfolio .project .project-content p {
+    font-size: 1.2rem;
+  }
+  /* line 184, ../../../Desktop/personal-page/portfolio-site/scss/_portfolio.scss */
+  #portfolio .project .project-content a {
+    font-size: 1.2rem;
+    padding: 1rem 1.8rem;
+  }
 }
 
 /* line 1, ../../../Desktop/personal-page/portfolio-site/scss/_about.scss */
@@ -940,6 +1087,7 @@ footer {
   color: #1a2a44;
   padding-top: clamp(2rem, 6vw, 3rem);
   padding: clamp(2rem, 6vw) 1rem;
+  margin-bottom: clamp(3rem, 8vw);
   /* ✨ Fade-in animation (consistent with About/Contact) */
 }
 
@@ -1159,24 +1307,25 @@ footer {
 
 /* line 131, ../../../Desktop/personal-page/portfolio-site/scss/_contact.scss */
 #contact .contact-form button {
+  align-self: center;
   background: #334e68;
   color: #f8fafc;
   border: none;
-  border-radius: 30px;
+  border-radius: 6px;
   font-weight: bold;
-  font-size: clamp(1rem, 2vw, 1.15rem);
-  padding: clamp(0.7rem, 2vw, 1rem) clamp(1.2rem, 3vw, 2rem);
+  font-size: 1rem;
+  padding: 0.6rem 1.2rem;
   cursor: pointer;
-  transition: all 0.3s ease;
-  align-self: center;
-  box-shadow: 0 4px 10px rgba(51, 78, 104, 0.2);
+  transition: background 0.3s ease, transform 0.2s ease;
+  box-shadow: 0 4px 10px rgba(51, 78, 104, 0.15);
+  /* Responsive scaling (matches portfolio section) */
 }
 
 /* line 144, ../../../Desktop/personal-page/portfolio-site/scss/_contact.scss */
 #contact .contact-form button:hover {
   background: #ff6b6b;
   transform: translateY(-2px);
-  box-shadow: 0 6px 16px rgba(255, 107, 107, 0.3);
+  box-shadow: 0 6px 16px rgba(255, 107, 107, 0.25);
 }
 
 /* line 150, ../../../Desktop/personal-page/portfolio-site/scss/_contact.scss */
@@ -1187,19 +1336,51 @@ footer {
   box-shadow: none;
 }
 
-/* line 159, ../../../Desktop/personal-page/portfolio-site/scss/_contact.scss */
+@media (min-width: 576px) {
+  /* line 131, ../../../Desktop/personal-page/portfolio-site/scss/_contact.scss */
+  #contact .contact-form button {
+    font-size: 1.05rem;
+    padding: 0.7rem 1.3rem;
+  }
+}
+
+@media (min-width: 768px) {
+  /* line 131, ../../../Desktop/personal-page/portfolio-site/scss/_contact.scss */
+  #contact .contact-form button {
+    font-size: 1.1rem;
+    padding: 0.8rem 1.5rem;
+  }
+}
+
+@media (min-width: 992px) {
+  /* line 131, ../../../Desktop/personal-page/portfolio-site/scss/_contact.scss */
+  #contact .contact-form button {
+    font-size: 1.15rem;
+    padding: 0.9rem 1.6rem;
+  }
+}
+
+@media (min-width: 1200px) {
+  /* line 131, ../../../Desktop/personal-page/portfolio-site/scss/_contact.scss */
+  #contact .contact-form button {
+    font-size: 1.2rem;
+    padding: 1rem 1.8rem;
+  }
+}
+
+/* line 180, ../../../Desktop/personal-page/portfolio-site/scss/_contact.scss */
 #contact .contact-form.success {
   animation: successPulse 0.5s ease-in-out;
 }
 
-/* line 165, ../../../Desktop/personal-page/portfolio-site/scss/_contact.scss */
+/* line 186, ../../../Desktop/personal-page/portfolio-site/scss/_contact.scss */
 #contact.fade-item {
   opacity: 0;
   transform: translateY(40px);
   transition: opacity 1s ease-out, transform 1s ease-out;
 }
 
-/* line 170, ../../../Desktop/personal-page/portfolio-site/scss/_contact.scss */
+/* line 191, ../../../Desktop/personal-page/portfolio-site/scss/_contact.scss */
 #contact.fade-item.visible {
   opacity: 1 !important;
   transform: translateY(0);

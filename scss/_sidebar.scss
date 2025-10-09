@@ -2,7 +2,7 @@
   position: fixed;
   top: 0;
   left: 0;
-  height: 100%;
+  height: 100vh; // ✅ full viewport height (stable)
   width: 200px;
   background: linear-gradient(
     180deg,
@@ -13,11 +13,14 @@
   padding: 20px 20px 20px 15px;
   display: flex;
   flex-direction: column;
+  justify-content: flex-start; // ✅ keep top-aligned by default
+  align-items: flex-start;
   transform: translateX(-100%);
   transition: transform 0.3s ease;
   z-index: 1001;
   box-sizing: border-box;
   box-shadow: 2px 0 8px rgba(0, 0, 0, 0.2);
+  overflow-y: auto; // ✅ prevents height squishing or overflow clipping
 
   &.open {
     transform: translateX(0);
@@ -27,6 +30,7 @@
     margin: 0 0 3rem 0;
     padding: 0;
     width: 100%;
+    flex-shrink: 0; // ✅ prevents resizing
   }
 
   h1 a {
@@ -44,11 +48,10 @@
     gap: 1.2rem;
     width: 100%;
     padding-left: 0;
+    flex-grow: 1; // ✅ ensures consistent middle spacing
+    justify-content: flex-start;
   }
 
-  /* ====================================
-     NAV LINKS (No underline version)
-  ==================================== */
   .nav-links a {
     color: $brand-lightest;
     text-decoration: none;
@@ -70,11 +73,8 @@
     }
   }
 
-  /* ====================================
-     SOCIAL LINKS
-  ==================================== */
   .social {
-    margin-top: 1.5rem;
+    margin-top: auto; // ✅ always anchored to bottom
     display: flex;
     justify-content: flex-start;
     gap: 1.5rem;
@@ -92,6 +92,46 @@
     }
   }
 
+  /* ✅ Full-screen overlay for mobile/tablet */
+  @media (max-width: 991px) {
+    width: 100vw;
+    height: 100vh;
+    padding: 2rem;
+    background: linear-gradient(
+      180deg,
+      $brand-darkest 0%,
+      darken($brand-darkest, 3%) 100%
+    );
+    justify-content: flex-start; // ✅ keep vertical layout consistent
+    align-items: flex-start;
+
+    h1 {
+      margin-bottom: 2rem;
+    }
+
+    .nav-links {
+      gap: 2rem;
+      align-items: flex-start;
+
+      a {
+        font-size: 1.5rem;
+        padding-left: 0.25rem;
+
+        &:hover {
+          transform: translateX(5px);
+        }
+      }
+    }
+
+    .social {
+      margin-top: auto;
+
+      a {
+        font-size: 2rem;
+      }
+    }
+  }
+
   /* ---- Responsive breakpoints ---- */
   @media (min-width: 576px) {
     width: 240px;
@@ -104,6 +144,7 @@
   @media (min-width: 768px) {
     width: 280px;
     padding-left: 25px;
+
     .social a {
       font-size: 2rem;
     }
@@ -113,6 +154,7 @@
     transform: translateX(0);
     width: 320px;
     padding-left: 30px;
+
     .social a {
       font-size: 2.2rem;
     }
@@ -121,6 +163,7 @@
   @media (min-width: 1200px) {
     width: 360px;
     padding-left: 35px;
+
     .social a {
       font-size: 2.5rem;
     }
@@ -184,6 +227,7 @@
   @media (max-width: $break-sm) {
     width: 3.5rem;
     height: 3rem;
+
     & > span {
       height: 6px;
     }

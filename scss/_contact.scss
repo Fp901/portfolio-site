@@ -129,22 +129,22 @@
     }
 
     button {
+      align-self: center;
       background: $brand-dark;
       color: $brand-lightest;
       border: none;
-      border-radius: 30px;
+      border-radius: 6px; // Match portfolio button
       font-weight: bold;
-      font-size: clamp(1rem, 2vw, 1.15rem);
-      padding: clamp(0.7rem, 2vw, 1rem) clamp(1.2rem, 3vw, 2rem);
+      font-size: 1rem;
+      padding: 0.6rem 1.2rem;
       cursor: pointer;
-      transition: all 0.3s ease;
-      align-self: center;
-      box-shadow: 0 4px 10px rgba($brand-dark, 0.2);
+      transition: background 0.3s ease, transform 0.2s ease;
+      box-shadow: 0 4px 10px rgba($brand-dark, 0.15);
 
       &:hover {
         background: $brand-pinkish;
         transform: translateY(-2px);
-        box-shadow: 0 6px 16px rgba($brand-pinkish, 0.3);
+        box-shadow: 0 6px 16px rgba($brand-pinkish, 0.25);
       }
 
       &:disabled {
@@ -152,6 +152,27 @@
         cursor: not-allowed;
         transform: none;
         box-shadow: none;
+      }
+
+      /* Responsive scaling (matches portfolio section) */
+      @media (min-width: $break-sm) {
+        font-size: 1.05rem;
+        padding: 0.7rem 1.3rem;
+      }
+
+      @media (min-width: $break-md) {
+        font-size: 1.1rem;
+        padding: 0.8rem 1.5rem;
+      }
+
+      @media (min-width: $break-lg) {
+        font-size: 1.15rem;
+        padding: 0.9rem 1.6rem;
+      }
+
+      @media (min-width: $break-xl) {
+        font-size: 1.2rem;
+        padding: 1rem 1.8rem;
       }
     }
 

@@ -1,12 +1,12 @@
 #scs {
   background: $brand-lightest;
   color: $brand-darkest;
-  padding-top: clamp(
-    $space-md,
-    6vw,
-    $space-lg
-  ); // prevents overlap with contact
+  padding-top: clamp($space-md, 6vw, $space-lg);
   padding: clamp($space-md, 6vw) $space-sm;
+  margin-bottom: clamp(
+    $space-lg,
+    8vw
+  ); // ✅ new bottom spacing for breathing room
 
   h2 {
     text-align: center;
@@ -16,7 +16,7 @@
   }
 
   .container {
-    max-width: 1400px; // ✅ increased from 1100px to match About section
+    max-width: 1400px; // ✅ matches About section width
     margin: 0 auto;
     padding: 0 clamp($space-sm, 4vw, $space-lg);
   }
@@ -42,7 +42,7 @@
       }
 
       &:last-of-type {
-        margin-bottom: 0; // Reduce bottom padding for smoother flow
+        margin-bottom: 0; // Keeps last paragraph tighter to section bottom
       }
     }
   }
