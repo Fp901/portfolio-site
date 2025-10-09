@@ -2,7 +2,7 @@ document.addEventListener("DOMContentLoaded", () => {
   const form = document.getElementById("contactForm");
   const status = document.getElementById("form-status");
 
-  form.addEventListener("submit", (e) => {
+  form.addEventListener("submit", async (e) => {
     e.preventDefault();
 
     const firstNameField = document.getElementById("firstName");
@@ -17,7 +17,6 @@ document.addEventListener("DOMContentLoaded", () => {
     const isPhoneValid = validatePhone(phoneField);
     const isMessageValid = validateMessage(messageField);
 
-    // ✅ All validations passed
     if (
       isFirstNameValid &&
       isLastNameValid &&
@@ -25,30 +24,58 @@ document.addEventListener("DOMContentLoaded", () => {
       isPhoneValid &&
       isMessageValid
     ) {
-      status.textContent = "✅ Message sent successfully!";
-      status.style.color = "#28a745";
-      form.classList.add("success");
-      setTimeout(() => form.classList.remove("success"), 600);
+      status.textContent = "⏳ Sending message...";
+      status.style.color = "#555";
 
-      // Reset form and helper messages
-      form.reset();
-      form.querySelectorAll(".helper-text").forEach((h) => {
-        h.textContent = "";
-        h.classList.remove("visible", "valid");
-      });
-      form.querySelectorAll("input, textarea").forEach((f) => {
-        f.classList.remove("valid", "invalid");
-      });
+      const formData = {
+        firstName: firstNameField.value.trim(),
+        lastName: lastNameField.value.trim(),
+        email: emailField.value.trim(),
+        phone: phoneField.value.trim(),
+        message: messageField.value.trim(),
+      };
+
+      try {
+        const response = await fetch("http://localhost:3000/api/contact", {
+          method: "POST",
+          headers: { "Content-Type": "application/json" },
+          body: JSON.stringify(formData),
+        });
+
+        const result = await response.json();
+
+        if (result.success) {
+          status.textContent = "✅ Message sent successfully!";
+          status.style.color = "#28a745";
+          form.classList.add("success");
+          setTimeout(() => form.classList.remove("success"), 600);
+
+          form.reset();
+          form.querySelectorAll(".helper-text").forEach((h) => {
+            h.textContent = "";
+            h.classList.remove("visible", "valid");
+          });
+          form.querySelectorAll("input, textarea").forEach((f) => {
+            f.classList.remove("valid", "invalid");
+          });
+        } else {
+          status.textContent =
+            "❌ " + (result.message || "Failed to send message.");
+          status.style.color = "#c0392b";
+        }
+      } catch (error) {
+        console.error("❌ Error sending message:", error);
+        status.textContent = "⚠️ Failed to send message. Please try again.";
+        status.style.color = "#c0392b";
+      }
     } else {
-      // ❌ Show bottom warning
       status.textContent = "⚠️ Please fix the highlighted fields.";
       status.style.color = "#c0392b";
       status.style.fontWeight = "500";
-      status.style.transition = "color 0.3s ease";
     }
   });
 
-  // 🧩 Live validation feedback
+  // Live validators
   form.querySelectorAll("input, textarea").forEach((field) => {
     field.addEventListener("input", () => {
       switch (field.id) {
@@ -71,32 +98,28 @@ document.addEventListener("DOMContentLoaded", () => {
     });
   });
 
-  // ✅ Validation Functions
+  // Validators
   function validateName(input, label) {
     const helper = input.nextElementSibling;
     const regex = /^[A-Za-z\s'-]{2,}$/;
-    if (!input.value.trim()) {
+    if (!input.value.trim())
       return showError(input, helper, `${label} is required.`);
-    }
-    if (!regex.test(input.value.trim())) {
+    if (!regex.test(input.value.trim()))
       return showError(
         input,
         helper,
         `${label} should only contain letters and spaces.`
       );
-    }
     return showSuccess(input, helper, "✅");
   }
 
   function validateEmail(input) {
     const helper = input.nextElementSibling;
     const regex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
-    if (!input.value.trim()) {
+    if (!input.value.trim())
       return showError(input, helper, "Email is required.");
-    }
-    if (!regex.test(input.value.trim())) {
+    if (!regex.test(input.value.trim()))
       return showError(input, helper, "Please enter a valid email address.");
-    }
     return showSuccess(input, helper, "✅");
   }
 
@@ -106,31 +129,28 @@ document.addEventListener("DOMContentLoaded", () => {
       helper.textContent = "";
       helper.classList.remove("visible");
       input.classList.remove("invalid", "valid");
-      return true; // optional
+      return true;
     }
     const regex = /^\+?\d{7,15}$/;
-    if (!regex.test(input.value.trim())) {
+    if (!regex.test(input.value.trim()))
       return showError(input, helper, "Phone must be 7–15 digits.");
-    }
     return showSuccess(input, helper, "✅");
   }
 
   function validateMessage(input) {
     const helper = input.nextElementSibling;
-    if (!input.value.trim()) {
+    if (!input.value.trim())
       return showError(input, helper, "Message cannot be empty.");
-    }
-    if (input.value.trim().length < 10) {
+    if (input.value.trim().length < 10)
       return showError(
         input,
         helper,
         "Message must be at least 10 characters long."
       );
-    }
     return showSuccess(input, helper, "✅");
   }
 
-  // ⚙️ Helper Functions
+  // Helpers
   function showError(input, helper, message) {
     input.classList.add("invalid");
     input.classList.remove("valid");
