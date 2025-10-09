@@ -1,10 +1,14 @@
-# Node modules (if you ever use npm locally)
+# ===========================
+# 🌐 FRONTEND / GENERAL
+# ===========================
+
+# Node modules (auto-generated dependencies)
 node_modules/
 
 # Sass cache
 .sass-cache/
 
-# Scout-App cache files
+# Scout-App cache files and maps
 *.map
 
 # VSCode settings
@@ -14,5 +18,66 @@ node_modules/
 .DS_Store
 Thumbs.db
 
-# Compiled CSS (optional – if you want to ignore auto-generated CSS)
+# Compiled CSS (optional – uncomment if you don’t want to track compiled CSS)
 # /css
+
+# Local environment configuration (never commit secrets)
+.env
+
+# Backend structure documentation (for personal reference only)
+backend-structure.txt
+
+# Log files
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+logs/
+*.log
+
+# Temporary build files or lock files
+package-lock.json
+yarn.lock
+
+# Backup / temp / system files
+*.tmp
+*.bak
+*.swp
+*.swo
+
+# ===========================
+# 🧩 NODE / EXPRESS BACKEND
+# ===========================
+
+# Prevent sensitive backend data from being committed
+server/config/db.js
+server/config/*.local
+server/config/*.secret
+
+# Exclude local uploads (if you ever store files on server)
+uploads/
+tmp/
+
+# Optional: exclude generated data exports or backups
+data/
+backup/
+
+# ===========================
+# 🧠 IDE / ENVIRONMENT
+# ===========================
+.idea/
+*.iml
+
+# ===========================
+# ✅ SUMMARY
+# ===========================
+# Safe to commit:
+# - SCSS, HTML, JS (frontend)
+# - Public assets (images)
+# - README.md
+#
+# NOT safe to commit:
+# - node_modules/
+# - .env
+# - logs, tmp, cache
+# - backend-structure.txt
+# - any config file containing credentials
