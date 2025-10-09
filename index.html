@@ -171,6 +171,7 @@
         </div>
       </section>
 
+      <!-- CONTACT SECTION -->
       <section id="contact" class="contact fade-item">
         <div class="container">
           <h2>Get in Touch</h2>
@@ -182,18 +183,68 @@
             </p>
             <p>
               Email:
-              <a href="mailto:francois.pretorius@gmail.com"
-                >francois.pretorius@gmail.com</a
-              >
+              <a href="mailto:francois.pretorius@gmail.com">
+                francois.pretorius@gmail.com
+              </a>
             </p>
             <p>Phone: <a href="tel:+447727977855">+44 7727 977855</a></p>
 
-            <form class="contact-form">
-              <input type="text" placeholder="Your Name" required />
-              <input type="email" placeholder="Your Email" required />
-              <textarea placeholder="Your Message" rows="5" required></textarea>
+            <!-- Contact Form -->
+            <form id="contactForm" class="contact-form" novalidate>
+              <div class="form-group">
+                <input
+                  type="text"
+                  id="firstName"
+                  placeholder="First Name"
+                  required
+                />
+                <small class="helper-text"></small>
+              </div>
+
+              <div class="form-group">
+                <input
+                  type="text"
+                  id="lastName"
+                  placeholder="Last Name"
+                  required
+                />
+                <small class="helper-text"></small>
+              </div>
+
+              <div class="form-group">
+                <input
+                  type="email"
+                  id="email"
+                  placeholder="Your Email"
+                  required
+                />
+                <small class="helper-text"></small>
+              </div>
+
+              <div class="form-group">
+                <input
+                  type="tel"
+                  id="phone"
+                  placeholder="Your Phone (optional)"
+                />
+                <small class="helper-text"></small>
+              </div>
+
+              <div class="form-group">
+                <textarea
+                  id="message"
+                  placeholder="Your Message"
+                  rows="5"
+                  required
+                ></textarea>
+                <small class="helper-text"></small>
+              </div>
+
               <button type="submit">Send Message</button>
             </form>
+
+            <!-- Status Message -->
+            <p id="form-status" style="margin-top: 1rem"></p>
           </div>
         </div>
       </section>
@@ -244,6 +295,7 @@
       </p>
     </footer>
 
+    <script src="js/formValidation.js"></script>
     <script src="js/main.js"></script>
   </body>
 </html>
