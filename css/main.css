@@ -770,7 +770,7 @@ footer {
   }
 }
 
-@media (min-width: 1200px) {
+@media (min-width: 992px) {
   /* line 5, ../../../Desktop/personal-page/portfolio-site/scss/_portfolio.scss */
   #portfolio h2 {
     font-size: 3rem;
@@ -781,37 +781,37 @@ footer {
 #portfolio .projects {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-  gap: 1rem;
+  gap: clamp(2rem, 4vw, 3rem);
 }
 
 @media (min-width: 768px) {
-  /* line 20, ../../../Desktop/personal-page/portfolio-site/scss/_portfolio.scss */
-  #portfolio .projects {
-    gap: 2rem;
-  }
-}
-
-@media (min-width: 1200px) {
   /* line 20, ../../../Desktop/personal-page/portfolio-site/scss/_portfolio.scss */
   #portfolio .projects {
     gap: 3rem;
   }
 }
 
-/* line 32, ../../../Desktop/personal-page/portfolio-site/scss/_portfolio.scss */
+@media (min-width: 992px) {
+  /* line 20, ../../../Desktop/personal-page/portfolio-site/scss/_portfolio.scss */
+  #portfolio .projects {
+    gap: 3rem;
+  }
+}
+
+/* line 37, ../../../Desktop/personal-page/portfolio-site/scss/_portfolio.scss */
 #portfolio .projects .project {
   opacity: 0;
   transform: translateY(40px);
   transition: opacity 1s cubic-bezier(0.25, 0.1, 0.25, 1), transform 1s cubic-bezier(0.25, 0.1, 0.25, 1);
 }
 
-/* line 38, ../../../Desktop/personal-page/portfolio-site/scss/_portfolio.scss */
+/* line 43, ../../../Desktop/personal-page/portfolio-site/scss/_portfolio.scss */
 #portfolio .projects .project.visible {
   opacity: 1;
   transform: translateY(0);
 }
 
-/* line 43, ../../../Desktop/personal-page/portfolio-site/scss/_portfolio.scss */
+/* line 48, ../../../Desktop/personal-page/portfolio-site/scss/_portfolio.scss */
 #portfolio .projects .project .project-inner {
   background: #fff;
   border-radius: 8px;
@@ -823,13 +823,13 @@ footer {
   transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
-/* line 53, ../../../Desktop/personal-page/portfolio-site/scss/_portfolio.scss */
+/* line 58, ../../../Desktop/personal-page/portfolio-site/scss/_portfolio.scss */
 #portfolio .projects .project .project-inner:hover {
   transform: translateY(-8px) scale(1.03);
   box-shadow: 0 10px 28px rgba(255, 107, 107, 0.25);
 }
 
-/* line 59, ../../../Desktop/personal-page/portfolio-site/scss/_portfolio.scss */
+/* line 64, ../../../Desktop/personal-page/portfolio-site/scss/_portfolio.scss */
 #portfolio .projects .project img {
   width: 100%;
   height: auto;
@@ -838,7 +838,7 @@ footer {
   display: block;
 }
 
-/* line 67, ../../../Desktop/personal-page/portfolio-site/scss/_portfolio.scss */
+/* line 72, ../../../Desktop/personal-page/portfolio-site/scss/_portfolio.scss */
 #portfolio .projects .project .project-content {
   padding: 1rem;
   display: flex;
@@ -849,24 +849,24 @@ footer {
   text-align: center;
 }
 
-/* line 76, ../../../Desktop/personal-page/portfolio-site/scss/_portfolio.scss */
+/* line 81, ../../../Desktop/personal-page/portfolio-site/scss/_portfolio.scss */
 #portfolio .projects .project .project-content h3 {
   margin-bottom: 0.5rem;
-  font-size: 1.2rem;
+  font-size: clamp(1.4rem, 3vw, 2.2rem);
   color: #1a2a44;
   white-space: normal;
 }
 
-/* line 83, ../../../Desktop/personal-page/portfolio-site/scss/_portfolio.scss */
+/* line 92, ../../../Desktop/personal-page/portfolio-site/scss/_portfolio.scss */
 #portfolio .projects .project .project-content p {
   flex-grow: 1;
   margin-bottom: 1rem;
-  font-size: 1rem;
+  font-size: clamp(1.1rem, 2vw, 1.35rem);
   color: #1a2a44;
-  line-height: 1.5;
+  line-height: 1.6;
 }
 
-/* line 91, ../../../Desktop/personal-page/portfolio-site/scss/_portfolio.scss */
+/* line 104, ../../../Desktop/personal-page/portfolio-site/scss/_portfolio.scss */
 #portfolio .projects .project .project-content a {
   align-self: center;
   background: #334e68;
@@ -884,14 +884,14 @@ footer {
   /* remove mouse-focus ring, keep keyboard focus */
 }
 
-/* line 106, ../../../Desktop/personal-page/portfolio-site/scss/_portfolio.scss */
+/* line 119, ../../../Desktop/personal-page/portfolio-site/scss/_portfolio.scss */
 #portfolio .projects .project .project-content a:hover:not(:focus):not(:active) {
   background: #ff6b6b;
   transform: translateY(-3px);
   box-shadow: 0 6px 16px rgba(255, 107, 107, 0.25);
 }
 
-/* line 113, ../../../Desktop/personal-page/portfolio-site/scss/_portfolio.scss */
+/* line 126, ../../../Desktop/personal-page/portfolio-site/scss/_portfolio.scss */
 #portfolio .projects .project .project-content a:focus {
   outline: none;
   background: #334e68;
@@ -899,13 +899,13 @@ footer {
   box-shadow: 0 4px 10px rgba(51, 78, 104, 0.15);
 }
 
-/* line 120, ../../../Desktop/personal-page/portfolio-site/scss/_portfolio.scss */
+/* line 133, ../../../Desktop/personal-page/portfolio-site/scss/_portfolio.scss */
 #portfolio .projects .project .project-content a:active {
   transform: translateY(0);
   box-shadow: 0 2px 8px rgba(255, 107, 107, 0.15);
 }
 
-/* line 126, ../../../Desktop/personal-page/portfolio-site/scss/_portfolio.scss */
+/* line 139, ../../../Desktop/personal-page/portfolio-site/scss/_portfolio.scss */
 #portfolio .projects .project .project-content a:focus:not(:focus-visible) {
   outline: none;
   box-shadow: none;
@@ -930,7 +930,7 @@ footer {
 
 /* line 18, ../../../Desktop/personal-page/portfolio-site/scss/_about.scss */
 #about .container {
-  max-width: 1200px;
+  max-width: 1400px;
   margin: 0 auto;
   padding: 0 clamp(1rem, 4vw, 3rem);
 }
@@ -960,7 +960,7 @@ footer {
   text-align: left;
   line-height: 1.8;
   letter-spacing: 0.2px;
-  font-size: clamp(1rem, 2vw, 1.15rem);
+  font-size: clamp(1.3rem, 2.6vw, 1.6rem);
   color: #1a2a44;
 }
 
@@ -1048,7 +1048,7 @@ footer {
 
 /* line 22, ../../../Desktop/personal-page/portfolio-site/scss/_coding.scss */
 #coding .container {
-  max-width: 1200px;
+  max-width: 1400px;
   margin: 0 auto;
   padding: 0 1rem;
 }
@@ -1099,34 +1099,34 @@ footer {
   padding-top: clamp(2rem, 6vw, 3rem);
   padding: clamp(2rem, 6vw) 1rem;
   margin-bottom: clamp(3rem, 8vw);
-  /* ✨ Fade-in animation */
+  /* ✨ Fade-in animation (consistent with About/Contact) */
 }
 
 /* line 8, ../../../Desktop/personal-page/portfolio-site/scss/_scs.scss */
 #scs h2 {
   text-align: center;
-  margin-bottom: clamp(1rem, 1.5vw, 2rem);
+  margin-bottom: 2rem;
   font-size: clamp(1.8rem, 4vw, 3rem);
   font-weight: 700;
-  padding: clamp(0.5rem, 1.5vw, 1rem) 0;
+  padding: clamp(1rem, 2vw, 2rem) 0;
 }
 
-/* line 20, ../../../Desktop/personal-page/portfolio-site/scss/_scs.scss */
+/* line 16, ../../../Desktop/personal-page/portfolio-site/scss/_scs.scss */
 #scs .container {
   max-width: 1400px;
   margin: 0 auto;
   padding: 0 clamp(1rem, 4vw, 3rem);
 }
 
-/* line 26, ../../../Desktop/personal-page/portfolio-site/scss/_scs.scss */
+/* line 22, ../../../Desktop/personal-page/portfolio-site/scss/_scs.scss */
 #scs .scs-content {
   max-width: 900px;
   margin: 0 auto;
   text-align: left;
   line-height: 1.8;
   letter-spacing: 0.2px;
-  font-size: clamp(1rem, 1.8vw, 1.15rem);
-  padding: clamp(1rem, 3vw, 2rem) 0;
+  font-size: clamp(1.1rem, 2vw, 1.3rem);
+  padding: clamp(2rem, 4vw, 3rem) 0;
 }
 
 /* line 35, ../../../Desktop/personal-page/portfolio-site/scss/_scs.scss */
@@ -1139,23 +1139,23 @@ footer {
 /* line 40, ../../../Desktop/personal-page/portfolio-site/scss/_scs.scss */
 #scs .scs-content p:first-of-type {
   font-weight: 500;
-  font-size: clamp(1.05rem, 2vw, 1.2rem);
+  font-size: clamp(1.15rem, 2.2vw, 1.35rem);
   color: #334e68;
 }
 
-/* line 46, ../../../Desktop/personal-page/portfolio-site/scss/_scs.scss */
+/* line 50, ../../../Desktop/personal-page/portfolio-site/scss/_scs.scss */
 #scs .scs-content p:last-of-type {
   margin-bottom: clamp(1rem, 2vw, 2rem);
 }
 
-/* line 53, ../../../Desktop/personal-page/portfolio-site/scss/_scs.scss */
+/* line 61, ../../../Desktop/personal-page/portfolio-site/scss/_scs.scss */
 #scs.fade-item {
   opacity: 0;
   transform: translateY(40px);
   transition: opacity 1s ease-out, transform 1s ease-out;
 }
 
-/* line 58, ../../../Desktop/personal-page/portfolio-site/scss/_scs.scss */
+/* line 66, ../../../Desktop/personal-page/portfolio-site/scss/_scs.scss */
 #scs.fade-item.visible {
   opacity: 1 !important;
   transform: translateY(0);
@@ -1183,7 +1183,7 @@ footer {
 
 /* line 15, ../../../Desktop/personal-page/portfolio-site/scss/_contact.scss */
 #contact .container {
-  max-width: 900px;
+  max-width: 1400px;
   margin: 0 auto;
   padding: 0 clamp(1rem, 4vw, 3rem);
 }
@@ -1204,7 +1204,7 @@ footer {
 /* line 32, ../../../Desktop/personal-page/portfolio-site/scss/_contact.scss */
 #contact .contact-content p {
   color: #1a2a44;
-  font-size: clamp(1rem, 2vw, 1.15rem);
+  font-size: clamp(1.1rem, 2.5vw, 1.4rem);
   margin-bottom: clamp(0.5rem, 1.5vw, 1rem);
   font-weight: 400;
 }

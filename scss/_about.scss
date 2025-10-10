@@ -16,7 +16,7 @@
   }
 
   .container {
-    max-width: 1200px;
+    max-width: 1400px;
     margin: 0 auto;
     padding: 0 clamp($space-sm, 4vw, $space-lg);
   }
@@ -40,7 +40,7 @@
       text-align: left;
       line-height: 1.8;
       letter-spacing: 0.2px;
-      font-size: clamp(1rem, 2vw, 1.15rem);
+      font-size: clamp(1.3rem, 2.6vw, 1.6rem);
       color: $brand-darkest;
 
       p {

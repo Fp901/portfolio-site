@@ -12,7 +12,7 @@
     @media (min-width: $break-md) {
       font-size: 2.5rem;
     }
-    @media (min-width: $break-xl) {
+    @media (min-width: $break-lg) {
       font-size: 3rem;
     }
   }
@@ -20,12 +20,17 @@
   .projects {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-    gap: $space-sm;
+    gap: clamp(
+      $space-md,
+      4vw,
+      $space-lg
+    ); // ✅ increased responsive gap for more space when stacked
 
     @media (min-width: $break-md) {
-      gap: $space-md;
+      gap: $space-lg;
     }
-    @media (min-width: $break-xl) {
+
+    @media (min-width: $break-lg) {
       gap: $space-lg;
     }
 
@@ -75,7 +80,11 @@
 
         h3 {
           margin-bottom: $space-xs;
-          font-size: 1.2rem;
+          font-size: clamp(
+            1.4rem,
+            3vw,
+            2.2rem
+          ); // ✅ smoother scaling, balanced with h2
           color: $brand-darkest;
           white-space: normal;
         }
@@ -83,9 +92,13 @@
         p {
           flex-grow: 1;
           margin-bottom: $space-sm;
-          font-size: 1rem;
+          font-size: clamp(
+            1.1rem,
+            2vw,
+            1.35rem
+          ); // ✅ slightly larger for readability
           color: $brand-darkest;
-          line-height: 1.5;
+          line-height: 1.6; // ✅ slightly looser for readability
         }
 
         a {

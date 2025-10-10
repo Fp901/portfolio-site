@@ -13,7 +13,7 @@
   }
 
   .container {
-    max-width: 900px;
+    max-width: 1400px;
     margin: 0 auto;
     padding: 0 clamp($space-sm, 4vw, $space-lg);
   }
@@ -31,7 +31,7 @@
 
     p {
       color: $brand-darkest;
-      font-size: clamp(1rem, 2vw, 1.15rem);
+      font-size: clamp(1.1rem, 2.5vw, 1.4rem);
       margin-bottom: clamp($space-xs, 1.5vw, $space-sm);
       font-weight: 400;
 

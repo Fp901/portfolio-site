@@ -3,22 +3,18 @@
   color: $brand-darkest;
   padding-top: clamp($space-md, 6vw, $space-lg);
   padding: clamp($space-md, 6vw) $space-sm;
-  margin-bottom: clamp($space-lg, 8vw);
+  margin-bottom: clamp($space-lg, 8vw); // ✅ breathing room below section
 
   h2 {
     text-align: center;
-    margin-bottom: clamp(
-      $space-sm,
-      1.5vw,
-      $space-md
-    ); // 🔧 slightly reduced bottom margin
+    margin-bottom: $space-md;
     font-size: clamp(1.8rem, 4vw, 3rem);
     font-weight: 700;
-    padding: clamp($space-xs, 1.5vw, $space-sm) 0; // 🔧 slightly smaller vertical padding for balance
+    padding: clamp($space-sm, 2vw, $space-md) 0; // ✅ consistent heading spacing
   }
 
   .container {
-    max-width: 1400px;
+    max-width: 1400px; // ✅ matches About section width
     margin: 0 auto;
     padding: 0 clamp($space-sm, 4vw, $space-lg);
   }
@@ -29,8 +25,12 @@
     text-align: left;
     line-height: 1.8;
     letter-spacing: 0.2px;
-    font-size: clamp(1rem, 1.8vw, 1.15rem);
-    padding: clamp($space-sm, 3vw, $space-md) 0; // 🔧 reduced top padding to tighten gap
+    font-size: clamp(
+      1.1rem,
+      2vw,
+      1.3rem
+    ); // ✅ increased slightly for readability
+    padding: clamp($space-md, 4vw, $space-lg) 0;
 
     p {
       margin-bottom: clamp($space-sm, 3vw, $space-md);
@@ -39,17 +39,25 @@
 
       &:first-of-type {
         font-weight: 500;
-        font-size: clamp(1.05rem, 2vw, 1.2rem);
+        font-size: clamp(
+          1.15rem,
+          2.2vw,
+          1.35rem
+        ); // ✅ slightly larger for intro line
         color: $brand-dark;
       }
 
       &:last-of-type {
-        margin-bottom: clamp($space-sm, 2vw, $space-md);
+        margin-bottom: clamp(
+          $space-sm,
+          2vw,
+          $space-md
+        ); // ✅ added bottom margin for extra space
       }
     }
   }
 
-  /* ✨ Fade-in animation */
+  /* ✨ Fade-in animation (consistent with About/Contact) */
   &.fade-item {
     opacity: 0;
     transform: translateY(40px);
