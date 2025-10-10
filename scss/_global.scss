@@ -81,6 +81,9 @@ section h3 {
   font-size: 1.4rem;
 }
 
+/* ==============================
+   Back to Top Button (Updated)
+============================== */
 .back-to-top {
   position: fixed;
   bottom: 2rem;
@@ -93,22 +96,33 @@ section h3 {
   font-weight: bold;
   font-size: 1rem;
   box-shadow: 0 4px 12px rgba(51, 78, 104, 0.3);
-  transition: all 0.3s ease;
+  transition: all 0.4s ease;
   opacity: 0;
-  visibility: hidden;
+  pointer-events: none;
+  transform: translateX(40px); // fade in from right
   z-index: 1000;
+  display: flex;
+  align-items: center;
+  gap: 6px;
 
   &:hover {
     background: $brand-pinkish;
+    color: #fff;
     box-shadow: 0 6px 16px rgba(255, 107, 107, 0.4);
     text-decoration: underline;
-    transform: translateY(-2px);
+    transform: translateX(0) scale(1.05);
   }
 
-  // Show after scroll (add JS for .scrolled class as noted)
-  body.scrolled & {
+  &:focus,
+  &:active {
+    outline: none;
+    box-shadow: none;
+  }
+
+  &.show {
     opacity: 1;
-    visibility: visible;
+    pointer-events: auto;
+    transform: translateX(0); // slide into view
   }
 
   @media (max-width: $break-md) {

@@ -173,3 +173,34 @@ if (burger && sidebar) {
     }
   });
 }
+
+// BACK TO TOP FUNCTIONALITY
+const backToTopBtn = document.querySelector(".back-to-top");
+
+// Show button only when user scrolls down
+window.addEventListener("scroll", () => {
+  if (window.scrollY > 300) {
+    backToTopBtn.classList.add("show");
+  } else {
+    backToTopBtn.classList.remove("show");
+  }
+
+  // 🧼 Ensure button resets to original colors after scrolling
+  if (document.activeElement === backToTopBtn) {
+    backToTopBtn.blur();
+  }
+});
+
+// Smooth scroll to top when clicked
+backToTopBtn.addEventListener("click", (e) => {
+  e.preventDefault();
+  window.scrollTo({
+    top: 0,
+    behavior: "smooth",
+  });
+
+  // ✅ Remove focus highlight after scrolling
+  setTimeout(() => {
+    backToTopBtn.blur();
+  }, 300);
+});
