@@ -1,9 +1,5 @@
 #about {
-  background: linear-gradient(
-    to bottom right,
-    #ffffff,
-    #f9fafc
-  ); // ✨ subtle gradient like coding section
+  background: linear-gradient(to bottom right, #ffffff, #f9fafc);
   color: $brand-darkest;
   padding: clamp($space-md, 6vw, $space-lg) $space-sm;
 
@@ -30,9 +26,10 @@
     background: #fff;
     border-radius: 12px;
     padding: clamp($space-md, 4vw, $space-lg);
-    box-shadow: 0 4px 16px rgba(0, 0, 0, 0.08); // ✨ subtle depth
+    box-shadow: 0 4px 16px rgba(0, 0, 0, 0.08);
 
-    @media (min-width: 900px) {
+    /* 🧩 Stacks earlier for tablet screens */
+    @media (min-width: 1100px) {
       grid-template-columns: 1.1fr 0.9fr; // two columns: text + visual
     }
 
@@ -40,11 +37,12 @@
       text-align: left;
       line-height: 1.8;
       letter-spacing: 0.2px;
-      font-size: clamp(1.3rem, 2.6vw, 1.6rem);
+      font-size: clamp(1.2rem, 2.2vw, 1.5rem);
       color: $brand-darkest;
 
       p {
         margin-bottom: clamp($space-sm, 2vw, $space-md);
+
         &:last-child {
           margin-bottom: 0;
         }
@@ -68,12 +66,31 @@
         }
       }
 
-      // Optional if you ever replace <i> with an <img>
       img {
         max-width: 300px;
         width: 100%;
         border-radius: 50%;
         box-shadow: 0 6px 20px rgba($brand-dark, 0.1);
+      }
+    }
+
+    /* ✅ When stacked vertically, center the icon underneath text */
+    @media (max-width: 1099px) {
+      .about-visual {
+        order: 2; // move visual below text
+        margin-top: clamp($space-md, 5vw, $space-lg);
+        justify-content: center;
+        text-align: center;
+
+        i,
+        img {
+          margin: 0 auto;
+        }
+      }
+
+      .about-text {
+        order: 1;
+        text-align: center; // center text for better mobile symmetry
       }
     }
   }

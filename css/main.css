@@ -919,7 +919,7 @@ footer {
   /* ✨ Fade-in animation */
 }
 
-/* line 10, ../../../Desktop/personal-page/portfolio-site/scss/_about.scss */
+/* line 6, ../../../Desktop/personal-page/portfolio-site/scss/_about.scss */
 #about h2 {
   text-align: center;
   margin-bottom: clamp(1rem, 2vw, 2rem);
@@ -928,14 +928,14 @@ footer {
   padding: clamp(0.5rem, 1.5vw, 1rem) 0;
 }
 
-/* line 18, ../../../Desktop/personal-page/portfolio-site/scss/_about.scss */
+/* line 14, ../../../Desktop/personal-page/portfolio-site/scss/_about.scss */
 #about .container {
   max-width: 1400px;
   margin: 0 auto;
   padding: 0 clamp(1rem, 4vw, 3rem);
 }
 
-/* line 24, ../../../Desktop/personal-page/portfolio-site/scss/_about.scss */
+/* line 20, ../../../Desktop/personal-page/portfolio-site/scss/_about.scss */
 #about .about-content {
   display: grid;
   grid-template-columns: 1fr;
@@ -946,42 +946,44 @@ footer {
   border-radius: 12px;
   padding: clamp(2rem, 4vw, 3rem);
   box-shadow: 0 4px 16px rgba(0, 0, 0, 0.08);
+  /* 🧩 Stacks earlier for tablet screens */
+  /* ✅ When stacked vertically, center the icon underneath text */
 }
 
-@media (min-width: 900px) {
-  /* line 24, ../../../Desktop/personal-page/portfolio-site/scss/_about.scss */
+@media (min-width: 1100px) {
+  /* line 20, ../../../Desktop/personal-page/portfolio-site/scss/_about.scss */
   #about .about-content {
     grid-template-columns: 1.1fr 0.9fr;
   }
 }
 
-/* line 39, ../../../Desktop/personal-page/portfolio-site/scss/_about.scss */
+/* line 36, ../../../Desktop/personal-page/portfolio-site/scss/_about.scss */
 #about .about-content .about-text {
   text-align: left;
   line-height: 1.8;
   letter-spacing: 0.2px;
-  font-size: clamp(1.3rem, 2.6vw, 1.6rem);
+  font-size: clamp(1.2rem, 2.2vw, 1.5rem);
   color: #1a2a44;
 }
 
-/* line 46, ../../../Desktop/personal-page/portfolio-site/scss/_about.scss */
+/* line 43, ../../../Desktop/personal-page/portfolio-site/scss/_about.scss */
 #about .about-content .about-text p {
   margin-bottom: clamp(1rem, 2vw, 2rem);
 }
 
-/* line 48, ../../../Desktop/personal-page/portfolio-site/scss/_about.scss */
+/* line 46, ../../../Desktop/personal-page/portfolio-site/scss/_about.scss */
 #about .about-content .about-text p:last-child {
   margin-bottom: 0;
 }
 
-/* line 54, ../../../Desktop/personal-page/portfolio-site/scss/_about.scss */
+/* line 52, ../../../Desktop/personal-page/portfolio-site/scss/_about.scss */
 #about .about-content .about-visual {
   display: flex;
   justify-content: center;
   align-items: center;
 }
 
-/* line 59, ../../../Desktop/personal-page/portfolio-site/scss/_about.scss */
+/* line 57, ../../../Desktop/personal-page/portfolio-site/scss/_about.scss */
 #about .about-content .about-visual i {
   font-size: clamp(4rem, 8vw, 6rem);
   color: #ff6b6b;
@@ -989,13 +991,13 @@ footer {
   transition: transform 0.3s ease, opacity 0.3s ease;
 }
 
-/* line 65, ../../../Desktop/personal-page/portfolio-site/scss/_about.scss */
+/* line 63, ../../../Desktop/personal-page/portfolio-site/scss/_about.scss */
 #about .about-content .about-visual i:hover {
   transform: scale(1.05);
   opacity: 1;
 }
 
-/* line 72, ../../../Desktop/personal-page/portfolio-site/scss/_about.scss */
+/* line 69, ../../../Desktop/personal-page/portfolio-site/scss/_about.scss */
 #about .about-content .about-visual img {
   max-width: 300px;
   width: 100%;
@@ -1003,14 +1005,34 @@ footer {
   box-shadow: 0 6px 20px rgba(51, 78, 104, 0.1);
 }
 
-/* line 82, ../../../Desktop/personal-page/portfolio-site/scss/_about.scss */
+@media (max-width: 1099px) {
+  /* line 79, ../../../Desktop/personal-page/portfolio-site/scss/_about.scss */
+  #about .about-content .about-visual {
+    order: 2;
+    margin-top: clamp(2rem, 5vw, 3rem);
+    justify-content: center;
+    text-align: center;
+  }
+  /* line 85, ../../../Desktop/personal-page/portfolio-site/scss/_about.scss */
+  #about .about-content .about-visual i,
+  #about .about-content .about-visual img {
+    margin: 0 auto;
+  }
+  /* line 91, ../../../Desktop/personal-page/portfolio-site/scss/_about.scss */
+  #about .about-content .about-text {
+    order: 1;
+    text-align: center;
+  }
+}
+
+/* line 99, ../../../Desktop/personal-page/portfolio-site/scss/_about.scss */
 #about.fade-item {
   opacity: 0;
   transform: translateY(40px);
   transition: opacity 1s ease-out, transform 1s ease-out;
 }
 
-/* line 87, ../../../Desktop/personal-page/portfolio-site/scss/_about.scss */
+/* line 104, ../../../Desktop/personal-page/portfolio-site/scss/_about.scss */
 #about.fade-item.visible {
   opacity: 1 !important;
   transform: translateY(0);
