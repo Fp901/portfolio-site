@@ -876,13 +876,39 @@ footer {
   text-decoration: none;
   font-weight: bold;
   font-size: 1rem;
-  transition: background 0.3s ease, transform 0.2s ease;
+  transition: background 0.3s ease, transform 0.2s ease, box-shadow 0.2s ease;
+  box-shadow: 0 4px 10px rgba(51, 78, 104, 0.15);
+  display: inline-block;
+  /* ✅ only show hover when not focused/active */
+  /* keep focused state visually “original” */
+  /* remove mouse-focus ring, keep keyboard focus */
 }
 
-/* line 102, ../../../Desktop/personal-page/portfolio-site/scss/_portfolio.scss */
-#portfolio .projects .project .project-content a:hover {
+/* line 106, ../../../Desktop/personal-page/portfolio-site/scss/_portfolio.scss */
+#portfolio .projects .project .project-content a:hover:not(:focus):not(:active) {
   background: #ff6b6b;
-  transform: translateY(-2px);
+  transform: translateY(-3px);
+  box-shadow: 0 6px 16px rgba(255, 107, 107, 0.25);
+}
+
+/* line 113, ../../../Desktop/personal-page/portfolio-site/scss/_portfolio.scss */
+#portfolio .projects .project .project-content a:focus {
+  outline: none;
+  background: #334e68;
+  transform: none;
+  box-shadow: 0 4px 10px rgba(51, 78, 104, 0.15);
+}
+
+/* line 120, ../../../Desktop/personal-page/portfolio-site/scss/_portfolio.scss */
+#portfolio .projects .project .project-content a:active {
+  transform: translateY(0);
+  box-shadow: 0 2px 8px rgba(255, 107, 107, 0.15);
+}
+
+/* line 126, ../../../Desktop/personal-page/portfolio-site/scss/_portfolio.scss */
+#portfolio .projects .project .project-content a:focus:not(:focus-visible) {
+  outline: none;
+  box-shadow: none;
 }
 
 /* line 1, ../../../Desktop/personal-page/portfolio-site/scss/_about.scss */

@@ -231,3 +231,14 @@ backToTopBtn.addEventListener("click", (e) => {
     backToTopBtn.blur();
   }, 300);
 });
+
+// ✅ Remove persistent focus highlight on portfolio, hero CTA, and contact buttons
+document
+  .querySelectorAll(
+    "#portfolio .project-content a, .cta-btn, #contactForm button"
+  )
+  .forEach((btn) => {
+    const clearFocus = () => btn.blur();
+    btn.addEventListener("pointerup", clearFocus); // covers mouse + touch
+    btn.addEventListener("click", clearFocus); // safety for older browsers
+  });

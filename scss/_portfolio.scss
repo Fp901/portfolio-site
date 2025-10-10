@@ -7,7 +7,7 @@
     margin-bottom: $space-md;
     font-size: 2rem;
     font-weight: 700;
-    padding: clamp($space-sm, 2vw, $space-md) 0; // ✅ Added vertical padding for spacing consistency
+    padding: clamp($space-sm, 2vw, $space-md) 0;
 
     @media (min-width: $break-md) {
       font-size: 2.5rem;
@@ -97,11 +97,35 @@
           text-decoration: none;
           font-weight: bold;
           font-size: 1rem;
-          transition: background 0.3s ease, transform 0.2s ease;
+          transition: background 0.3s ease, transform 0.2s ease,
+            box-shadow 0.2s ease;
+          box-shadow: 0 4px 10px rgba($brand-dark, 0.15);
+          display: inline-block;
 
-          &:hover {
+          /* ✅ only show hover when not focused/active */
+          &:hover:not(:focus):not(:active) {
             background: $brand-pinkish;
-            transform: translateY(-2px);
+            transform: translateY(-3px);
+            box-shadow: 0 6px 16px rgba($brand-pinkish, 0.25);
+          }
+
+          /* keep focused state visually “original” */
+          &:focus {
+            outline: none;
+            background: $brand-dark;
+            transform: none;
+            box-shadow: 0 4px 10px rgba($brand-dark, 0.15);
+          }
+
+          &:active {
+            transform: translateY(0);
+            box-shadow: 0 2px 8px rgba($brand-pinkish, 0.15);
+          }
+
+          /* remove mouse-focus ring, keep keyboard focus */
+          &:focus:not(:focus-visible) {
+            outline: none;
+            box-shadow: none;
           }
         }
       }
