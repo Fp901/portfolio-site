@@ -1,0 +1,118 @@
+.coding {
+  text-align: center;
+  padding: 5rem 0 6rem;
+  background: linear-gradient(to bottom right, #f9fafc, #ffffff);
+
+  h2 {
+    margin-bottom: 1rem;
+  }
+
+  .section-intro {
+    max-width: 600px;
+    margin: 0 auto 3rem;
+    font-size: 1.1rem;
+    color: rgba($brand-darkest, 0.8);
+    line-height: 1.6;
+  }
+
+  .coding-loader {
+    width: 140px;
+    height: 140px;
+    margin: 0 auto 3rem;
+  }
+
+  .projects {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+    gap: 2rem;
+    justify-items: center;
+    align-items: stretch;
+  }
+
+  .project {
+    background: $brand-lightest;
+    border-radius: 16px;
+    box-shadow: 0 4px 16px rgba(51, 78, 104, 0.15);
+    transition: all 0.3s ease;
+    width: 100%;
+    max-width: 380px;
+    padding: 2rem 1.5rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    /* ✨ Added hover pop + glow */
+    &:hover {
+      transform: translateY(-8px) scale(1.03);
+      box-shadow: 0 10px 28px rgba($brand-pinkish, 0.25);
+    }
+
+    .project-content {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+
+      i {
+        font-size: 3rem;
+        color: $brand-pinkish;
+        margin-bottom: 1.25rem;
+        transition: transform 0.3s ease;
+
+        /* Icon pop effect */
+        .project:hover & {
+          transform: scale(1.15);
+        }
+      }
+
+      h3 {
+        margin-bottom: 0.75rem;
+        font-size: 1.4rem;
+        color: $brand-darkest;
+      }
+
+      p {
+        color: $brand-dark;
+        font-size: 1rem;
+        line-height: 1.6;
+        margin-bottom: 1rem;
+        max-width: 280px;
+      }
+
+      .status {
+        display: inline-block;
+        padding: 0.4rem 0.8rem;
+        font-size: 0.9rem;
+        border-radius: 6px;
+        background: rgba(255, 107, 107, 0.1);
+        color: $brand-pinkish;
+        font-weight: 600;
+        letter-spacing: 0.5px;
+        animation: pulse 1.5s infinite ease-in-out;
+      }
+    }
+  }
+
+  @keyframes pulse {
+    0%,
+    100% {
+      opacity: 0.6;
+    }
+    50% {
+      opacity: 1;
+    }
+  }
+
+  @media (min-width: 768px) {
+    .projects {
+      gap: 2.5rem;
+    }
+  }
+
+  @media (min-width: 1200px) {
+    .projects {
+      gap: 3rem;
+    }
+  }
+}

@@ -13,6 +13,11 @@
       href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap"
       rel="stylesheet"
     />
+    <!-- Lottie Player -->
+    <script
+      src="https://unpkg.com/@lottiefiles/dotlottie-wc@0.8.1/dist/dotlottie-wc.js"
+      type="module"
+    ></script>
   </head>
 
   <body>
@@ -65,20 +70,27 @@
           <i class="fas fa-chevron-down"></i>
         </div>
       </section>
-
       <!-- ABOUT SECTION -->
       <section id="about" class="about fade-item">
         <div class="container">
           <h2>About Me</h2>
+
           <div class="about-content">
-            <p>
-              Hi, I’m a Web Developer and Cybersecurity graduate with a passion
-              for building fast, secure, and user-focused web applications.
-            </p>
-            <p>
-              I blend clean design with solid back-end development to create
-              digital experiences that are as safe as they are smooth.
-            </p>
+            <div class="about-text">
+              <p>
+                Hi, I’m a Web Developer and Cybersecurity graduate with a
+                passion for building fast, secure, and user-focused web
+                applications.
+              </p>
+              <p>
+                I blend clean design with solid back-end development to create
+                digital experiences that are as safe as they are smooth.
+              </p>
+            </div>
+
+            <div class="about-visual">
+              <i class="fas fa-laptop-code"></i>
+            </div>
           </div>
         </div>
       </section>
@@ -89,104 +101,116 @@
           <h2>My Portfolio</h2>
           <div class="projects">
             <div class="project fade-item">
-              <img
-                src="assets/images/inventory.jpg"
-                alt="Inventory Management"
-              />
-              <div class="project-content">
-                <h3>Inventory Management</h3>
-                <p>
-                  A Java-based system for adding, updating, and tracking
-                  inventory with transaction logging.
-                </p>
-                <a
-                  href="https://github.com/Fp901/Inventory-management.git"
-                  target="_blank"
-                >
-                  <i class="fab fa-github"></i> View Project
-                </a>
+              <div class="project-inner">
+                <img
+                  src="assets/images/inventory.jpg"
+                  alt="Inventory Management"
+                />
+                <div class="project-content">
+                  <h3>Inventory Management</h3>
+                  <p>
+                    A Java-based system for adding, updating, and tracking
+                    inventory with transaction logging.
+                  </p>
+                  <a
+                    href="https://github.com/Fp901/Inventory-management.git"
+                    target="_blank"
+                  >
+                    <i class="fab fa-github"></i> View Project
+                  </a>
+                </div>
               </div>
             </div>
 
             <div class="project fade-item">
-              <img src="assets/images/password.jpg" alt="Password Manager" />
-              <div class="project-content">
-                <h3>Password Manager</h3>
-                <p>
-                  A secure Python CLI password manager using hashing,
-                  encryption, and MVC design.
-                </p>
-                <a
-                  href="https://github.com/Fp901/password_manager.git"
-                  target="_blank"
-                >
-                  <i class="fab fa-github"></i> View Project
-                </a>
+              <div class="project-inner">
+                <img src="assets/images/password.jpg" alt="Password Manager" />
+                <div class="project-content">
+                  <h3>Password Manager</h3>
+                  <p>
+                    A secure Python CLI password manager using hashing,
+                    encryption, and MVC design.
+                  </p>
+                  <a
+                    href="https://github.com/Fp901/password_manager.git"
+                    target="_blank"
+                  >
+                    <i class="fab fa-github"></i> View Project
+                  </a>
+                </div>
               </div>
             </div>
 
             <div class="project fade-item">
-              <img src="assets/images/site-replica.png" alt="Site Replica" />
-              <div class="project-content">
-                <h3>Site Replica</h3>
-                <p>
-                  Recreation of the Netmatters homepage using HTML and SASS for
-                  front-end practice.
-                </p>
-                <a
-                  href="https://github.com/Fp901/site-replica.git"
-                  target="_blank"
-                >
-                  <i class="fab fa-github"></i> View Project
-                </a>
+              <div class="project-inner">
+                <img src="assets/images/site-replica.png" alt="Site Replica" />
+                <div class="project-content">
+                  <h3>Site Replica</h3>
+                  <p>
+                    Recreation of the Netmatters homepage using HTML and SASS
+                    for front-end practice.
+                  </p>
+                  <a
+                    href="https://github.com/Fp901/site-replica.git"
+                    target="_blank"
+                  >
+                    <i class="fab fa-github"></i> View Project
+                  </a>
+                </div>
               </div>
             </div>
 
             <div class="project fade-item">
-              <img src="assets/images/portfolio.jpg" alt="Portfolio Site" />
-              <div class="project-content">
-                <h3>Portfolio Site</h3>
-                <p>
-                  A responsive personal landing page built with HTML and SCSS to
-                  showcase projects.
-                </p>
-                <a
-                  href="https://github.com/Fp901/portfolio-site.git"
-                  target="_blank"
-                >
-                  <i class="fab fa-github"></i> View Project
-                </a>
+              <div class="project-inner">
+                <img src="assets/images/portfolio.jpg" alt="Portfolio Site" />
+                <div class="project-content">
+                  <h3>Portfolio Site</h3>
+                  <p>
+                    A responsive personal landing page built with HTML and SCSS
+                    to showcase projects.
+                  </p>
+                  <a
+                    href="https://github.com/Fp901/portfolio-site.git"
+                    target="_blank"
+                  >
+                    <i class="fab fa-github"></i> View Project
+                  </a>
+                </div>
               </div>
             </div>
 
             <div class="project fade-item">
-              <img src="assets/images/tv-me.png" alt="TV-me Site" />
-              <div class="project-content">
-                <h3>TV-me Site</h3>
-                <p>
-                  A responsive app using the TVmaze API to show schedules,
-                  shows, and celebrity data.
-                </p>
-                <a
-                  href="https://github.com/Fp901/TV-me-site.git"
-                  target="_blank"
-                >
-                  <i class="fab fa-github"></i> View Project
-                </a>
+              <div class="project-inner">
+                <img src="assets/images/tv-me.png" alt="TV-me Site" />
+                <div class="project-content">
+                  <h3>TV-me Site</h3>
+                  <p>
+                    A responsive app using the TVmaze API to show schedules,
+                    shows, and celebrity data.
+                  </p>
+                  <a
+                    href="https://github.com/Fp901/TV-me-site.git"
+                    target="_blank"
+                  >
+                    <i class="fab fa-github"></i> View Project
+                  </a>
+                </div>
               </div>
             </div>
 
             <div class="project fade-item">
-              <img src="assets/images/java.jpg" alt="DbHub" />
-              <div class="project-content">
-                <h3>DbHub</h3>
-                <p>
-                  A Java desktop application with MySQL integration for secure
-                  enterprise data management.
-                </p>
-                <a href="https://github.com/Fp901/DbHub.git" target="_blank">
-                  <i class="fab fa-github"></i> View Project
-                </a>
+              <div class="project-inner">
+                <img src="assets/images/java.jpg" alt="DbHub" />
+                <div class="project-content">
+                  <h3>DbHub</h3>
+                  <p>
+                    A Java desktop application with MySQL integration for secure
+                    enterprise data management.
+                  </p>
+                  <a href="https://github.com/Fp901/DbHub.git" target="_blank">
+                    <i class="fab fa-github"></i> View Project
+                  </a>
+                </div>
               </div>
             </div>
           </div>
@@ -197,7 +221,55 @@
       <section id="coding" class="coding fade-item">
         <div class="container">
           <h2>Coding Examples</h2>
-          <p>Coming soon...</p>
+          <p class="section-intro">
+            A showcase of my code structure, secure practices, and automation
+            logic — currently being updated.
+          </p>
+
+          <!-- Blue loading animation -->
+          <div class="coding-loader fade-item">
+            <dotlottie-wc
+              src="https://lottie.host/3ce9d60e-536e-454d-9ea9-f62f0f2f91e4/7OJsZNaa5T.lottie"
+              style="width: 140px; height: 140px"
+              autoplay
+              loop
+            ></dotlottie-wc>
+          </div>
+
+          <div class="projects">
+            <div class="project fade-item">
+              <div class="project-content">
+                <i class="fab fa-python"></i>
+                <h3>Python Projects</h3>
+                <p>
+                  Secure coding, automation scripts, and data processing tools.
+                </p>
+                <span class="status coming-soon">Coming soon...</span>
+              </div>
+            </div>
+
+            <div class="project fade-item">
+              <div class="project-content">
+                <i class="fab fa-js-square"></i>
+                <h3>JavaScript Demos</h3>
+                <p>
+                  Front-end utilities, DOM manipulation, and browser extensions.
+                </p>
+                <span class="status coming-soon">Coming soon...</span>
+              </div>
+            </div>
+
+            <div class="project fade-item">
+              <div class="project-content">
+                <i class="fab fa-java"></i>
+                <h3>Java Snippets</h3>
+                <p>
+                  Object-oriented examples, design patterns, and desktop tools.
+                </p>
+                <span class="status coming-soon">Coming soon...</span>
+              </div>
+            </div>
+          </div>
         </div>
       </section>
 
@@ -324,7 +396,6 @@
         ></a>
       </p>
     </footer>
-
     <script src="js/formValidation.js"></script>
     <script src="js/main.js"></script>
   </body>

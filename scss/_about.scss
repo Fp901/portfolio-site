@@ -1,36 +1,80 @@
 #about {
-  background: $brand-lightest;
+  background: linear-gradient(
+    to bottom right,
+    #ffffff,
+    #f9fafc
+  ); // ✨ subtle gradient like coding section
   color: $brand-darkest;
   padding: clamp($space-md, 6vw, $space-lg) $space-sm;
 
   h2 {
     text-align: center;
-    margin-bottom: $space-md;
+    margin-bottom: clamp($space-sm, 2vw, $space-md);
     font-size: clamp(1.8rem, 4vw, 3rem);
     font-weight: 700;
+    padding: clamp($space-xs, 1.5vw, $space-sm) 0;
   }
 
   .container {
-    max-width: 1400px;
+    max-width: 1200px;
     margin: 0 auto;
     padding: 0 clamp($space-sm, 4vw, $space-lg);
   }
 
   .about-content {
-    max-width: 900px;
-    margin: 0 auto;
-    text-align: left;
-    line-height: 1.7;
-    letter-spacing: 0.2px;
-    font-size: clamp(1rem, 2vw, 1.15rem);
-    padding: $space-md 0 $space-sm; // 👈 reduced bottom padding for tighter spacing
+    display: grid;
+    grid-template-columns: 1fr; // stacks by default
+    align-items: center;
+    justify-items: center;
+    gap: clamp($space-md, 4vw, $space-lg);
+    background: #fff;
+    border-radius: 12px;
+    padding: clamp($space-md, 4vw, $space-lg);
+    box-shadow: 0 4px 16px rgba(0, 0, 0, 0.08); // ✨ subtle depth
 
-    p {
-      margin-bottom: clamp(
-        $space-sm,
-        2vw,
-        $space-md
-      ); // responsive paragraph spacing
+    @media (min-width: 900px) {
+      grid-template-columns: 1.1fr 0.9fr; // two columns: text + visual
+    }
+
+    .about-text {
+      text-align: left;
+      line-height: 1.8;
+      letter-spacing: 0.2px;
+      font-size: clamp(1rem, 2vw, 1.15rem);
+      color: $brand-darkest;
+
+      p {
+        margin-bottom: clamp($space-sm, 2vw, $space-md);
+        &:last-child {
+          margin-bottom: 0;
+        }
+      }
+    }
+
+    .about-visual {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+
+      i {
+        font-size: clamp(4rem, 8vw, 6rem);
+        color: $brand-pinkish;
+        opacity: 0.9;
+        transition: transform 0.3s ease, opacity 0.3s ease;
+
+        &:hover {
+          transform: scale(1.05);
+          opacity: 1;
+        }
+      }
+
+      // Optional if you ever replace <i> with an <img>
+      img {
+        max-width: 300px;
+        width: 100%;
+        border-radius: 50%;
+        box-shadow: 0 6px 20px rgba($brand-dark, 0.1);
+      }
     }
   }
 

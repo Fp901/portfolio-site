@@ -3,20 +3,22 @@
   color: $brand-darkest;
   padding-top: clamp($space-md, 6vw, $space-lg);
   padding: clamp($space-md, 6vw) $space-sm;
-  margin-bottom: clamp(
-    $space-lg,
-    8vw
-  ); // ✅ new bottom spacing for breathing room
+  margin-bottom: clamp($space-lg, 8vw);
 
   h2 {
     text-align: center;
-    margin-bottom: $space-md;
+    margin-bottom: clamp(
+      $space-sm,
+      1.5vw,
+      $space-md
+    ); // 🔧 slightly reduced bottom margin
     font-size: clamp(1.8rem, 4vw, 3rem);
     font-weight: 700;
+    padding: clamp($space-xs, 1.5vw, $space-sm) 0; // 🔧 slightly smaller vertical padding for balance
   }
 
   .container {
-    max-width: 1400px; // ✅ matches About section width
+    max-width: 1400px;
     margin: 0 auto;
     padding: 0 clamp($space-sm, 4vw, $space-lg);
   }
@@ -28,7 +30,7 @@
     line-height: 1.8;
     letter-spacing: 0.2px;
     font-size: clamp(1rem, 1.8vw, 1.15rem);
-    padding: clamp($space-md, 4vw, $space-lg) 0;
+    padding: clamp($space-sm, 3vw, $space-md) 0; // 🔧 reduced top padding to tighten gap
 
     p {
       margin-bottom: clamp($space-sm, 3vw, $space-md);
@@ -42,12 +44,12 @@
       }
 
       &:last-of-type {
-        margin-bottom: 0; // Keeps last paragraph tighter to section bottom
+        margin-bottom: clamp($space-sm, 2vw, $space-md);
       }
     }
   }
 
-  /* ✨ Fade-in animation (consistent with About/Contact) */
+  /* ✨ Fade-in animation */
   &.fade-item {
     opacity: 0;
     transform: translateY(40px);

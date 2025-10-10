@@ -9,6 +9,7 @@
     margin-bottom: $space-md;
     font-size: clamp(1.8rem, 4vw, 3rem);
     font-weight: 700;
+    padding: clamp($space-sm, 2vw, $space-md) 0; // ✅ Added padding around the heading
   }
 
   .container {

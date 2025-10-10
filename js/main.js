@@ -136,6 +136,31 @@ document.addEventListener("DOMContentLoaded", () => {
 
   window.addEventListener("scroll", activateSection);
   activateSection();
+
+  /* ------------------------------
+     Pause/Play Lottie Animation (Coding Section)
+  ------------------------------ */
+  const lottiePlayer = document.querySelector("dotlottie-wc");
+  const loaderContainer = document.querySelector(".coding-loader");
+
+  if (lottiePlayer && loaderContainer) {
+    const lottieObserver = new IntersectionObserver(
+      (entries) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) {
+            lottiePlayer.play();
+            loaderContainer.classList.remove("paused");
+          } else {
+            lottiePlayer.pause();
+            loaderContainer.classList.add("paused");
+          }
+        });
+      },
+      { threshold: 0.3 }
+    );
+
+    lottieObserver.observe(lottiePlayer);
+  }
 });
 
 /* ------------------------------
@@ -174,7 +199,9 @@ if (burger && sidebar) {
   });
 }
 
-// BACK TO TOP FUNCTIONALITY
+/* ------------------------------
+   BACK TO TOP FUNCTIONALITY
+------------------------------ */
 const backToTopBtn = document.querySelector(".back-to-top");
 
 // Show button only when user scrolls down
