@@ -20,11 +20,7 @@
   .projects {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-    gap: clamp(
-      $space-md,
-      4vw,
-      $space-lg
-    ); // ✅ increased responsive gap for more space when stacked
+    gap: clamp($space-md, 4vw, $space-lg);
 
     @media (min-width: $break-md) {
       gap: $space-lg;
@@ -80,62 +76,54 @@
 
         h3 {
           margin-bottom: $space-xs;
-          font-size: clamp(
-            1.4rem,
-            3vw,
-            2.2rem
-          ); // ✅ smoother scaling, balanced with h2
+          font-size: clamp(1.3rem, 2.6vw, 1.9rem);
           color: $brand-darkest;
           white-space: normal;
+          font-weight: 600;
         }
 
         p {
           flex-grow: 1;
           margin-bottom: $space-sm;
-          font-size: clamp(
-            1.1rem,
-            2vw,
-            1.35rem
-          ); // ✅ slightly larger for readability
+          font-size: clamp(1rem, 1.8vw, 1.25rem);
           color: $brand-darkest;
-          line-height: 1.6; // ✅ slightly looser for readability
+          line-height: 1.6;
         }
 
         a {
           align-self: center;
           background: $brand-dark;
           color: $brand-lightest;
-          padding: 0.6rem 1.2rem;
+          padding: clamp(0.5rem, 1.5vw, 0.8rem) clamp(1rem, 2vw, 1.5rem);
           border-radius: 4px;
           text-decoration: none;
           font-weight: bold;
-          font-size: 1rem;
-          transition: background 0.3s ease, transform 0.2s ease,
-            box-shadow 0.2s ease;
-          box-shadow: 0 4px 10px rgba($brand-dark, 0.15);
+          font-size: clamp(0.9rem, 1.6vw, 1rem);
+          transition: background 0.3s ease, transform 0.25s ease,
+            box-shadow 0.25s ease;
+          box-shadow: 0 3px 10px rgba($brand-dark, 0.15);
           display: inline-block;
 
-          /* ✅ only show hover when not focused/active */
+          /* ✅ Subtle, refined hover animation */
           &:hover:not(:focus):not(:active) {
             background: $brand-pinkish;
-            transform: translateY(-3px);
-            box-shadow: 0 6px 16px rgba($brand-pinkish, 0.25);
+            transform: translateY(-4px) scale(1.02);
+            box-shadow: 0 8px 18px rgba($brand-pinkish, 0.25);
           }
 
-          /* keep focused state visually “original” */
+          /* keep focused state visually neutral */
           &:focus {
             outline: none;
             background: $brand-dark;
             transform: none;
-            box-shadow: 0 4px 10px rgba($brand-dark, 0.15);
+            box-shadow: 0 3px 10px rgba($brand-dark, 0.15);
           }
 
           &:active {
             transform: translateY(0);
-            box-shadow: 0 2px 8px rgba($brand-pinkish, 0.15);
+            box-shadow: 0 2px 6px rgba($brand-pinkish, 0.15);
           }
 
-          /* remove mouse-focus ring, keep keyboard focus */
           &:focus:not(:focus-visible) {
             outline: none;
             box-shadow: none;

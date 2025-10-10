@@ -1,7 +1,11 @@
 #contact {
   background: $brand-lightest;
-  margin-bottom: clamp($space-lg, 8vw);
-  padding: clamp($space-md, 6vw) $space-sm;
+  margin-bottom: clamp(
+    $space-lg,
+    8vw,
+    $space-lg * 1.5
+  ); // ✅ fixed clamp syntax
+  padding: clamp($space-md, 6vw, $space-lg) $space-sm;
   color: $brand-darkest;
 
   h2 {
@@ -9,7 +13,7 @@
     margin-bottom: $space-md;
     font-size: clamp(1.8rem, 4vw, 3rem);
     font-weight: 700;
-    padding: clamp($space-sm, 2vw, $space-md) 0; // ✅ Added padding around the heading
+    padding: clamp($space-sm, 2vw, $space-md) 0; // ✅ consistent heading spacing
   }
 
   .container {
@@ -31,14 +35,13 @@
 
     p {
       color: $brand-darkest;
-      font-size: clamp(1.1rem, 2.5vw, 1.4rem);
+      font-size: clamp(1.15rem, 2.5vw, 1.45rem); // ✅ unified font size
       margin-bottom: clamp($space-xs, 1.5vw, $space-sm);
       font-weight: 400;
 
       &:first-of-type {
         margin-bottom: $space-md;
-        font-weight: 500;
-        font-size: clamp(1.05rem, 2.5vw, 1.2rem);
+        font-weight: 600; // ✅ slightly bolder, not larger
         color: $brand-dark;
       }
     }

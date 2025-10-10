@@ -798,20 +798,20 @@ footer {
   }
 }
 
-/* line 37, ../../../Desktop/personal-page/portfolio-site/scss/_portfolio.scss */
+/* line 33, ../../../Desktop/personal-page/portfolio-site/scss/_portfolio.scss */
 #portfolio .projects .project {
   opacity: 0;
   transform: translateY(40px);
   transition: opacity 1s cubic-bezier(0.25, 0.1, 0.25, 1), transform 1s cubic-bezier(0.25, 0.1, 0.25, 1);
 }
 
-/* line 43, ../../../Desktop/personal-page/portfolio-site/scss/_portfolio.scss */
+/* line 39, ../../../Desktop/personal-page/portfolio-site/scss/_portfolio.scss */
 #portfolio .projects .project.visible {
   opacity: 1;
   transform: translateY(0);
 }
 
-/* line 48, ../../../Desktop/personal-page/portfolio-site/scss/_portfolio.scss */
+/* line 44, ../../../Desktop/personal-page/portfolio-site/scss/_portfolio.scss */
 #portfolio .projects .project .project-inner {
   background: #fff;
   border-radius: 8px;
@@ -823,13 +823,13 @@ footer {
   transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
-/* line 58, ../../../Desktop/personal-page/portfolio-site/scss/_portfolio.scss */
+/* line 54, ../../../Desktop/personal-page/portfolio-site/scss/_portfolio.scss */
 #portfolio .projects .project .project-inner:hover {
   transform: translateY(-8px) scale(1.03);
   box-shadow: 0 10px 28px rgba(255, 107, 107, 0.25);
 }
 
-/* line 64, ../../../Desktop/personal-page/portfolio-site/scss/_portfolio.scss */
+/* line 60, ../../../Desktop/personal-page/portfolio-site/scss/_portfolio.scss */
 #portfolio .projects .project img {
   width: 100%;
   height: auto;
@@ -838,7 +838,7 @@ footer {
   display: block;
 }
 
-/* line 72, ../../../Desktop/personal-page/portfolio-site/scss/_portfolio.scss */
+/* line 68, ../../../Desktop/personal-page/portfolio-site/scss/_portfolio.scss */
 #portfolio .projects .project .project-content {
   padding: 1rem;
   display: flex;
@@ -849,63 +849,63 @@ footer {
   text-align: center;
 }
 
-/* line 81, ../../../Desktop/personal-page/portfolio-site/scss/_portfolio.scss */
+/* line 77, ../../../Desktop/personal-page/portfolio-site/scss/_portfolio.scss */
 #portfolio .projects .project .project-content h3 {
   margin-bottom: 0.5rem;
-  font-size: clamp(1.4rem, 3vw, 2.2rem);
+  font-size: clamp(1.3rem, 2.6vw, 1.9rem);
   color: #1a2a44;
   white-space: normal;
+  font-weight: 600;
 }
 
-/* line 92, ../../../Desktop/personal-page/portfolio-site/scss/_portfolio.scss */
+/* line 85, ../../../Desktop/personal-page/portfolio-site/scss/_portfolio.scss */
 #portfolio .projects .project .project-content p {
   flex-grow: 1;
   margin-bottom: 1rem;
-  font-size: clamp(1.1rem, 2vw, 1.35rem);
+  font-size: clamp(1rem, 1.8vw, 1.25rem);
   color: #1a2a44;
   line-height: 1.6;
 }
 
-/* line 104, ../../../Desktop/personal-page/portfolio-site/scss/_portfolio.scss */
+/* line 93, ../../../Desktop/personal-page/portfolio-site/scss/_portfolio.scss */
 #portfolio .projects .project .project-content a {
   align-self: center;
   background: #334e68;
   color: #f8fafc;
-  padding: 0.6rem 1.2rem;
+  padding: clamp(0.5rem, 1.5vw, 0.8rem) clamp(1rem, 2vw, 1.5rem);
   border-radius: 4px;
   text-decoration: none;
   font-weight: bold;
-  font-size: 1rem;
-  transition: background 0.3s ease, transform 0.2s ease, box-shadow 0.2s ease;
-  box-shadow: 0 4px 10px rgba(51, 78, 104, 0.15);
+  font-size: clamp(0.9rem, 1.6vw, 1rem);
+  transition: background 0.3s ease, transform 0.25s ease, box-shadow 0.25s ease;
+  box-shadow: 0 3px 10px rgba(51, 78, 104, 0.15);
   display: inline-block;
-  /* ✅ only show hover when not focused/active */
-  /* keep focused state visually “original” */
-  /* remove mouse-focus ring, keep keyboard focus */
+  /* ✅ Subtle, refined hover animation */
+  /* keep focused state visually neutral */
 }
 
-/* line 119, ../../../Desktop/personal-page/portfolio-site/scss/_portfolio.scss */
+/* line 108, ../../../Desktop/personal-page/portfolio-site/scss/_portfolio.scss */
 #portfolio .projects .project .project-content a:hover:not(:focus):not(:active) {
   background: #ff6b6b;
-  transform: translateY(-3px);
-  box-shadow: 0 6px 16px rgba(255, 107, 107, 0.25);
+  transform: translateY(-4px) scale(1.02);
+  box-shadow: 0 8px 18px rgba(255, 107, 107, 0.25);
 }
 
-/* line 126, ../../../Desktop/personal-page/portfolio-site/scss/_portfolio.scss */
+/* line 115, ../../../Desktop/personal-page/portfolio-site/scss/_portfolio.scss */
 #portfolio .projects .project .project-content a:focus {
   outline: none;
   background: #334e68;
   transform: none;
-  box-shadow: 0 4px 10px rgba(51, 78, 104, 0.15);
+  box-shadow: 0 3px 10px rgba(51, 78, 104, 0.15);
 }
 
-/* line 133, ../../../Desktop/personal-page/portfolio-site/scss/_portfolio.scss */
+/* line 122, ../../../Desktop/personal-page/portfolio-site/scss/_portfolio.scss */
 #portfolio .projects .project .project-content a:active {
   transform: translateY(0);
-  box-shadow: 0 2px 8px rgba(255, 107, 107, 0.15);
+  box-shadow: 0 2px 6px rgba(255, 107, 107, 0.15);
 }
 
-/* line 139, ../../../Desktop/personal-page/portfolio-site/scss/_portfolio.scss */
+/* line 127, ../../../Desktop/personal-page/portfolio-site/scss/_portfolio.scss */
 #portfolio .projects .project .project-content a:focus:not(:focus-visible) {
   outline: none;
   box-shadow: none;
@@ -1022,6 +1022,7 @@ footer {
   background: #f8fafc;
   text-align: center;
   /* ✅ Consistent container */
+  /* ✅ Coding card grid */
   /* Responsive padding */
 }
 
@@ -1085,6 +1086,118 @@ footer {
   }
 }
 
+/* line 50, ../../../Desktop/personal-page/portfolio-site/scss/_coding.scss */
+#coding .projects {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+  gap: 2rem;
+  justify-items: center;
+  align-items: stretch;
+}
+
+@media (min-width: 768px) {
+  /* line 50, ../../../Desktop/personal-page/portfolio-site/scss/_coding.scss */
+  #coding .projects {
+    gap: 2.5rem;
+  }
+}
+
+@media (min-width: 1200px) {
+  /* line 50, ../../../Desktop/personal-page/portfolio-site/scss/_coding.scss */
+  #coding .projects {
+    gap: 3rem;
+  }
+}
+
+/* line 66, ../../../Desktop/personal-page/portfolio-site/scss/_coding.scss */
+#coding .project {
+  background: #f8fafc;
+  border-radius: 16px;
+  box-shadow: 0 4px 16px rgba(51, 78, 104, 0.15);
+  transition: all 0.3s ease;
+  width: 100%;
+  max-width: 380px;
+  padding: 2rem 1.5rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* line 78, ../../../Desktop/personal-page/portfolio-site/scss/_coding.scss */
+#coding .project:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 8px 24px rgba(255, 107, 107, 0.25);
+}
+
+/* line 83, ../../../Desktop/personal-page/portfolio-site/scss/_coding.scss */
+#coding .project .project-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
+
+/* line 90, ../../../Desktop/personal-page/portfolio-site/scss/_coding.scss */
+#coding .project .project-content i {
+  font-size: 6rem;
+  color: #ff6b6b;
+  margin-bottom: 1.25rem;
+}
+
+@media (min-width: 768px) {
+  /* line 90, ../../../Desktop/personal-page/portfolio-site/scss/_coding.scss */
+  #coding .project .project-content i {
+    font-size: 7rem;
+  }
+}
+
+@media (min-width: 1200px) {
+  /* line 90, ../../../Desktop/personal-page/portfolio-site/scss/_coding.scss */
+  #coding .project .project-content i {
+    font-size: 8rem;
+  }
+}
+
+/* line 103, ../../../Desktop/personal-page/portfolio-site/scss/_coding.scss */
+#coding .project .project-content h3 {
+  margin-bottom: 0.75rem;
+  font-size: clamp(1.5rem, 3.5vw, 2.5rem);
+  color: #1a2a44;
+}
+
+/* line 109, ../../../Desktop/personal-page/portfolio-site/scss/_coding.scss */
+#coding .project .project-content p {
+  color: #334e68;
+  font-size: clamp(1.1rem, 2.5vw, 1.4rem);
+  line-height: 1.6;
+  margin-bottom: 1rem;
+  max-width: 280px;
+}
+
+/* line 117, ../../../Desktop/personal-page/portfolio-site/scss/_coding.scss */
+#coding .project .project-content .status {
+  display: inline-block;
+  padding: 0.4rem 0.8rem;
+  font-size: 0.9rem;
+  border-radius: 6px;
+  background: rgba(255, 107, 107, 0.1);
+  color: #ff6b6b;
+  font-weight: 600;
+  letter-spacing: 0.5px;
+  animation: pulse 1.5s infinite ease-in-out;
+}
+
+@keyframes pulse {
+  0%,
+  100% {
+    opacity: 0.6;
+  }
+  50% {
+    opacity: 1;
+  }
+}
+
 @media (min-width: 576px) {
   /* line 3, ../../../Desktop/personal-page/portfolio-site/scss/_coding.scss */
   #coding {
@@ -1096,29 +1209,28 @@ footer {
 #scs {
   background: #f8fafc;
   color: #1a2a44;
-  padding-top: clamp(2rem, 6vw, 3rem);
-  padding: clamp(2rem, 6vw) 1rem;
+  padding: clamp(2rem, 6vw, 3rem) 1rem;
   margin-bottom: clamp(3rem, 8vw);
-  /* ✨ Fade-in animation (consistent with About/Contact) */
+  /* ✨ Fade-in animation */
 }
 
-/* line 8, ../../../Desktop/personal-page/portfolio-site/scss/_scs.scss */
+/* line 7, ../../../Desktop/personal-page/portfolio-site/scss/_scs.scss */
 #scs h2 {
   text-align: center;
-  margin-bottom: 2rem;
+  margin-bottom: clamp(1rem, 2.5vw, 2rem);
   font-size: clamp(1.8rem, 4vw, 3rem);
   font-weight: 700;
-  padding: clamp(1rem, 2vw, 2rem) 0;
+  padding: 0;
 }
 
-/* line 16, ../../../Desktop/personal-page/portfolio-site/scss/_scs.scss */
+/* line 15, ../../../Desktop/personal-page/portfolio-site/scss/_scs.scss */
 #scs .container {
   max-width: 1400px;
   margin: 0 auto;
   padding: 0 clamp(1rem, 4vw, 3rem);
 }
 
-/* line 22, ../../../Desktop/personal-page/portfolio-site/scss/_scs.scss */
+/* line 21, ../../../Desktop/personal-page/portfolio-site/scss/_scs.scss */
 #scs .scs-content {
   max-width: 900px;
   margin: 0 auto;
@@ -1126,36 +1238,38 @@ footer {
   line-height: 1.8;
   letter-spacing: 0.2px;
   font-size: clamp(1.1rem, 2vw, 1.3rem);
-  padding: clamp(2rem, 4vw, 3rem) 0;
+  padding-top: clamp(1rem, 1vw, 2rem);
+  padding-bottom: clamp(1rem, 2vw, 2rem);
 }
 
-/* line 35, ../../../Desktop/personal-page/portfolio-site/scss/_scs.scss */
+/* line 31, ../../../Desktop/personal-page/portfolio-site/scss/_scs.scss */
 #scs .scs-content p {
-  margin-bottom: clamp(1rem, 3vw, 2rem);
+  margin-bottom: clamp(1rem, 2vw, 2rem);
   color: #1a2a44;
   font-weight: 400;
 }
 
-/* line 40, ../../../Desktop/personal-page/portfolio-site/scss/_scs.scss */
+/* line 36, ../../../Desktop/personal-page/portfolio-site/scss/_scs.scss */
 #scs .scs-content p:first-of-type {
   font-weight: 500;
   font-size: clamp(1.15rem, 2.2vw, 1.35rem);
-  color: #334e68;
+  color: rgba(51, 78, 104, 0.85);
+  margin-top: 0.25rem;
 }
 
-/* line 50, ../../../Desktop/personal-page/portfolio-site/scss/_scs.scss */
+/* line 43, ../../../Desktop/personal-page/portfolio-site/scss/_scs.scss */
 #scs .scs-content p:last-of-type {
   margin-bottom: clamp(1rem, 2vw, 2rem);
 }
 
-/* line 61, ../../../Desktop/personal-page/portfolio-site/scss/_scs.scss */
+/* line 50, ../../../Desktop/personal-page/portfolio-site/scss/_scs.scss */
 #scs.fade-item {
   opacity: 0;
   transform: translateY(40px);
   transition: opacity 1s ease-out, transform 1s ease-out;
 }
 
-/* line 66, ../../../Desktop/personal-page/portfolio-site/scss/_scs.scss */
+/* line 55, ../../../Desktop/personal-page/portfolio-site/scss/_scs.scss */
 #scs.fade-item.visible {
   opacity: 1 !important;
   transform: translateY(0);
@@ -1164,15 +1278,15 @@ footer {
 /* line 1, ../../../Desktop/personal-page/portfolio-site/scss/_contact.scss */
 #contact {
   background: #f8fafc;
-  margin-bottom: clamp(3rem, 8vw);
-  padding: clamp(2rem, 6vw) 1rem;
+  margin-bottom: clamp(3rem, 8vw, 4.5rem);
+  padding: clamp(2rem, 6vw, 3rem) 1rem;
   color: #1a2a44;
   /* ✏️ Form Styling */
   /* ✨ Fade-in animation */
   /* 🔁 Animations */
 }
 
-/* line 7, ../../../Desktop/personal-page/portfolio-site/scss/_contact.scss */
+/* line 11, ../../../Desktop/personal-page/portfolio-site/scss/_contact.scss */
 #contact h2 {
   text-align: center;
   margin-bottom: 2rem;
@@ -1181,14 +1295,14 @@ footer {
   padding: clamp(1rem, 2vw, 2rem) 0;
 }
 
-/* line 15, ../../../Desktop/personal-page/portfolio-site/scss/_contact.scss */
+/* line 19, ../../../Desktop/personal-page/portfolio-site/scss/_contact.scss */
 #contact .container {
   max-width: 1400px;
   margin: 0 auto;
   padding: 0 clamp(1rem, 4vw, 3rem);
 }
 
-/* line 21, ../../../Desktop/personal-page/portfolio-site/scss/_contact.scss */
+/* line 25, ../../../Desktop/personal-page/portfolio-site/scss/_contact.scss */
 #contact .contact-content {
   max-width: 800px;
   margin: 0 auto;
@@ -1201,23 +1315,22 @@ footer {
   line-height: 1.8;
 }
 
-/* line 32, ../../../Desktop/personal-page/portfolio-site/scss/_contact.scss */
+/* line 36, ../../../Desktop/personal-page/portfolio-site/scss/_contact.scss */
 #contact .contact-content p {
   color: #1a2a44;
-  font-size: clamp(1.1rem, 2.5vw, 1.4rem);
+  font-size: clamp(1.15rem, 2.5vw, 1.45rem);
   margin-bottom: clamp(0.5rem, 1.5vw, 1rem);
   font-weight: 400;
 }
 
-/* line 38, ../../../Desktop/personal-page/portfolio-site/scss/_contact.scss */
+/* line 42, ../../../Desktop/personal-page/portfolio-site/scss/_contact.scss */
 #contact .contact-content p:first-of-type {
   margin-bottom: 2rem;
-  font-weight: 500;
-  font-size: clamp(1.05rem, 2.5vw, 1.2rem);
+  font-weight: 600;
   color: #334e68;
 }
 
-/* line 46, ../../../Desktop/personal-page/portfolio-site/scss/_contact.scss */
+/* line 49, ../../../Desktop/personal-page/portfolio-site/scss/_contact.scss */
 #contact .contact-content a {
   color: #1a2a44;
   font-weight: 500;
@@ -1225,12 +1338,12 @@ footer {
   transition: color 0.3s ease;
 }
 
-/* line 52, ../../../Desktop/personal-page/portfolio-site/scss/_contact.scss */
+/* line 55, ../../../Desktop/personal-page/portfolio-site/scss/_contact.scss */
 #contact .contact-content a:hover {
   color: #ff6b6b;
 }
 
-/* line 59, ../../../Desktop/personal-page/portfolio-site/scss/_contact.scss */
+/* line 62, ../../../Desktop/personal-page/portfolio-site/scss/_contact.scss */
 #contact .contact-form {
   display: flex;
   flex-direction: column;
@@ -1242,7 +1355,7 @@ footer {
   /* ✅ Success pulse animation when form submits */
 }
 
-/* line 67, ../../../Desktop/personal-page/portfolio-site/scss/_contact.scss */
+/* line 70, ../../../Desktop/personal-page/portfolio-site/scss/_contact.scss */
 #contact .contact-form .form-group {
   display: flex;
   flex-direction: column;
@@ -1251,7 +1364,7 @@ footer {
   width: 100%;
 }
 
-/* line 75, ../../../Desktop/personal-page/portfolio-site/scss/_contact.scss */
+/* line 78, ../../../Desktop/personal-page/portfolio-site/scss/_contact.scss */
 #contact .contact-form input,
 #contact .contact-form textarea {
   width: 100%;
@@ -1266,7 +1379,7 @@ footer {
   text-align: left;
 }
 
-/* line 88, ../../../Desktop/personal-page/portfolio-site/scss/_contact.scss */
+/* line 91, ../../../Desktop/personal-page/portfolio-site/scss/_contact.scss */
 #contact .contact-form input:focus,
 #contact .contact-form textarea:focus {
   outline: none;
@@ -1274,7 +1387,7 @@ footer {
   box-shadow: 0 0 0 3px rgba(255, 107, 107, 0.15);
 }
 
-/* line 94, ../../../Desktop/personal-page/portfolio-site/scss/_contact.scss */
+/* line 97, ../../../Desktop/personal-page/portfolio-site/scss/_contact.scss */
 #contact .contact-form input.valid,
 #contact .contact-form textarea.valid {
   border-color: #28a745;
@@ -1282,7 +1395,7 @@ footer {
   transition: all 0.3s ease-in-out;
 }
 
-/* line 100, ../../../Desktop/personal-page/portfolio-site/scss/_contact.scss */
+/* line 103, ../../../Desktop/personal-page/portfolio-site/scss/_contact.scss */
 #contact .contact-form input.invalid,
 #contact .contact-form textarea.invalid {
   border-color: #ff6b6b;
@@ -1291,13 +1404,13 @@ footer {
   transition: all 0.3s ease-in-out;
 }
 
-/* line 108, ../../../Desktop/personal-page/portfolio-site/scss/_contact.scss */
+/* line 111, ../../../Desktop/personal-page/portfolio-site/scss/_contact.scss */
 #contact .contact-form textarea {
   resize: vertical;
   min-height: clamp(100px, 20vw, 150px);
 }
 
-/* line 114, ../../../Desktop/personal-page/portfolio-site/scss/_contact.scss */
+/* line 117, ../../../Desktop/personal-page/portfolio-site/scss/_contact.scss */
 #contact .contact-form .helper-text {
   font-size: 0.85rem;
   margin-top: 0.3rem;
@@ -1307,18 +1420,18 @@ footer {
   transform: translateY(-3px);
 }
 
-/* line 122, ../../../Desktop/personal-page/portfolio-site/scss/_contact.scss */
+/* line 125, ../../../Desktop/personal-page/portfolio-site/scss/_contact.scss */
 #contact .contact-form .helper-text.visible {
   opacity: 1;
   transform: translateY(0);
 }
 
-/* line 127, ../../../Desktop/personal-page/portfolio-site/scss/_contact.scss */
+/* line 130, ../../../Desktop/personal-page/portfolio-site/scss/_contact.scss */
 #contact .contact-form .helper-text.valid {
   color: #28a745;
 }
 
-/* line 132, ../../../Desktop/personal-page/portfolio-site/scss/_contact.scss */
+/* line 135, ../../../Desktop/personal-page/portfolio-site/scss/_contact.scss */
 #contact .contact-form button {
   align-self: center;
   background: #334e68;
@@ -1334,14 +1447,14 @@ footer {
   /* Responsive scaling (matches portfolio section) */
 }
 
-/* line 145, ../../../Desktop/personal-page/portfolio-site/scss/_contact.scss */
+/* line 148, ../../../Desktop/personal-page/portfolio-site/scss/_contact.scss */
 #contact .contact-form button:hover {
   background: #ff6b6b;
   transform: translateY(-2px);
   box-shadow: 0 6px 16px rgba(255, 107, 107, 0.25);
 }
 
-/* line 151, ../../../Desktop/personal-page/portfolio-site/scss/_contact.scss */
+/* line 154, ../../../Desktop/personal-page/portfolio-site/scss/_contact.scss */
 #contact .contact-form button:disabled {
   background: #4c749b;
   cursor: not-allowed;
@@ -1350,7 +1463,7 @@ footer {
 }
 
 @media (min-width: 576px) {
-  /* line 132, ../../../Desktop/personal-page/portfolio-site/scss/_contact.scss */
+  /* line 135, ../../../Desktop/personal-page/portfolio-site/scss/_contact.scss */
   #contact .contact-form button {
     font-size: 1.05rem;
     padding: 0.7rem 1.3rem;
@@ -1358,7 +1471,7 @@ footer {
 }
 
 @media (min-width: 768px) {
-  /* line 132, ../../../Desktop/personal-page/portfolio-site/scss/_contact.scss */
+  /* line 135, ../../../Desktop/personal-page/portfolio-site/scss/_contact.scss */
   #contact .contact-form button {
     font-size: 1.1rem;
     padding: 0.8rem 1.5rem;
@@ -1366,7 +1479,7 @@ footer {
 }
 
 @media (min-width: 992px) {
-  /* line 132, ../../../Desktop/personal-page/portfolio-site/scss/_contact.scss */
+  /* line 135, ../../../Desktop/personal-page/portfolio-site/scss/_contact.scss */
   #contact .contact-form button {
     font-size: 1.15rem;
     padding: 0.9rem 1.6rem;
@@ -1374,26 +1487,26 @@ footer {
 }
 
 @media (min-width: 1200px) {
-  /* line 132, ../../../Desktop/personal-page/portfolio-site/scss/_contact.scss */
+  /* line 135, ../../../Desktop/personal-page/portfolio-site/scss/_contact.scss */
   #contact .contact-form button {
     font-size: 1.2rem;
     padding: 1rem 1.8rem;
   }
 }
 
-/* line 181, ../../../Desktop/personal-page/portfolio-site/scss/_contact.scss */
+/* line 184, ../../../Desktop/personal-page/portfolio-site/scss/_contact.scss */
 #contact .contact-form.success {
   animation: successPulse 0.5s ease-in-out;
 }
 
-/* line 187, ../../../Desktop/personal-page/portfolio-site/scss/_contact.scss */
+/* line 190, ../../../Desktop/personal-page/portfolio-site/scss/_contact.scss */
 #contact.fade-item {
   opacity: 0;
   transform: translateY(40px);
   transition: opacity 1s ease-out, transform 1s ease-out;
 }
 
-/* line 192, ../../../Desktop/personal-page/portfolio-site/scss/_contact.scss */
+/* line 195, ../../../Desktop/personal-page/portfolio-site/scss/_contact.scss */
 #contact.fade-item.visible {
   opacity: 1 !important;
   transform: translateY(0);

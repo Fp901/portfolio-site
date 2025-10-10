@@ -46,6 +46,98 @@
     }
   }
 
+  /* ✅ Coding card grid */
+  .projects {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+    gap: 2rem;
+    justify-items: center;
+    align-items: stretch;
+
+    @media (min-width: 768px) {
+      gap: 2.5rem;
+    }
+
+    @media (min-width: 1200px) {
+      gap: 3rem;
+    }
+  }
+
+  .project {
+    background: $brand-lightest;
+    border-radius: 16px;
+    box-shadow: 0 4px 16px rgba(51, 78, 104, 0.15);
+    transition: all 0.3s ease;
+    width: 100%;
+    max-width: 380px;
+    padding: 2rem 1.5rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    &:hover {
+      transform: translateY(-6px);
+      box-shadow: 0 8px 24px rgba(255, 107, 107, 0.25);
+    }
+
+    .project-content {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+
+      i {
+        font-size: 6rem; // ✅ doubled icon size (previously ~3rem)
+        color: $brand-pinkish;
+        margin-bottom: 1.25rem;
+
+        @media (min-width: $break-md) {
+          font-size: 7rem;
+        }
+        @media (min-width: $break-xl) {
+          font-size: 8rem;
+        }
+      }
+
+      h3 {
+        margin-bottom: 0.75rem;
+        font-size: clamp(1.5rem, 3.5vw, 2.5rem);
+        color: $brand-darkest;
+      }
+
+      p {
+        color: $brand-dark;
+        font-size: clamp(1.1rem, 2.5vw, 1.4rem);
+        line-height: 1.6;
+        margin-bottom: 1rem;
+        max-width: 280px;
+      }
+
+      .status {
+        display: inline-block;
+        padding: 0.4rem 0.8rem;
+        font-size: 0.9rem;
+        border-radius: 6px;
+        background: rgba(255, 107, 107, 0.1);
+        color: $brand-pinkish;
+        font-weight: 600;
+        letter-spacing: 0.5px;
+        animation: pulse 1.5s infinite ease-in-out;
+      }
+    }
+  }
+
+  @keyframes pulse {
+    0%,
+    100% {
+      opacity: 0.6;
+    }
+    50% {
+      opacity: 1;
+    }
+  }
+
   /* Responsive padding */
   @media (min-width: $break-sm) {
     padding: $space-lg $space-md;

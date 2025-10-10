@@ -1,20 +1,19 @@
 #scs {
   background: $brand-lightest;
   color: $brand-darkest;
-  padding-top: clamp($space-md, 6vw, $space-lg);
-  padding: clamp($space-md, 6vw) $space-sm;
-  margin-bottom: clamp($space-lg, 8vw); // ✅ breathing room below section
+  padding: clamp($space-md, 6vw, $space-lg) $space-sm;
+  margin-bottom: clamp($space-lg, 8vw);
 
   h2 {
     text-align: center;
-    margin-bottom: $space-md;
+    margin-bottom: clamp($space-sm, 2.5vw, $space-md);
     font-size: clamp(1.8rem, 4vw, 3rem);
     font-weight: 700;
-    padding: clamp($space-sm, 2vw, $space-md) 0; // ✅ consistent heading spacing
+    padding: 0; // ✅ no extra top padding
   }
 
   .container {
-    max-width: 1400px; // ✅ matches About section width
+    max-width: 1400px;
     margin: 0 auto;
     padding: 0 clamp($space-sm, 4vw, $space-lg);
   }
@@ -25,39 +24,29 @@
     text-align: left;
     line-height: 1.8;
     letter-spacing: 0.2px;
-    font-size: clamp(
-      1.1rem,
-      2vw,
-      1.3rem
-    ); // ✅ increased slightly for readability
-    padding: clamp($space-md, 4vw, $space-lg) 0;
+    font-size: clamp(1.1rem, 2vw, 1.3rem);
+    padding-top: clamp($space-sm, 1vw, $space-md);
+    padding-bottom: clamp($space-sm, 2vw, $space-md);
 
     p {
-      margin-bottom: clamp($space-sm, 3vw, $space-md);
+      margin-bottom: clamp($space-sm, 2vw, $space-md);
       color: $brand-darkest;
       font-weight: 400;
 
       &:first-of-type {
         font-weight: 500;
-        font-size: clamp(
-          1.15rem,
-          2.2vw,
-          1.35rem
-        ); // ✅ slightly larger for intro line
-        color: $brand-dark;
+        font-size: clamp(1.15rem, 2.2vw, 1.35rem);
+        color: rgba($brand-dark, 0.85); // ✅ subtle tint for intro line
+        margin-top: 0.25rem;
       }
 
       &:last-of-type {
-        margin-bottom: clamp(
-          $space-sm,
-          2vw,
-          $space-md
-        ); // ✅ added bottom margin for extra space
+        margin-bottom: clamp($space-sm, 2vw, $space-md);
       }
     }
   }
 
-  /* ✨ Fade-in animation (consistent with About/Contact) */
+  /* ✨ Fade-in animation */
   &.fade-item {
     opacity: 0;
     transform: translateY(40px);
