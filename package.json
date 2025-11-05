@@ -1,20 +1,23 @@
 {
   "name": "portfolio-site",
   "version": "1.0.0",
-  "type": "module",
+  "description": "Portfolio with Node backend for contact form (Express + SendGrid).",
   "main": "server/server.js",
+  "type": "module",
   "scripts": {
     "start": "node server/server.js",
     "dev": "nodemon server/server.js"
   },
+  "author": "Francois Pretorius",
+  "license": "MIT",
   "dependencies": {
-    "@sendgrid/mail": "^8.1.6",
+    "@sendgrid/mail": "^8.1.0",
     "cors": "^2.8.5",
     "dotenv": "^17.2.3",
     "express": "^5.1.0",
-    "express-rate-limit": "^8.1.0",
-    "helmet": "^8.1.0",
-    "validator": "^13.15.15"
+    "express-rate-limit": "^7.4.0",
+    "helmet": "^7.1.0",
+    "validator": "^13.11.0"
   },
   "devDependencies": {
     "nodemon": "^3.1.0"
