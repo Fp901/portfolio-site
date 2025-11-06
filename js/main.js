@@ -242,3 +242,92 @@ document
     btn.addEventListener("pointerup", clearFocus); // covers mouse + touch
     btn.addEventListener("click", clearFocus); // safety for older browsers
   });
+
+/* ------------------------------
+   Coding Example Click & Display
+------------------------------ */
+document.addEventListener("DOMContentLoaded", () => {
+  const exampleSection = document.getElementById("codeExample");
+  const title = document.getElementById("exampleTitle");
+  const code = document.getElementById("exampleCode");
+  const lang = document.getElementById("exampleLang");
+  const desc = document.getElementById("exampleDesc");
+  const why = document.getElementById("exampleWhy");
+
+  if (!exampleSection) return;
+
+  const examples = {
+    python: {
+      title: "Password Manager – Hashing Function",
+      lang: "Python",
+      desc: "Securely hashes user passwords using SHA-256 before storing them locally.",
+      why: "I used this to demonstrate secure password handling and cryptographic principles.",
+      code: `import hashlib
+
+def hash_password(password):
+    return hashlib.sha256(password.encode()).hexdigest()`,
+    },
+    javascript: {
+      title: "Image Preloader – Unsplash API",
+      lang: "JavaScript (ES6)",
+      desc: "Fetches random images from Unsplash and caches them for fast display.",
+      why: "This shows how I use async/await and APIs to improve performance.",
+      code: `async function preloadImages() {
+  const res = await fetch("https://api.unsplash.com/search/photos?query=nature");
+  const data = await res.json();
+  cachedImages.push(...data.results);
+}`,
+    },
+    java: {
+      title: "Inventory Tracker – Item Class",
+      lang: "Java",
+      desc: "Defines a reusable Item object with encapsulated fields and validation.",
+      why: "Demonstrates OOP, data encapsulation, and constructor use.",
+      code: `public class Item {
+  private String name;
+  private int quantity;
+
+  public Item(String name, int quantity) {
+      this.name = name;
+      this.quantity = quantity;
+  }
+
+  public String getName() { return name; }
+  public int getQuantity() { return quantity; }
+}`,
+    },
+  };
+
+  document.querySelectorAll("#coding .project-content").forEach((card) => {
+    card.addEventListener("click", () => {
+      const titleText = card.querySelector("h3").innerText.toLowerCase();
+      let selected = null;
+
+      if (titleText.includes("python")) selected = examples.python;
+      else if (titleText.includes("javascript")) selected = examples.javascript;
+      else if (titleText.includes("java")) selected = examples.java;
+
+      if (!selected) return;
+
+      // 🧩 NEW: Toggle collapse if the same card is clicked again
+      if (
+        !exampleSection.classList.contains("hidden") &&
+        title.innerText === selected.title
+      ) {
+        exampleSection.classList.add("hidden");
+        return;
+      }
+
+      // Otherwise, show new content
+      title.innerText = selected.title;
+      code.textContent = selected.code;
+      lang.innerText = selected.lang;
+      desc.innerText = selected.desc;
+      why.innerText = selected.why;
+
+      exampleSection.classList.remove("hidden");
+      Prism.highlightAll();
+      exampleSection.scrollIntoView({ behavior: "smooth" });
+    });
+  });
+});

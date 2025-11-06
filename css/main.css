@@ -1,12 +1,12 @@
 @charset "UTF-8";
-/* line 3, ../../../Desktop/personal-page/portfolio-site/scss/_global.scss */
+/* line 3, ../Desktop/Admin/personal-page/portfolio-site/scss/_global.scss */
 * {
   box-sizing: border-box;
   margin: 0;
   padding: 0;
 }
 
-/* line 9, ../../../Desktop/personal-page/portfolio-site/scss/_global.scss */
+/* line 9, ../Desktop/Admin/personal-page/portfolio-site/scss/_global.scss */
 .container {
   width: 100%;
   margin: 0 auto;
@@ -14,55 +14,55 @@
 }
 
 @media (max-width: 320px) {
-  /* line 9, ../../../Desktop/personal-page/portfolio-site/scss/_global.scss */
+  /* line 9, ../Desktop/Admin/personal-page/portfolio-site/scss/_global.scss */
   .container {
     padding: 0 0.5rem;
   }
 }
 
 @media (min-width: 576px) {
-  /* line 9, ../../../Desktop/personal-page/portfolio-site/scss/_global.scss */
+  /* line 9, ../Desktop/Admin/personal-page/portfolio-site/scss/_global.scss */
   .container {
     max-width: 540px;
   }
 }
 
 @media (min-width: 768px) {
-  /* line 9, ../../../Desktop/personal-page/portfolio-site/scss/_global.scss */
+  /* line 9, ../Desktop/Admin/personal-page/portfolio-site/scss/_global.scss */
   .container {
     max-width: 720px;
   }
 }
 
 @media (min-width: 992px) {
-  /* line 9, ../../../Desktop/personal-page/portfolio-site/scss/_global.scss */
+  /* line 9, ../Desktop/Admin/personal-page/portfolio-site/scss/_global.scss */
   .container {
     max-width: 960px;
   }
 }
 
 @media (min-width: 1200px) {
-  /* line 9, ../../../Desktop/personal-page/portfolio-site/scss/_global.scss */
+  /* line 9, ../Desktop/Admin/personal-page/portfolio-site/scss/_global.scss */
   .container {
     max-width: 1140px;
   }
 }
 
 @media (min-width: 1400px) {
-  /* line 9, ../../../Desktop/personal-page/portfolio-site/scss/_global.scss */
+  /* line 9, ../Desktop/Admin/personal-page/portfolio-site/scss/_global.scss */
   .container {
     max-width: 1280px;
   }
 }
 
-/* line 36, ../../../Desktop/personal-page/portfolio-site/scss/_global.scss */
+/* line 36, ../Desktop/Admin/personal-page/portfolio-site/scss/_global.scss */
 html {
   height: 100%;
   scroll-behavior: smooth;
   overflow-x: hidden;
 }
 
-/* line 42, ../../../Desktop/personal-page/portfolio-site/scss/_global.scss */
+/* line 42, ../Desktop/Admin/personal-page/portfolio-site/scss/_global.scss */
 body {
   display: flex;
   flex-direction: column;
@@ -75,18 +75,18 @@ body {
   overflow-x: hidden;
 }
 
-/* line 54, ../../../Desktop/personal-page/portfolio-site/scss/_global.scss */
+/* line 54, ../Desktop/Admin/personal-page/portfolio-site/scss/_global.scss */
 a {
   color: #1a2a44;
   text-decoration: none;
 }
 
-/* line 58, ../../../Desktop/personal-page/portfolio-site/scss/_global.scss */
+/* line 58, ../Desktop/Admin/personal-page/portfolio-site/scss/_global.scss */
 a:hover {
   color: #829ab1;
 }
 
-/* line 63, ../../../Desktop/personal-page/portfolio-site/scss/_global.scss */
+/* line 63, ../Desktop/Admin/personal-page/portfolio-site/scss/_global.scss */
 h1,
 h2,
 h3,
@@ -97,14 +97,14 @@ h5 {
   line-height: 1.3;
 }
 
-/* line 73, ../../../Desktop/personal-page/portfolio-site/scss/_global.scss */
+/* line 73, ../Desktop/Admin/personal-page/portfolio-site/scss/_global.scss */
 section h2 {
   text-align: center;
   margin-bottom: 2rem;
   font-size: 2rem;
 }
 
-/* line 79, ../../../Desktop/personal-page/portfolio-site/scss/_global.scss */
+/* line 79, ../Desktop/Admin/personal-page/portfolio-site/scss/_global.scss */
 section h3 {
   margin: 1rem 0 0.5rem;
   font-size: 1.4rem;
@@ -113,7 +113,7 @@ section h3 {
 /* ==============================
    Back to Top Button (Updated)
 ============================== */
-/* line 87, ../../../Desktop/personal-page/portfolio-site/scss/_global.scss */
+/* line 87, ../Desktop/Admin/personal-page/portfolio-site/scss/_global.scss */
 .back-to-top {
   position: fixed;
   bottom: 2rem;
@@ -136,7 +136,7 @@ section h3 {
   gap: 6px;
 }
 
-/* line 108, ../../../Desktop/personal-page/portfolio-site/scss/_global.scss */
+/* line 108, ../Desktop/Admin/personal-page/portfolio-site/scss/_global.scss */
 .back-to-top:hover {
   background: #ff6b6b;
   color: #fff;
@@ -145,13 +145,13 @@ section h3 {
   transform: translateX(0) scale(1.05);
 }
 
-/* line 116, ../../../Desktop/personal-page/portfolio-site/scss/_global.scss */
+/* line 116, ../Desktop/Admin/personal-page/portfolio-site/scss/_global.scss */
 .back-to-top:focus, .back-to-top:active {
   outline: none;
   box-shadow: none;
 }
 
-/* line 122, ../../../Desktop/personal-page/portfolio-site/scss/_global.scss */
+/* line 122, ../Desktop/Admin/personal-page/portfolio-site/scss/_global.scss */
 .back-to-top.show {
   opacity: 1;
   pointer-events: auto;
@@ -159,7 +159,7 @@ section h3 {
 }
 
 @media (max-width: 768px) {
-  /* line 87, ../../../Desktop/personal-page/portfolio-site/scss/_global.scss */
+  /* line 87, ../Desktop/Admin/personal-page/portfolio-site/scss/_global.scss */
   .back-to-top {
     bottom: 1rem;
     right: 1rem;
@@ -168,12 +168,12 @@ section h3 {
   }
 }
 
-/* line 136, ../../../Desktop/personal-page/portfolio-site/scss/_global.scss */
+/* line 136, ../Desktop/Admin/personal-page/portfolio-site/scss/_global.scss */
 .content {
   flex-grow: 1;
 }
 
-/* line 140, ../../../Desktop/personal-page/portfolio-site/scss/_global.scss */
+/* line 140, ../Desktop/Admin/personal-page/portfolio-site/scss/_global.scss */
 footer {
   margin-top: auto;
   flex-shrink: 0;
@@ -182,7 +182,7 @@ footer {
 /* ====================
    Scroll Progress Bar
 ==================== */
-/* line 148, ../../../Desktop/personal-page/portfolio-site/scss/_global.scss */
+/* line 148, ../Desktop/Admin/personal-page/portfolio-site/scss/_global.scss */
 #progress-bar {
   position: fixed;
   top: 0;
@@ -197,14 +197,14 @@ footer {
 /* =========================================
    Global Fade Animation (used site-wide)
 ========================================= */
-/* line 162, ../../../Desktop/personal-page/portfolio-site/scss/_global.scss */
+/* line 162, ../Desktop/Admin/personal-page/portfolio-site/scss/_global.scss */
 .fade-item {
   opacity: 0;
   transform: translateY(40px);
   transition: opacity 1s cubic-bezier(0.25, 0.1, 0.25, 1), transform 1s cubic-bezier(0.25, 0.1, 0.25, 1);
 }
 
-/* line 169, ../../../Desktop/personal-page/portfolio-site/scss/_global.scss */
+/* line 169, ../Desktop/Admin/personal-page/portfolio-site/scss/_global.scss */
 .fade-item.visible {
   opacity: 1;
   transform: translateY(0);
@@ -212,66 +212,66 @@ footer {
 
 /* Typography scaling */
 @media (min-width: 576px) {
-  /* line 176, ../../../Desktop/personal-page/portfolio-site/scss/_global.scss */
+  /* line 176, ../Desktop/Admin/personal-page/portfolio-site/scss/_global.scss */
   body {
     font-size: 1.125rem;
   }
-  /* line 179, ../../../Desktop/personal-page/portfolio-site/scss/_global.scss */
+  /* line 179, ../Desktop/Admin/personal-page/portfolio-site/scss/_global.scss */
   section h2 {
     font-size: 2.5rem;
   }
-  /* line 182, ../../../Desktop/personal-page/portfolio-site/scss/_global.scss */
+  /* line 182, ../Desktop/Admin/personal-page/portfolio-site/scss/_global.scss */
   section h3 {
     font-size: 1.6rem;
   }
 }
 
 @media (min-width: 768px) {
-  /* line 188, ../../../Desktop/personal-page/portfolio-site/scss/_global.scss */
+  /* line 188, ../Desktop/Admin/personal-page/portfolio-site/scss/_global.scss */
   body {
     font-size: 1.25rem;
   }
-  /* line 191, ../../../Desktop/personal-page/portfolio-site/scss/_global.scss */
+  /* line 191, ../Desktop/Admin/personal-page/portfolio-site/scss/_global.scss */
   section h2 {
     font-size: 3rem;
   }
-  /* line 194, ../../../Desktop/personal-page/portfolio-site/scss/_global.scss */
+  /* line 194, ../Desktop/Admin/personal-page/portfolio-site/scss/_global.scss */
   section h3 {
     font-size: 1.8rem;
   }
 }
 
 @media (min-width: 992px) {
-  /* line 200, ../../../Desktop/personal-page/portfolio-site/scss/_global.scss */
+  /* line 200, ../Desktop/Admin/personal-page/portfolio-site/scss/_global.scss */
   body {
     font-size: 1.375rem;
   }
-  /* line 203, ../../../Desktop/personal-page/portfolio-site/scss/_global.scss */
+  /* line 203, ../Desktop/Admin/personal-page/portfolio-site/scss/_global.scss */
   section h2 {
     font-size: 3.5rem;
   }
-  /* line 206, ../../../Desktop/personal-page/portfolio-site/scss/_global.scss */
+  /* line 206, ../Desktop/Admin/personal-page/portfolio-site/scss/_global.scss */
   section h3 {
     font-size: 2rem;
   }
 }
 
 @media (min-width: 1200px) {
-  /* line 212, ../../../Desktop/personal-page/portfolio-site/scss/_global.scss */
+  /* line 212, ../Desktop/Admin/personal-page/portfolio-site/scss/_global.scss */
   body {
     font-size: 1.5rem;
   }
-  /* line 215, ../../../Desktop/personal-page/portfolio-site/scss/_global.scss */
+  /* line 215, ../Desktop/Admin/personal-page/portfolio-site/scss/_global.scss */
   section h2 {
     font-size: 4rem;
   }
-  /* line 218, ../../../Desktop/personal-page/portfolio-site/scss/_global.scss */
+  /* line 218, ../Desktop/Admin/personal-page/portfolio-site/scss/_global.scss */
   section h3 {
     font-size: 2.25rem;
   }
 }
 
-/* line 1, ../../../Desktop/personal-page/portfolio-site/scss/_sidebar.scss */
+/* line 1, ../Desktop/Admin/personal-page/portfolio-site/scss/_sidebar.scss */
 .sidebar {
   position: fixed;
   top: 0;
@@ -295,12 +295,12 @@ footer {
   /* ---- Responsive breakpoints ---- */
 }
 
-/* line 25, ../../../Desktop/personal-page/portfolio-site/scss/_sidebar.scss */
+/* line 25, ../Desktop/Admin/personal-page/portfolio-site/scss/_sidebar.scss */
 .sidebar.open {
   transform: translateX(0);
 }
 
-/* line 29, ../../../Desktop/personal-page/portfolio-site/scss/_sidebar.scss */
+/* line 29, ../Desktop/Admin/personal-page/portfolio-site/scss/_sidebar.scss */
 .sidebar h1 {
   margin: 0 0 3rem 0;
   padding: 0;
@@ -308,7 +308,7 @@ footer {
   flex-shrink: 0;
 }
 
-/* line 36, ../../../Desktop/personal-page/portfolio-site/scss/_sidebar.scss */
+/* line 36, ../Desktop/Admin/personal-page/portfolio-site/scss/_sidebar.scss */
 .sidebar h1 a {
   color: #ff6b6b;
   text-decoration: none;
@@ -318,7 +318,7 @@ footer {
   padding-left: 0;
 }
 
-/* line 45, ../../../Desktop/personal-page/portfolio-site/scss/_sidebar.scss */
+/* line 45, ../Desktop/Admin/personal-page/portfolio-site/scss/_sidebar.scss */
 .sidebar .nav-links {
   display: flex;
   flex-direction: column;
@@ -329,7 +329,7 @@ footer {
   justify-content: flex-start;
 }
 
-/* line 55, ../../../Desktop/personal-page/portfolio-site/scss/_sidebar.scss */
+/* line 55, ../Desktop/Admin/personal-page/portfolio-site/scss/_sidebar.scss */
 .sidebar .nav-links a {
   color: #f8fafc;
   text-decoration: none;
@@ -340,20 +340,20 @@ footer {
   transition: color 0.3s ease, transform 0.25s ease;
 }
 
-/* line 64, ../../../Desktop/personal-page/portfolio-site/scss/_sidebar.scss */
+/* line 64, ../Desktop/Admin/personal-page/portfolio-site/scss/_sidebar.scss */
 .sidebar .nav-links a:hover {
   color: #ff6b6b;
   transform: translateX(5px);
 }
 
-/* line 69, ../../../Desktop/personal-page/portfolio-site/scss/_sidebar.scss */
+/* line 69, ../Desktop/Admin/personal-page/portfolio-site/scss/_sidebar.scss */
 .sidebar .nav-links a.active {
   color: #ff6b6b;
   font-weight: 600;
   transform: translateX(4px);
 }
 
-/* line 76, ../../../Desktop/personal-page/portfolio-site/scss/_sidebar.scss */
+/* line 76, ../Desktop/Admin/personal-page/portfolio-site/scss/_sidebar.scss */
 .sidebar .social {
   margin-top: auto;
   display: flex;
@@ -363,20 +363,20 @@ footer {
   padding-left: 0;
 }
 
-/* line 84, ../../../Desktop/personal-page/portfolio-site/scss/_sidebar.scss */
+/* line 84, ../Desktop/Admin/personal-page/portfolio-site/scss/_sidebar.scss */
 .sidebar .social a {
   color: #fff;
   font-size: 1.8rem;
   transition: color 0.3s ease;
 }
 
-/* line 89, ../../../Desktop/personal-page/portfolio-site/scss/_sidebar.scss */
+/* line 89, ../Desktop/Admin/personal-page/portfolio-site/scss/_sidebar.scss */
 .sidebar .social a:hover {
   color: #ff6b6b;
 }
 
 @media (max-width: 991px) {
-  /* line 1, ../../../Desktop/personal-page/portfolio-site/scss/_sidebar.scss */
+  /* line 1, ../Desktop/Admin/personal-page/portfolio-site/scss/_sidebar.scss */
   .sidebar {
     width: 100vw;
     height: 100vh;
@@ -385,106 +385,106 @@ footer {
     justify-content: flex-start;
     align-items: flex-start;
   }
-  /* line 108, ../../../Desktop/personal-page/portfolio-site/scss/_sidebar.scss */
+  /* line 108, ../Desktop/Admin/personal-page/portfolio-site/scss/_sidebar.scss */
   .sidebar h1 {
     margin-bottom: 2rem;
   }
-  /* line 112, ../../../Desktop/personal-page/portfolio-site/scss/_sidebar.scss */
+  /* line 112, ../Desktop/Admin/personal-page/portfolio-site/scss/_sidebar.scss */
   .sidebar .nav-links {
     gap: 2rem;
     align-items: flex-start;
   }
-  /* line 116, ../../../Desktop/personal-page/portfolio-site/scss/_sidebar.scss */
+  /* line 116, ../Desktop/Admin/personal-page/portfolio-site/scss/_sidebar.scss */
   .sidebar .nav-links a {
     font-size: 1.5rem;
     padding-left: 0.25rem;
   }
-  /* line 120, ../../../Desktop/personal-page/portfolio-site/scss/_sidebar.scss */
+  /* line 120, ../Desktop/Admin/personal-page/portfolio-site/scss/_sidebar.scss */
   .sidebar .nav-links a:hover {
     transform: translateX(5px);
   }
-  /* line 126, ../../../Desktop/personal-page/portfolio-site/scss/_sidebar.scss */
+  /* line 126, ../Desktop/Admin/personal-page/portfolio-site/scss/_sidebar.scss */
   .sidebar .social {
     margin-top: auto;
   }
-  /* line 129, ../../../Desktop/personal-page/portfolio-site/scss/_sidebar.scss */
+  /* line 129, ../Desktop/Admin/personal-page/portfolio-site/scss/_sidebar.scss */
   .sidebar .social a {
     font-size: 2rem;
   }
 }
 
 @media (min-width: 576px) {
-  /* line 1, ../../../Desktop/personal-page/portfolio-site/scss/_sidebar.scss */
+  /* line 1, ../Desktop/Admin/personal-page/portfolio-site/scss/_sidebar.scss */
   .sidebar {
     width: 240px;
     padding-left: 20px;
   }
-  /* line 139, ../../../Desktop/personal-page/portfolio-site/scss/_sidebar.scss */
+  /* line 139, ../Desktop/Admin/personal-page/portfolio-site/scss/_sidebar.scss */
   .sidebar h1 a {
     font-size: 2.5rem;
   }
 }
 
 @media (min-width: 768px) {
-  /* line 1, ../../../Desktop/personal-page/portfolio-site/scss/_sidebar.scss */
+  /* line 1, ../Desktop/Admin/personal-page/portfolio-site/scss/_sidebar.scss */
   .sidebar {
     width: 280px;
     padding-left: 25px;
   }
-  /* line 148, ../../../Desktop/personal-page/portfolio-site/scss/_sidebar.scss */
+  /* line 148, ../Desktop/Admin/personal-page/portfolio-site/scss/_sidebar.scss */
   .sidebar .social a {
     font-size: 2rem;
   }
 }
 
 @media (min-width: 992px) {
-  /* line 1, ../../../Desktop/personal-page/portfolio-site/scss/_sidebar.scss */
+  /* line 1, ../Desktop/Admin/personal-page/portfolio-site/scss/_sidebar.scss */
   .sidebar {
     transform: translateX(0);
     width: 320px;
     padding-left: 30px;
   }
-  /* line 158, ../../../Desktop/personal-page/portfolio-site/scss/_sidebar.scss */
+  /* line 158, ../Desktop/Admin/personal-page/portfolio-site/scss/_sidebar.scss */
   .sidebar .social a {
     font-size: 2.2rem;
   }
 }
 
 @media (min-width: 1200px) {
-  /* line 1, ../../../Desktop/personal-page/portfolio-site/scss/_sidebar.scss */
+  /* line 1, ../Desktop/Admin/personal-page/portfolio-site/scss/_sidebar.scss */
   .sidebar {
     width: 360px;
     padding-left: 35px;
   }
-  /* line 167, ../../../Desktop/personal-page/portfolio-site/scss/_sidebar.scss */
+  /* line 167, ../Desktop/Admin/personal-page/portfolio-site/scss/_sidebar.scss */
   .sidebar .social a {
     font-size: 2.5rem;
   }
 }
 
 /* ---- Content Area ---- */
-/* line 174, ../../../Desktop/personal-page/portfolio-site/scss/_sidebar.scss */
+/* line 174, ../Desktop/Admin/personal-page/portfolio-site/scss/_sidebar.scss */
 .content {
   margin-left: 0;
   flex-grow: 1;
 }
 
 @media (min-width: 992px) {
-  /* line 174, ../../../Desktop/personal-page/portfolio-site/scss/_sidebar.scss */
+  /* line 174, ../Desktop/Admin/personal-page/portfolio-site/scss/_sidebar.scss */
   .content {
     margin-left: 320px;
   }
 }
 
 @media (min-width: 1200px) {
-  /* line 174, ../../../Desktop/personal-page/portfolio-site/scss/_sidebar.scss */
+  /* line 174, ../Desktop/Admin/personal-page/portfolio-site/scss/_sidebar.scss */
   .content {
     margin-left: 360px;
   }
 }
 
 /* ---- Burger Menu ---- */
-/* line 188, ../../../Desktop/personal-page/portfolio-site/scss/_sidebar.scss */
+/* line 188, ../Desktop/Admin/personal-page/portfolio-site/scss/_sidebar.scss */
 .burger {
   position: fixed;
   top: 1rem;
@@ -500,7 +500,7 @@ footer {
   transition: opacity 0.3s ease;
 }
 
-/* line 202, ../../../Desktop/personal-page/portfolio-site/scss/_sidebar.scss */
+/* line 202, ../Desktop/Admin/personal-page/portfolio-site/scss/_sidebar.scss */
 .burger > span {
   background: #1a2a44;
   height: 5px;
@@ -509,41 +509,41 @@ footer {
   transition: all 0.3s ease;
 }
 
-/* line 210, ../../../Desktop/personal-page/portfolio-site/scss/_sidebar.scss */
+/* line 210, ../Desktop/Admin/personal-page/portfolio-site/scss/_sidebar.scss */
 .sidebar.open ~ .burger {
   opacity: 0;
   pointer-events: none;
 }
 
-/* line 216, ../../../Desktop/personal-page/portfolio-site/scss/_sidebar.scss */
+/* line 216, ../Desktop/Admin/personal-page/portfolio-site/scss/_sidebar.scss */
 .burger.open > span:nth-child(1) {
   transform: translateY(0.8rem) rotate(45deg);
 }
 
-/* line 219, ../../../Desktop/personal-page/portfolio-site/scss/_sidebar.scss */
+/* line 219, ../Desktop/Admin/personal-page/portfolio-site/scss/_sidebar.scss */
 .burger.open > span:nth-child(2) {
   opacity: 0;
 }
 
-/* line 222, ../../../Desktop/personal-page/portfolio-site/scss/_sidebar.scss */
+/* line 222, ../Desktop/Admin/personal-page/portfolio-site/scss/_sidebar.scss */
 .burger.open > span:nth-child(3) {
   transform: translateY(-0.8rem) rotate(-45deg);
 }
 
 @media (max-width: 576px) {
-  /* line 188, ../../../Desktop/personal-page/portfolio-site/scss/_sidebar.scss */
+  /* line 188, ../Desktop/Admin/personal-page/portfolio-site/scss/_sidebar.scss */
   .burger {
     width: 3.5rem;
     height: 3rem;
   }
-  /* line 231, ../../../Desktop/personal-page/portfolio-site/scss/_sidebar.scss */
+  /* line 231, ../Desktop/Admin/personal-page/portfolio-site/scss/_sidebar.scss */
   .burger > span {
     height: 6px;
   }
 }
 
 @media (min-width: 576px) {
-  /* line 188, ../../../Desktop/personal-page/portfolio-site/scss/_sidebar.scss */
+  /* line 188, ../Desktop/Admin/personal-page/portfolio-site/scss/_sidebar.scss */
   .burger {
     width: 3.8rem;
     height: 3.2rem;
@@ -551,7 +551,7 @@ footer {
 }
 
 @media (min-width: 768px) {
-  /* line 188, ../../../Desktop/personal-page/portfolio-site/scss/_sidebar.scss */
+  /* line 188, ../Desktop/Admin/personal-page/portfolio-site/scss/_sidebar.scss */
   .burger {
     width: 4rem;
     height: 3.4rem;
@@ -559,13 +559,13 @@ footer {
 }
 
 @media (min-width: 992px) {
-  /* line 188, ../../../Desktop/personal-page/portfolio-site/scss/_sidebar.scss */
+  /* line 188, ../Desktop/Admin/personal-page/portfolio-site/scss/_sidebar.scss */
   .burger {
     display: none;
   }
 }
 
-/* line 1, ../../../Desktop/personal-page/portfolio-site/scss/_hero.scss */
+/* line 1, ../Desktop/Admin/personal-page/portfolio-site/scss/_hero.scss */
 .hero {
   position: relative;
   height: 100vh;
@@ -598,7 +598,7 @@ footer {
   =============================== */
 }
 
-/* line 24, ../../../Desktop/personal-page/portfolio-site/scss/_hero.scss */
+/* line 24, ../Desktop/Admin/personal-page/portfolio-site/scss/_hero.scss */
 .hero::before {
   content: "";
   position: absolute;
@@ -607,7 +607,7 @@ footer {
   z-index: 0;
 }
 
-/* line 35, ../../../Desktop/personal-page/portfolio-site/scss/_hero.scss */
+/* line 35, ../Desktop/Admin/personal-page/portfolio-site/scss/_hero.scss */
 .hero .hero-content {
   flex: 1;
   display: flex;
@@ -619,13 +619,13 @@ footer {
 }
 
 @media (max-width: 375px) {
-  /* line 35, ../../../Desktop/personal-page/portfolio-site/scss/_hero.scss */
+  /* line 35, ../Desktop/Admin/personal-page/portfolio-site/scss/_hero.scss */
   .hero .hero-content {
     padding: 0 0.75rem;
   }
 }
 
-/* line 52, ../../../Desktop/personal-page/portfolio-site/scss/_hero.scss */
+/* line 52, ../Desktop/Admin/personal-page/portfolio-site/scss/_hero.scss */
 .hero h1,
 .hero .tagline {
   color: #f8fafc;
@@ -633,7 +633,7 @@ footer {
   animation: fadeInUp 1s ease-out both;
 }
 
-/* line 59, ../../../Desktop/personal-page/portfolio-site/scss/_hero.scss */
+/* line 59, ../Desktop/Admin/personal-page/portfolio-site/scss/_hero.scss */
 .hero h1 {
   font-weight: bold;
   letter-spacing: 1px;
@@ -642,7 +642,7 @@ footer {
   animation-delay: 0.2s;
 }
 
-/* line 67, ../../../Desktop/personal-page/portfolio-site/scss/_hero.scss */
+/* line 67, ../Desktop/Admin/personal-page/portfolio-site/scss/_hero.scss */
 .hero .tagline {
   font-weight: 500;
   opacity: 0.9;
@@ -654,7 +654,7 @@ footer {
 }
 
 @media (max-width: 375px) {
-  /* line 67, ../../../Desktop/personal-page/portfolio-site/scss/_hero.scss */
+  /* line 67, ../Desktop/Admin/personal-page/portfolio-site/scss/_hero.scss */
   .hero .tagline {
     line-height: 1.4;
     margin-bottom: 1rem;
@@ -662,7 +662,7 @@ footer {
   }
 }
 
-/* line 86, ../../../Desktop/personal-page/portfolio-site/scss/_hero.scss */
+/* line 86, ../Desktop/Admin/personal-page/portfolio-site/scss/_hero.scss */
 .hero .cta-btn {
   background: #1a2a44;
   color: #f8fafc;
@@ -677,14 +677,14 @@ footer {
   animation: pulse 2s infinite;
 }
 
-/* line 99, ../../../Desktop/personal-page/portfolio-site/scss/_hero.scss */
+/* line 99, ../Desktop/Admin/personal-page/portfolio-site/scss/_hero.scss */
 .hero .cta-btn:hover {
   background: #ff6b6b;
   box-shadow: 0 6px 16px rgba(255, 107, 107, 0.4);
   transform: translateY(-2px);
 }
 
-/* line 109, ../../../Desktop/personal-page/portfolio-site/scss/_hero.scss */
+/* line 109, ../Desktop/Admin/personal-page/portfolio-site/scss/_hero.scss */
 .hero .scroll-prompt {
   margin-bottom: 2rem;
   display: flex;
@@ -696,12 +696,12 @@ footer {
   animation: fadeInUp 1s ease-out 0.6s both;
 }
 
-/* line 119, ../../../Desktop/personal-page/portfolio-site/scss/_hero.scss */
+/* line 119, ../Desktop/Admin/personal-page/portfolio-site/scss/_hero.scss */
 .hero .scroll-prompt span {
   margin-bottom: 0.5rem;
 }
 
-/* line 123, ../../../Desktop/personal-page/portfolio-site/scss/_hero.scss */
+/* line 123, ../Desktop/Admin/personal-page/portfolio-site/scss/_hero.scss */
 .hero .scroll-prompt i {
   font-size: clamp(1.3rem, 3vw, 2.5rem);
   animation: bounce 1.5s infinite;
@@ -748,13 +748,13 @@ footer {
   }
 }
 
-/* line 1, ../../../Desktop/personal-page/portfolio-site/scss/_portfolio.scss */
+/* line 1, ../Desktop/Admin/personal-page/portfolio-site/scss/_portfolio.scss */
 #portfolio {
   padding: 3rem 1rem;
   background: #f8fafc;
 }
 
-/* line 5, ../../../Desktop/personal-page/portfolio-site/scss/_portfolio.scss */
+/* line 5, ../Desktop/Admin/personal-page/portfolio-site/scss/_portfolio.scss */
 #portfolio h2 {
   text-align: center;
   margin-bottom: 2rem;
@@ -764,20 +764,20 @@ footer {
 }
 
 @media (min-width: 768px) {
-  /* line 5, ../../../Desktop/personal-page/portfolio-site/scss/_portfolio.scss */
+  /* line 5, ../Desktop/Admin/personal-page/portfolio-site/scss/_portfolio.scss */
   #portfolio h2 {
     font-size: 2.5rem;
   }
 }
 
 @media (min-width: 992px) {
-  /* line 5, ../../../Desktop/personal-page/portfolio-site/scss/_portfolio.scss */
+  /* line 5, ../Desktop/Admin/personal-page/portfolio-site/scss/_portfolio.scss */
   #portfolio h2 {
     font-size: 3rem;
   }
 }
 
-/* line 20, ../../../Desktop/personal-page/portfolio-site/scss/_portfolio.scss */
+/* line 20, ../Desktop/Admin/personal-page/portfolio-site/scss/_portfolio.scss */
 #portfolio .projects {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
@@ -785,33 +785,33 @@ footer {
 }
 
 @media (min-width: 768px) {
-  /* line 20, ../../../Desktop/personal-page/portfolio-site/scss/_portfolio.scss */
+  /* line 20, ../Desktop/Admin/personal-page/portfolio-site/scss/_portfolio.scss */
   #portfolio .projects {
     gap: 3rem;
   }
 }
 
 @media (min-width: 992px) {
-  /* line 20, ../../../Desktop/personal-page/portfolio-site/scss/_portfolio.scss */
+  /* line 20, ../Desktop/Admin/personal-page/portfolio-site/scss/_portfolio.scss */
   #portfolio .projects {
     gap: 3rem;
   }
 }
 
-/* line 33, ../../../Desktop/personal-page/portfolio-site/scss/_portfolio.scss */
+/* line 33, ../Desktop/Admin/personal-page/portfolio-site/scss/_portfolio.scss */
 #portfolio .projects .project {
   opacity: 0;
   transform: translateY(40px);
   transition: opacity 1s cubic-bezier(0.25, 0.1, 0.25, 1), transform 1s cubic-bezier(0.25, 0.1, 0.25, 1);
 }
 
-/* line 39, ../../../Desktop/personal-page/portfolio-site/scss/_portfolio.scss */
+/* line 39, ../Desktop/Admin/personal-page/portfolio-site/scss/_portfolio.scss */
 #portfolio .projects .project.visible {
   opacity: 1;
   transform: translateY(0);
 }
 
-/* line 44, ../../../Desktop/personal-page/portfolio-site/scss/_portfolio.scss */
+/* line 44, ../Desktop/Admin/personal-page/portfolio-site/scss/_portfolio.scss */
 #portfolio .projects .project .project-inner {
   background: #fff;
   border-radius: 8px;
@@ -823,13 +823,13 @@ footer {
   transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
-/* line 54, ../../../Desktop/personal-page/portfolio-site/scss/_portfolio.scss */
+/* line 54, ../Desktop/Admin/personal-page/portfolio-site/scss/_portfolio.scss */
 #portfolio .projects .project .project-inner:hover {
   transform: translateY(-8px) scale(1.03);
   box-shadow: 0 10px 28px rgba(255, 107, 107, 0.25);
 }
 
-/* line 60, ../../../Desktop/personal-page/portfolio-site/scss/_portfolio.scss */
+/* line 60, ../Desktop/Admin/personal-page/portfolio-site/scss/_portfolio.scss */
 #portfolio .projects .project img {
   width: 100%;
   height: auto;
@@ -838,7 +838,7 @@ footer {
   display: block;
 }
 
-/* line 68, ../../../Desktop/personal-page/portfolio-site/scss/_portfolio.scss */
+/* line 68, ../Desktop/Admin/personal-page/portfolio-site/scss/_portfolio.scss */
 #portfolio .projects .project .project-content {
   padding: 1rem;
   display: flex;
@@ -849,7 +849,7 @@ footer {
   text-align: center;
 }
 
-/* line 77, ../../../Desktop/personal-page/portfolio-site/scss/_portfolio.scss */
+/* line 77, ../Desktop/Admin/personal-page/portfolio-site/scss/_portfolio.scss */
 #portfolio .projects .project .project-content h3 {
   margin-bottom: 0.5rem;
   font-size: clamp(1.3rem, 2.6vw, 1.9rem);
@@ -858,7 +858,7 @@ footer {
   font-weight: 600;
 }
 
-/* line 85, ../../../Desktop/personal-page/portfolio-site/scss/_portfolio.scss */
+/* line 85, ../Desktop/Admin/personal-page/portfolio-site/scss/_portfolio.scss */
 #portfolio .projects .project .project-content p {
   flex-grow: 1;
   margin-bottom: 1rem;
@@ -867,7 +867,7 @@ footer {
   line-height: 1.6;
 }
 
-/* line 93, ../../../Desktop/personal-page/portfolio-site/scss/_portfolio.scss */
+/* line 93, ../Desktop/Admin/personal-page/portfolio-site/scss/_portfolio.scss */
 #portfolio .projects .project .project-content a {
   align-self: center;
   background: #334e68;
@@ -884,14 +884,14 @@ footer {
   /* keep focused state visually neutral */
 }
 
-/* line 108, ../../../Desktop/personal-page/portfolio-site/scss/_portfolio.scss */
+/* line 108, ../Desktop/Admin/personal-page/portfolio-site/scss/_portfolio.scss */
 #portfolio .projects .project .project-content a:hover:not(:focus):not(:active) {
   background: #ff6b6b;
   transform: translateY(-4px) scale(1.02);
   box-shadow: 0 8px 18px rgba(255, 107, 107, 0.25);
 }
 
-/* line 115, ../../../Desktop/personal-page/portfolio-site/scss/_portfolio.scss */
+/* line 115, ../Desktop/Admin/personal-page/portfolio-site/scss/_portfolio.scss */
 #portfolio .projects .project .project-content a:focus {
   outline: none;
   background: #334e68;
@@ -899,19 +899,19 @@ footer {
   box-shadow: 0 3px 10px rgba(51, 78, 104, 0.15);
 }
 
-/* line 122, ../../../Desktop/personal-page/portfolio-site/scss/_portfolio.scss */
+/* line 122, ../Desktop/Admin/personal-page/portfolio-site/scss/_portfolio.scss */
 #portfolio .projects .project .project-content a:active {
   transform: translateY(0);
   box-shadow: 0 2px 6px rgba(255, 107, 107, 0.15);
 }
 
-/* line 127, ../../../Desktop/personal-page/portfolio-site/scss/_portfolio.scss */
+/* line 127, ../Desktop/Admin/personal-page/portfolio-site/scss/_portfolio.scss */
 #portfolio .projects .project .project-content a:focus:not(:focus-visible) {
   outline: none;
   box-shadow: none;
 }
 
-/* line 1, ../../../Desktop/personal-page/portfolio-site/scss/_about.scss */
+/* line 1, ../Desktop/Admin/personal-page/portfolio-site/scss/_about.scss */
 #about {
   background: linear-gradient(to bottom right, #ffffff, #f9fafc);
   color: #1a2a44;
@@ -919,7 +919,7 @@ footer {
   /* ✨ Fade-in animation */
 }
 
-/* line 6, ../../../Desktop/personal-page/portfolio-site/scss/_about.scss */
+/* line 6, ../Desktop/Admin/personal-page/portfolio-site/scss/_about.scss */
 #about h2 {
   text-align: center;
   margin-bottom: clamp(1rem, 2vw, 2rem);
@@ -928,14 +928,14 @@ footer {
   padding: clamp(0.5rem, 1.5vw, 1rem) 0;
 }
 
-/* line 14, ../../../Desktop/personal-page/portfolio-site/scss/_about.scss */
+/* line 14, ../Desktop/Admin/personal-page/portfolio-site/scss/_about.scss */
 #about .container {
   max-width: 1400px;
   margin: 0 auto;
   padding: 0 clamp(1rem, 4vw, 3rem);
 }
 
-/* line 20, ../../../Desktop/personal-page/portfolio-site/scss/_about.scss */
+/* line 20, ../Desktop/Admin/personal-page/portfolio-site/scss/_about.scss */
 #about .about-content {
   display: grid;
   grid-template-columns: 1fr;
@@ -951,13 +951,13 @@ footer {
 }
 
 @media (min-width: 1100px) {
-  /* line 20, ../../../Desktop/personal-page/portfolio-site/scss/_about.scss */
+  /* line 20, ../Desktop/Admin/personal-page/portfolio-site/scss/_about.scss */
   #about .about-content {
     grid-template-columns: 1.1fr 0.9fr;
   }
 }
 
-/* line 36, ../../../Desktop/personal-page/portfolio-site/scss/_about.scss */
+/* line 36, ../Desktop/Admin/personal-page/portfolio-site/scss/_about.scss */
 #about .about-content .about-text {
   text-align: left;
   line-height: 1.8;
@@ -966,24 +966,24 @@ footer {
   color: #1a2a44;
 }
 
-/* line 43, ../../../Desktop/personal-page/portfolio-site/scss/_about.scss */
+/* line 43, ../Desktop/Admin/personal-page/portfolio-site/scss/_about.scss */
 #about .about-content .about-text p {
   margin-bottom: clamp(1rem, 2vw, 2rem);
 }
 
-/* line 46, ../../../Desktop/personal-page/portfolio-site/scss/_about.scss */
+/* line 46, ../Desktop/Admin/personal-page/portfolio-site/scss/_about.scss */
 #about .about-content .about-text p:last-child {
   margin-bottom: 0;
 }
 
-/* line 52, ../../../Desktop/personal-page/portfolio-site/scss/_about.scss */
+/* line 52, ../Desktop/Admin/personal-page/portfolio-site/scss/_about.scss */
 #about .about-content .about-visual {
   display: flex;
   justify-content: center;
   align-items: center;
 }
 
-/* line 57, ../../../Desktop/personal-page/portfolio-site/scss/_about.scss */
+/* line 57, ../Desktop/Admin/personal-page/portfolio-site/scss/_about.scss */
 #about .about-content .about-visual i {
   font-size: clamp(4rem, 8vw, 6rem);
   color: #ff6b6b;
@@ -991,13 +991,13 @@ footer {
   transition: transform 0.3s ease, opacity 0.3s ease;
 }
 
-/* line 63, ../../../Desktop/personal-page/portfolio-site/scss/_about.scss */
+/* line 63, ../Desktop/Admin/personal-page/portfolio-site/scss/_about.scss */
 #about .about-content .about-visual i:hover {
   transform: scale(1.05);
   opacity: 1;
 }
 
-/* line 69, ../../../Desktop/personal-page/portfolio-site/scss/_about.scss */
+/* line 69, ../Desktop/Admin/personal-page/portfolio-site/scss/_about.scss */
 #about .about-content .about-visual img {
   max-width: 300px;
   width: 100%;
@@ -1006,39 +1006,39 @@ footer {
 }
 
 @media (max-width: 1099px) {
-  /* line 79, ../../../Desktop/personal-page/portfolio-site/scss/_about.scss */
+  /* line 79, ../Desktop/Admin/personal-page/portfolio-site/scss/_about.scss */
   #about .about-content .about-visual {
     order: 2;
     margin-top: clamp(2rem, 5vw, 3rem);
     justify-content: center;
     text-align: center;
   }
-  /* line 85, ../../../Desktop/personal-page/portfolio-site/scss/_about.scss */
+  /* line 85, ../Desktop/Admin/personal-page/portfolio-site/scss/_about.scss */
   #about .about-content .about-visual i,
   #about .about-content .about-visual img {
     margin: 0 auto;
   }
-  /* line 91, ../../../Desktop/personal-page/portfolio-site/scss/_about.scss */
+  /* line 91, ../Desktop/Admin/personal-page/portfolio-site/scss/_about.scss */
   #about .about-content .about-text {
     order: 1;
     text-align: center;
   }
 }
 
-/* line 99, ../../../Desktop/personal-page/portfolio-site/scss/_about.scss */
+/* line 99, ../Desktop/Admin/personal-page/portfolio-site/scss/_about.scss */
 #about.fade-item {
   opacity: 0;
   transform: translateY(40px);
   transition: opacity 1s ease-out, transform 1s ease-out;
 }
 
-/* line 104, ../../../Desktop/personal-page/portfolio-site/scss/_about.scss */
+/* line 104, ../Desktop/Admin/personal-page/portfolio-site/scss/_about.scss */
 #about.fade-item.visible {
   opacity: 1 !important;
   transform: translateY(0);
 }
 
-/* line 3, ../../../Desktop/personal-page/portfolio-site/scss/_coding.scss */
+/* line 3, ../Desktop/Admin/personal-page/portfolio-site/scss/_coding.scss */
 #coding {
   padding: 3rem 1rem;
   background: #f8fafc;
@@ -1046,9 +1046,18 @@ footer {
   /* ✅ Consistent container */
   /* ✅ Coding card grid */
   /* Responsive padding */
+  /* ===========================
+   Code Example Section
+   =========================== */
+  /* ===========================
+   Responsive Adjustments
+   =========================== */
+  /* Tablets (≥768px) */
+  /* Desktops (≥992px) */
+  /* Large desktops (≥1200px) */
 }
 
-/* line 8, ../../../Desktop/personal-page/portfolio-site/scss/_coding.scss */
+/* line 8, ../Desktop/Admin/personal-page/portfolio-site/scss/_coding.scss */
 #coding h2 {
   text-align: center;
   margin-bottom: 2rem;
@@ -1056,20 +1065,20 @@ footer {
 }
 
 @media (min-width: 768px) {
-  /* line 8, ../../../Desktop/personal-page/portfolio-site/scss/_coding.scss */
+  /* line 8, ../Desktop/Admin/personal-page/portfolio-site/scss/_coding.scss */
   #coding h2 {
     font-size: 2.5rem;
   }
 }
 
 @media (min-width: 1200px) {
-  /* line 8, ../../../Desktop/personal-page/portfolio-site/scss/_coding.scss */
+  /* line 8, ../Desktop/Admin/personal-page/portfolio-site/scss/_coding.scss */
   #coding h2 {
     font-size: 3rem;
   }
 }
 
-/* line 22, ../../../Desktop/personal-page/portfolio-site/scss/_coding.scss */
+/* line 22, ../Desktop/Admin/personal-page/portfolio-site/scss/_coding.scss */
 #coding .container {
   max-width: 1400px;
   margin: 0 auto;
@@ -1077,13 +1086,13 @@ footer {
 }
 
 @media (min-width: 768px) {
-  /* line 22, ../../../Desktop/personal-page/portfolio-site/scss/_coding.scss */
+  /* line 22, ../Desktop/Admin/personal-page/portfolio-site/scss/_coding.scss */
   #coding .container {
     padding: 0 2rem;
   }
 }
 
-/* line 32, ../../../Desktop/personal-page/portfolio-site/scss/_coding.scss */
+/* line 32, ../Desktop/Admin/personal-page/portfolio-site/scss/_coding.scss */
 #coding p {
   color: #1a2a44;
   font-size: 1.5rem;
@@ -1093,7 +1102,7 @@ footer {
 }
 
 @media (min-width: 768px) {
-  /* line 32, ../../../Desktop/personal-page/portfolio-site/scss/_coding.scss */
+  /* line 32, ../Desktop/Admin/personal-page/portfolio-site/scss/_coding.scss */
   #coding p {
     font-size: 1.8rem;
     max-width: 800px;
@@ -1101,14 +1110,14 @@ footer {
 }
 
 @media (min-width: 1200px) {
-  /* line 32, ../../../Desktop/personal-page/portfolio-site/scss/_coding.scss */
+  /* line 32, ../Desktop/Admin/personal-page/portfolio-site/scss/_coding.scss */
   #coding p {
     font-size: 2rem;
     max-width: 900px;
   }
 }
 
-/* line 50, ../../../Desktop/personal-page/portfolio-site/scss/_coding.scss */
+/* line 50, ../Desktop/Admin/personal-page/portfolio-site/scss/_coding.scss */
 #coding .projects {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
@@ -1118,20 +1127,20 @@ footer {
 }
 
 @media (min-width: 768px) {
-  /* line 50, ../../../Desktop/personal-page/portfolio-site/scss/_coding.scss */
+  /* line 50, ../Desktop/Admin/personal-page/portfolio-site/scss/_coding.scss */
   #coding .projects {
     gap: 2.5rem;
   }
 }
 
 @media (min-width: 1200px) {
-  /* line 50, ../../../Desktop/personal-page/portfolio-site/scss/_coding.scss */
+  /* line 50, ../Desktop/Admin/personal-page/portfolio-site/scss/_coding.scss */
   #coding .projects {
     gap: 3rem;
   }
 }
 
-/* line 66, ../../../Desktop/personal-page/portfolio-site/scss/_coding.scss */
+/* line 66, ../Desktop/Admin/personal-page/portfolio-site/scss/_coding.scss */
 #coding .project {
   background: #f8fafc;
   border-radius: 16px;
@@ -1145,13 +1154,13 @@ footer {
   align-items: center;
 }
 
-/* line 78, ../../../Desktop/personal-page/portfolio-site/scss/_coding.scss */
+/* line 78, ../Desktop/Admin/personal-page/portfolio-site/scss/_coding.scss */
 #coding .project:hover {
   transform: translateY(-6px);
   box-shadow: 0 8px 24px rgba(255, 107, 107, 0.25);
 }
 
-/* line 83, ../../../Desktop/personal-page/portfolio-site/scss/_coding.scss */
+/* line 83, ../Desktop/Admin/personal-page/portfolio-site/scss/_coding.scss */
 #coding .project .project-content {
   display: flex;
   flex-direction: column;
@@ -1160,7 +1169,7 @@ footer {
   text-align: center;
 }
 
-/* line 90, ../../../Desktop/personal-page/portfolio-site/scss/_coding.scss */
+/* line 90, ../Desktop/Admin/personal-page/portfolio-site/scss/_coding.scss */
 #coding .project .project-content i {
   font-size: 6rem;
   color: #ff6b6b;
@@ -1168,27 +1177,27 @@ footer {
 }
 
 @media (min-width: 768px) {
-  /* line 90, ../../../Desktop/personal-page/portfolio-site/scss/_coding.scss */
+  /* line 90, ../Desktop/Admin/personal-page/portfolio-site/scss/_coding.scss */
   #coding .project .project-content i {
     font-size: 7rem;
   }
 }
 
 @media (min-width: 1200px) {
-  /* line 90, ../../../Desktop/personal-page/portfolio-site/scss/_coding.scss */
+  /* line 90, ../Desktop/Admin/personal-page/portfolio-site/scss/_coding.scss */
   #coding .project .project-content i {
     font-size: 8rem;
   }
 }
 
-/* line 103, ../../../Desktop/personal-page/portfolio-site/scss/_coding.scss */
+/* line 103, ../Desktop/Admin/personal-page/portfolio-site/scss/_coding.scss */
 #coding .project .project-content h3 {
   margin-bottom: 0.75rem;
   font-size: clamp(1.5rem, 3.5vw, 2.5rem);
   color: #1a2a44;
 }
 
-/* line 109, ../../../Desktop/personal-page/portfolio-site/scss/_coding.scss */
+/* line 109, ../Desktop/Admin/personal-page/portfolio-site/scss/_coding.scss */
 #coding .project .project-content p {
   color: #334e68;
   font-size: clamp(1.1rem, 2.5vw, 1.4rem);
@@ -1197,7 +1206,7 @@ footer {
   max-width: 280px;
 }
 
-/* line 117, ../../../Desktop/personal-page/portfolio-site/scss/_coding.scss */
+/* line 117, ../Desktop/Admin/personal-page/portfolio-site/scss/_coding.scss */
 #coding .project .project-content .status {
   display: inline-block;
   padding: 0.4rem 0.8rem;
@@ -1221,13 +1230,115 @@ footer {
 }
 
 @media (min-width: 576px) {
-  /* line 3, ../../../Desktop/personal-page/portfolio-site/scss/_coding.scss */
+  /* line 3, ../Desktop/Admin/personal-page/portfolio-site/scss/_coding.scss */
   #coding {
     padding: 3rem 2rem;
   }
 }
 
-/* line 1, ../../../Desktop/personal-page/portfolio-site/scss/_scs.scss */
+/* line 146, ../Desktop/Admin/personal-page/portfolio-site/scss/_coding.scss */
+#coding .hidden {
+  display: none;
+}
+
+/* line 153, ../Desktop/Admin/personal-page/portfolio-site/scss/_coding.scss */
+#coding .code-example {
+  background: #f8fafc;
+  color: #f8fafc;
+  padding: 1rem;
+  border-radius: 12px;
+  margin-top: 2rem;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.15);
+  transition: all 0.4s ease;
+  overflow-x: auto;
+}
+
+/* line 163, ../Desktop/Admin/personal-page/portfolio-site/scss/_coding.scss */
+#coding .code-example h2 {
+  font-size: 1.25rem;
+  margin-bottom: 1rem;
+  color: #ff6b6b;
+  text-align: center;
+  line-height: 1.3;
+}
+
+/* line 171, ../Desktop/Admin/personal-page/portfolio-site/scss/_coding.scss */
+#coding .code-example pre {
+  background: #131f32;
+  padding: 1rem;
+  border-radius: 8px;
+  overflow-x: auto;
+  font-family: "Fira Code", monospace;
+  font-size: 0.9rem;
+  line-height: 1.5;
+  white-space: pre-wrap;
+  word-break: break-word;
+}
+
+/* line 183, ../Desktop/Admin/personal-page/portfolio-site/scss/_coding.scss */
+#coding .code-example code {
+  color: #f8fafc;
+}
+
+/* line 187, ../Desktop/Admin/personal-page/portfolio-site/scss/_coding.scss */
+#coding .code-example .code-meta {
+  margin-top: 1rem;
+  background: white;
+  color: #1a2a44;
+  padding: 1rem;
+  border-radius: 8px;
+  font-size: 0.95rem;
+}
+
+/* line 195, ../Desktop/Admin/personal-page/portfolio-site/scss/_coding.scss */
+#coding .code-example .code-meta p {
+  margin: 0.4rem 0;
+}
+
+/* line 199, ../Desktop/Admin/personal-page/portfolio-site/scss/_coding.scss */
+#coding .code-example .code-meta strong {
+  color: #334e68;
+}
+
+@media (min-width: 768px) {
+  /* line 211, ../Desktop/Admin/personal-page/portfolio-site/scss/_coding.scss */
+  #coding .code-example {
+    padding: 2rem;
+  }
+  /* line 214, ../Desktop/Admin/personal-page/portfolio-site/scss/_coding.scss */
+  #coding .code-example h2 {
+    font-size: 1.5rem;
+    text-align: left;
+  }
+  /* line 219, ../Desktop/Admin/personal-page/portfolio-site/scss/_coding.scss */
+  #coding .code-example pre {
+    font-size: 1rem;
+    padding: 2rem;
+  }
+}
+
+@media (min-width: 992px) {
+  /* line 228, ../Desktop/Admin/personal-page/portfolio-site/scss/_coding.scss */
+  #coding .code-example {
+    padding: 3rem;
+    margin-top: 3rem;
+  }
+  /* line 232, ../Desktop/Admin/personal-page/portfolio-site/scss/_coding.scss */
+  #coding .code-example h2 {
+    font-size: 1.75rem;
+  }
+}
+
+@media (min-width: 1200px) {
+  /* line 240, ../Desktop/Admin/personal-page/portfolio-site/scss/_coding.scss */
+  #coding .code-example {
+    max-width: 900px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+}
+
+/* line 1, ../Desktop/Admin/personal-page/portfolio-site/scss/_scs.scss */
 #scs {
   background: #f8fafc;
   color: #1a2a44;
@@ -1236,7 +1347,7 @@ footer {
   /* ✨ Fade-in animation */
 }
 
-/* line 7, ../../../Desktop/personal-page/portfolio-site/scss/_scs.scss */
+/* line 7, ../Desktop/Admin/personal-page/portfolio-site/scss/_scs.scss */
 #scs h2 {
   text-align: center;
   margin-bottom: clamp(1rem, 2.5vw, 2rem);
@@ -1245,14 +1356,14 @@ footer {
   padding: 0;
 }
 
-/* line 15, ../../../Desktop/personal-page/portfolio-site/scss/_scs.scss */
+/* line 15, ../Desktop/Admin/personal-page/portfolio-site/scss/_scs.scss */
 #scs .container {
   max-width: 1400px;
   margin: 0 auto;
   padding: 0 clamp(1rem, 4vw, 3rem);
 }
 
-/* line 21, ../../../Desktop/personal-page/portfolio-site/scss/_scs.scss */
+/* line 21, ../Desktop/Admin/personal-page/portfolio-site/scss/_scs.scss */
 #scs .scs-content {
   max-width: 900px;
   margin: 0 auto;
@@ -1264,14 +1375,14 @@ footer {
   padding-bottom: clamp(1rem, 2vw, 2rem);
 }
 
-/* line 31, ../../../Desktop/personal-page/portfolio-site/scss/_scs.scss */
+/* line 31, ../Desktop/Admin/personal-page/portfolio-site/scss/_scs.scss */
 #scs .scs-content p {
   margin-bottom: clamp(1rem, 2vw, 2rem);
   color: #1a2a44;
   font-weight: 400;
 }
 
-/* line 36, ../../../Desktop/personal-page/portfolio-site/scss/_scs.scss */
+/* line 36, ../Desktop/Admin/personal-page/portfolio-site/scss/_scs.scss */
 #scs .scs-content p:first-of-type {
   font-weight: 500;
   font-size: clamp(1.15rem, 2.2vw, 1.35rem);
@@ -1279,25 +1390,25 @@ footer {
   margin-top: 0.25rem;
 }
 
-/* line 43, ../../../Desktop/personal-page/portfolio-site/scss/_scs.scss */
+/* line 43, ../Desktop/Admin/personal-page/portfolio-site/scss/_scs.scss */
 #scs .scs-content p:last-of-type {
   margin-bottom: clamp(1rem, 2vw, 2rem);
 }
 
-/* line 50, ../../../Desktop/personal-page/portfolio-site/scss/_scs.scss */
+/* line 50, ../Desktop/Admin/personal-page/portfolio-site/scss/_scs.scss */
 #scs.fade-item {
   opacity: 0;
   transform: translateY(40px);
   transition: opacity 1s ease-out, transform 1s ease-out;
 }
 
-/* line 55, ../../../Desktop/personal-page/portfolio-site/scss/_scs.scss */
+/* line 55, ../Desktop/Admin/personal-page/portfolio-site/scss/_scs.scss */
 #scs.fade-item.visible {
   opacity: 1 !important;
   transform: translateY(0);
 }
 
-/* line 1, ../../../Desktop/personal-page/portfolio-site/scss/_contact.scss */
+/* line 1, ../Desktop/Admin/personal-page/portfolio-site/scss/_contact.scss */
 #contact {
   background: #f8fafc;
   margin-bottom: clamp(3rem, 8vw, 4.5rem);
@@ -1308,7 +1419,7 @@ footer {
   /* 🔁 Animations */
 }
 
-/* line 11, ../../../Desktop/personal-page/portfolio-site/scss/_contact.scss */
+/* line 11, ../Desktop/Admin/personal-page/portfolio-site/scss/_contact.scss */
 #contact h2 {
   text-align: center;
   margin-bottom: 2rem;
@@ -1317,14 +1428,14 @@ footer {
   padding: clamp(1rem, 2vw, 2rem) 0;
 }
 
-/* line 19, ../../../Desktop/personal-page/portfolio-site/scss/_contact.scss */
+/* line 19, ../Desktop/Admin/personal-page/portfolio-site/scss/_contact.scss */
 #contact .container {
   max-width: 1400px;
   margin: 0 auto;
   padding: 0 clamp(1rem, 4vw, 3rem);
 }
 
-/* line 25, ../../../Desktop/personal-page/portfolio-site/scss/_contact.scss */
+/* line 25, ../Desktop/Admin/personal-page/portfolio-site/scss/_contact.scss */
 #contact .contact-content {
   max-width: 800px;
   margin: 0 auto;
@@ -1337,7 +1448,7 @@ footer {
   line-height: 1.8;
 }
 
-/* line 36, ../../../Desktop/personal-page/portfolio-site/scss/_contact.scss */
+/* line 36, ../Desktop/Admin/personal-page/portfolio-site/scss/_contact.scss */
 #contact .contact-content p {
   color: #1a2a44;
   font-size: clamp(1.15rem, 2.5vw, 1.45rem);
@@ -1345,14 +1456,14 @@ footer {
   font-weight: 400;
 }
 
-/* line 42, ../../../Desktop/personal-page/portfolio-site/scss/_contact.scss */
+/* line 42, ../Desktop/Admin/personal-page/portfolio-site/scss/_contact.scss */
 #contact .contact-content p:first-of-type {
   margin-bottom: 2rem;
   font-weight: 600;
   color: #334e68;
 }
 
-/* line 49, ../../../Desktop/personal-page/portfolio-site/scss/_contact.scss */
+/* line 49, ../Desktop/Admin/personal-page/portfolio-site/scss/_contact.scss */
 #contact .contact-content a {
   color: #1a2a44;
   font-weight: 500;
@@ -1360,12 +1471,12 @@ footer {
   transition: color 0.3s ease;
 }
 
-/* line 55, ../../../Desktop/personal-page/portfolio-site/scss/_contact.scss */
+/* line 55, ../Desktop/Admin/personal-page/portfolio-site/scss/_contact.scss */
 #contact .contact-content a:hover {
   color: #ff6b6b;
 }
 
-/* line 62, ../../../Desktop/personal-page/portfolio-site/scss/_contact.scss */
+/* line 62, ../Desktop/Admin/personal-page/portfolio-site/scss/_contact.scss */
 #contact .contact-form {
   display: flex;
   flex-direction: column;
@@ -1377,7 +1488,7 @@ footer {
   /* ✅ Success pulse animation when form submits */
 }
 
-/* line 70, ../../../Desktop/personal-page/portfolio-site/scss/_contact.scss */
+/* line 70, ../Desktop/Admin/personal-page/portfolio-site/scss/_contact.scss */
 #contact .contact-form .form-group {
   display: flex;
   flex-direction: column;
@@ -1386,7 +1497,7 @@ footer {
   width: 100%;
 }
 
-/* line 78, ../../../Desktop/personal-page/portfolio-site/scss/_contact.scss */
+/* line 78, ../Desktop/Admin/personal-page/portfolio-site/scss/_contact.scss */
 #contact .contact-form input,
 #contact .contact-form textarea {
   width: 100%;
@@ -1401,7 +1512,7 @@ footer {
   text-align: left;
 }
 
-/* line 91, ../../../Desktop/personal-page/portfolio-site/scss/_contact.scss */
+/* line 91, ../Desktop/Admin/personal-page/portfolio-site/scss/_contact.scss */
 #contact .contact-form input:focus,
 #contact .contact-form textarea:focus {
   outline: none;
@@ -1409,7 +1520,7 @@ footer {
   box-shadow: 0 0 0 3px rgba(255, 107, 107, 0.15);
 }
 
-/* line 97, ../../../Desktop/personal-page/portfolio-site/scss/_contact.scss */
+/* line 97, ../Desktop/Admin/personal-page/portfolio-site/scss/_contact.scss */
 #contact .contact-form input.valid,
 #contact .contact-form textarea.valid {
   border-color: #28a745;
@@ -1417,7 +1528,7 @@ footer {
   transition: all 0.3s ease-in-out;
 }
 
-/* line 103, ../../../Desktop/personal-page/portfolio-site/scss/_contact.scss */
+/* line 103, ../Desktop/Admin/personal-page/portfolio-site/scss/_contact.scss */
 #contact .contact-form input.invalid,
 #contact .contact-form textarea.invalid {
   border-color: #ff6b6b;
@@ -1426,13 +1537,13 @@ footer {
   transition: all 0.3s ease-in-out;
 }
 
-/* line 111, ../../../Desktop/personal-page/portfolio-site/scss/_contact.scss */
+/* line 111, ../Desktop/Admin/personal-page/portfolio-site/scss/_contact.scss */
 #contact .contact-form textarea {
   resize: vertical;
   min-height: clamp(100px, 20vw, 150px);
 }
 
-/* line 117, ../../../Desktop/personal-page/portfolio-site/scss/_contact.scss */
+/* line 117, ../Desktop/Admin/personal-page/portfolio-site/scss/_contact.scss */
 #contact .contact-form .helper-text {
   font-size: 0.85rem;
   margin-top: 0.3rem;
@@ -1442,18 +1553,18 @@ footer {
   transform: translateY(-3px);
 }
 
-/* line 125, ../../../Desktop/personal-page/portfolio-site/scss/_contact.scss */
+/* line 125, ../Desktop/Admin/personal-page/portfolio-site/scss/_contact.scss */
 #contact .contact-form .helper-text.visible {
   opacity: 1;
   transform: translateY(0);
 }
 
-/* line 130, ../../../Desktop/personal-page/portfolio-site/scss/_contact.scss */
+/* line 130, ../Desktop/Admin/personal-page/portfolio-site/scss/_contact.scss */
 #contact .contact-form .helper-text.valid {
   color: #28a745;
 }
 
-/* line 135, ../../../Desktop/personal-page/portfolio-site/scss/_contact.scss */
+/* line 135, ../Desktop/Admin/personal-page/portfolio-site/scss/_contact.scss */
 #contact .contact-form button {
   align-self: center;
   background: #334e68;
@@ -1469,14 +1580,14 @@ footer {
   /* Responsive scaling (matches portfolio section) */
 }
 
-/* line 148, ../../../Desktop/personal-page/portfolio-site/scss/_contact.scss */
+/* line 148, ../Desktop/Admin/personal-page/portfolio-site/scss/_contact.scss */
 #contact .contact-form button:hover {
   background: #ff6b6b;
   transform: translateY(-2px);
   box-shadow: 0 6px 16px rgba(255, 107, 107, 0.25);
 }
 
-/* line 154, ../../../Desktop/personal-page/portfolio-site/scss/_contact.scss */
+/* line 154, ../Desktop/Admin/personal-page/portfolio-site/scss/_contact.scss */
 #contact .contact-form button:disabled {
   background: #4c749b;
   cursor: not-allowed;
@@ -1485,7 +1596,7 @@ footer {
 }
 
 @media (min-width: 576px) {
-  /* line 135, ../../../Desktop/personal-page/portfolio-site/scss/_contact.scss */
+  /* line 135, ../Desktop/Admin/personal-page/portfolio-site/scss/_contact.scss */
   #contact .contact-form button {
     font-size: 1.05rem;
     padding: 0.7rem 1.3rem;
@@ -1493,7 +1604,7 @@ footer {
 }
 
 @media (min-width: 768px) {
-  /* line 135, ../../../Desktop/personal-page/portfolio-site/scss/_contact.scss */
+  /* line 135, ../Desktop/Admin/personal-page/portfolio-site/scss/_contact.scss */
   #contact .contact-form button {
     font-size: 1.1rem;
     padding: 0.8rem 1.5rem;
@@ -1501,7 +1612,7 @@ footer {
 }
 
 @media (min-width: 992px) {
-  /* line 135, ../../../Desktop/personal-page/portfolio-site/scss/_contact.scss */
+  /* line 135, ../Desktop/Admin/personal-page/portfolio-site/scss/_contact.scss */
   #contact .contact-form button {
     font-size: 1.15rem;
     padding: 0.9rem 1.6rem;
@@ -1509,26 +1620,26 @@ footer {
 }
 
 @media (min-width: 1200px) {
-  /* line 135, ../../../Desktop/personal-page/portfolio-site/scss/_contact.scss */
+  /* line 135, ../Desktop/Admin/personal-page/portfolio-site/scss/_contact.scss */
   #contact .contact-form button {
     font-size: 1.2rem;
     padding: 1rem 1.8rem;
   }
 }
 
-/* line 184, ../../../Desktop/personal-page/portfolio-site/scss/_contact.scss */
+/* line 184, ../Desktop/Admin/personal-page/portfolio-site/scss/_contact.scss */
 #contact .contact-form.success {
   animation: successPulse 0.5s ease-in-out;
 }
 
-/* line 190, ../../../Desktop/personal-page/portfolio-site/scss/_contact.scss */
+/* line 190, ../Desktop/Admin/personal-page/portfolio-site/scss/_contact.scss */
 #contact.fade-item {
   opacity: 0;
   transform: translateY(40px);
   transition: opacity 1s ease-out, transform 1s ease-out;
 }
 
-/* line 195, ../../../Desktop/personal-page/portfolio-site/scss/_contact.scss */
+/* line 195, ../Desktop/Admin/personal-page/portfolio-site/scss/_contact.scss */
 #contact.fade-item.visible {
   opacity: 1 !important;
   transform: translateY(0);
@@ -1567,7 +1678,7 @@ footer {
 /* ====================
    Footer (Centered + Responsive)
 ==================== */
-/* line 5, ../../../Desktop/personal-page/portfolio-site/scss/_footer.scss */
+/* line 5, ../Desktop/Admin/personal-page/portfolio-site/scss/_footer.scss */
 .footer {
   background: linear-gradient(135deg, #f8fafc 0%, #829ab1 100%);
   padding: 1rem 1rem;
@@ -1582,7 +1693,7 @@ footer {
   /* Responsive scaling */
 }
 
-/* line 17, ../../../Desktop/personal-page/portfolio-site/scss/_footer.scss */
+/* line 17, ../Desktop/Admin/personal-page/portfolio-site/scss/_footer.scss */
 .footer p {
   color: #1a2a44;
   text-decoration: none;
@@ -1592,7 +1703,7 @@ footer {
   display: inline-block;
 }
 
-/* line 26, ../../../Desktop/personal-page/portfolio-site/scss/_footer.scss */
+/* line 26, ../Desktop/Admin/personal-page/portfolio-site/scss/_footer.scss */
 .footer a {
   color: #334e68;
   text-decoration: none;
@@ -1601,13 +1712,13 @@ footer {
   display: inline-block;
 }
 
-/* line 33, ../../../Desktop/personal-page/portfolio-site/scss/_footer.scss */
+/* line 33, ../Desktop/Admin/personal-page/portfolio-site/scss/_footer.scss */
 .footer a:hover {
   color: #ff6b6b;
   transform: scale(1.1);
 }
 
-/* line 38, ../../../Desktop/personal-page/portfolio-site/scss/_footer.scss */
+/* line 38, ../Desktop/Admin/personal-page/portfolio-site/scss/_footer.scss */
 .footer a i {
   font-size: 1.4rem;
   color: #334e68;
@@ -1618,73 +1729,73 @@ footer {
   text-shadow: 0 1px 2px rgba(26, 42, 68, 0.2);
 }
 
-/* line 47, ../../../Desktop/personal-page/portfolio-site/scss/_footer.scss */
+/* line 47, ../Desktop/Admin/personal-page/portfolio-site/scss/_footer.scss */
 .footer a i:hover {
   color: #ff6b6b;
   transform: scale(1.2) rotate(5deg);
 }
 
 @media (min-width: 576px) {
-  /* line 5, ../../../Desktop/personal-page/portfolio-site/scss/_footer.scss */
+  /* line 5, ../Desktop/Admin/personal-page/portfolio-site/scss/_footer.scss */
   .footer {
     font-size: 1rem;
     padding: 1rem 2rem;
   }
-  /* line 58, ../../../Desktop/personal-page/portfolio-site/scss/_footer.scss */
+  /* line 58, ../Desktop/Admin/personal-page/portfolio-site/scss/_footer.scss */
   .footer i {
     font-size: 1.5rem;
   }
 }
 
 @media (min-width: 768px) {
-  /* line 5, ../../../Desktop/personal-page/portfolio-site/scss/_footer.scss */
+  /* line 5, ../Desktop/Admin/personal-page/portfolio-site/scss/_footer.scss */
   .footer {
     font-size: 1.05rem;
   }
-  /* line 65, ../../../Desktop/personal-page/portfolio-site/scss/_footer.scss */
+  /* line 65, ../Desktop/Admin/personal-page/portfolio-site/scss/_footer.scss */
   .footer i {
     font-size: 1.6rem;
   }
 }
 
 @media (min-width: 992px) {
-  /* line 5, ../../../Desktop/personal-page/portfolio-site/scss/_footer.scss */
+  /* line 5, ../Desktop/Admin/personal-page/portfolio-site/scss/_footer.scss */
   .footer {
     font-size: 1.1rem;
     padding: 2rem 2rem;
     /* Offset for sidebar on large screens */
     margin-left: 250px;
   }
-  /* line 73, ../../../Desktop/personal-page/portfolio-site/scss/_footer.scss */
+  /* line 73, ../Desktop/Admin/personal-page/portfolio-site/scss/_footer.scss */
   .footer i {
     font-size: 1.7rem;
   }
 }
 
 @media (min-width: 1200px) {
-  /* line 5, ../../../Desktop/personal-page/portfolio-site/scss/_footer.scss */
+  /* line 5, ../Desktop/Admin/personal-page/portfolio-site/scss/_footer.scss */
   .footer {
     font-size: 1.15rem;
   }
-  /* line 83, ../../../Desktop/personal-page/portfolio-site/scss/_footer.scss */
+  /* line 83, ../Desktop/Admin/personal-page/portfolio-site/scss/_footer.scss */
   .footer i {
     font-size: 1.8rem;
   }
 }
 
-/* line 1, ../../../Desktop/personal-page/portfolio-site/scss/_examples.scss */
+/* line 1, ../Desktop/Admin/personal-page/portfolio-site/scss/_examples.scss */
 .coding {
   text-align: center;
   padding: 5rem 0 6rem;
   background: linear-gradient(to bottom right, #f9fafc, #ffffff);
 }
 
-/* line 6, ../../../Desktop/personal-page/portfolio-site/scss/_examples.scss */
+/* line 6, ../Desktop/Admin/personal-page/portfolio-site/scss/_examples.scss */
 .coding h2 {
   margin-bottom: 1rem;
 }
 
-/* line 10, ../../../Desktop/personal-page/portfolio-site/scss/_examples.scss */
+/* line 10, ../Desktop/Admin/personal-page/portfolio-site/scss/_examples.scss */
 .coding .section-intro {
   max-width: 600px;
   margin: 0 auto 3rem;
@@ -1693,14 +1804,14 @@ footer {
   line-height: 1.6;
 }
 
-/* line 18, ../../../Desktop/personal-page/portfolio-site/scss/_examples.scss */
+/* line 18, ../Desktop/Admin/personal-page/portfolio-site/scss/_examples.scss */
 .coding .coding-loader {
   width: 140px;
   height: 140px;
   margin: 0 auto 3rem;
 }
 
-/* line 24, ../../../Desktop/personal-page/portfolio-site/scss/_examples.scss */
+/* line 24, ../Desktop/Admin/personal-page/portfolio-site/scss/_examples.scss */
 .coding .projects {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
@@ -1709,7 +1820,7 @@ footer {
   align-items: stretch;
 }
 
-/* line 32, ../../../Desktop/personal-page/portfolio-site/scss/_examples.scss */
+/* line 32, ../Desktop/Admin/personal-page/portfolio-site/scss/_examples.scss */
 .coding .project {
   background: #f8fafc;
   border-radius: 16px;
@@ -1724,13 +1835,13 @@ footer {
   /* ✨ Added hover pop + glow */
 }
 
-/* line 45, ../../../Desktop/personal-page/portfolio-site/scss/_examples.scss */
+/* line 45, ../Desktop/Admin/personal-page/portfolio-site/scss/_examples.scss */
 .coding .project:hover {
   transform: translateY(-8px) scale(1.03);
   box-shadow: 0 10px 28px rgba(255, 107, 107, 0.25);
 }
 
-/* line 50, ../../../Desktop/personal-page/portfolio-site/scss/_examples.scss */
+/* line 50, ../Desktop/Admin/personal-page/portfolio-site/scss/_examples.scss */
 .coding .project .project-content {
   display: flex;
   flex-direction: column;
@@ -1739,7 +1850,7 @@ footer {
   text-align: center;
 }
 
-/* line 57, ../../../Desktop/personal-page/portfolio-site/scss/_examples.scss */
+/* line 57, ../Desktop/Admin/personal-page/portfolio-site/scss/_examples.scss */
 .coding .project .project-content i {
   font-size: 3rem;
   color: #ff6b6b;
@@ -1748,19 +1859,19 @@ footer {
   /* Icon pop effect */
 }
 
-/* line 64, ../../../Desktop/personal-page/portfolio-site/scss/_examples.scss */
+/* line 64, ../Desktop/Admin/personal-page/portfolio-site/scss/_examples.scss */
 .project:hover .coding .project .project-content i {
   transform: scale(1.15);
 }
 
-/* line 69, ../../../Desktop/personal-page/portfolio-site/scss/_examples.scss */
+/* line 69, ../Desktop/Admin/personal-page/portfolio-site/scss/_examples.scss */
 .coding .project .project-content h3 {
   margin-bottom: 0.75rem;
   font-size: 1.4rem;
   color: #1a2a44;
 }
 
-/* line 75, ../../../Desktop/personal-page/portfolio-site/scss/_examples.scss */
+/* line 75, ../Desktop/Admin/personal-page/portfolio-site/scss/_examples.scss */
 .coding .project .project-content p {
   color: #334e68;
   font-size: 1rem;
@@ -1769,7 +1880,7 @@ footer {
   max-width: 280px;
 }
 
-/* line 83, ../../../Desktop/personal-page/portfolio-site/scss/_examples.scss */
+/* line 83, ../Desktop/Admin/personal-page/portfolio-site/scss/_examples.scss */
 .coding .project .project-content .status {
   display: inline-block;
   padding: 0.4rem 0.8rem;
@@ -1793,20 +1904,20 @@ footer {
 }
 
 @media (min-width: 768px) {
-  /* line 108, ../../../Desktop/personal-page/portfolio-site/scss/_examples.scss */
+  /* line 108, ../Desktop/Admin/personal-page/portfolio-site/scss/_examples.scss */
   .coding .projects {
     gap: 2.5rem;
   }
 }
 
 @media (min-width: 1200px) {
-  /* line 114, ../../../Desktop/personal-page/portfolio-site/scss/_examples.scss */
+  /* line 114, ../Desktop/Admin/personal-page/portfolio-site/scss/_examples.scss */
   .coding .projects {
     gap: 3rem;
   }
 }
 
-/* line 15, ../../../Desktop/personal-page/portfolio-site/scss/main.scss */
+/* line 15, ../Desktop/Admin/personal-page/portfolio-site/scss/main.scss */
 body {
   margin: 0;
 }
